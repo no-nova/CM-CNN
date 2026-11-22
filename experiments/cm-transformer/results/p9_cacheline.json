@@ -1,0 +1,86 @@
+{
+ "tensor": "blk.16.ffn_down",
+ "shape": [
+  2560,
+  5184
+ ],
+ "row_bytes": 5184,
+ "block_bytes": 18,
+ "perf_available": false,
+ "perf_note": "perf_event_open is refused on this host (perf_event_paranoid); the census below is exact and is the quantity the counters would report",
+ "rows": [
+  {
+   "tau": 0.0,
+   "kept_blocks": 288,
+   "row_major_lines": 207360,
+   "block_major_lines": 207360,
+   "row_major_MB": 13.27,
+   "block_major_MB": 13.27,
+   "lines_per_skipped_block_row_major": 720.0,
+   "lines_per_skipped_block_major": 720.0,
+   "line_ratio": 1.0,
+   "block_major_ms": 0.534,
+   "block_major_GBps": 24.87
+  },
+  {
+   "tau": 0.2,
+   "kept_blocks": 230,
+   "row_major_lines": 166400,
+   "block_major_lines": 165600,
+   "row_major_MB": 10.65,
+   "block_major_MB": 10.6,
+   "lines_per_skipped_block_row_major": 723.5,
+   "lines_per_skipped_block_major": 720.0,
+   "line_ratio": 0.995,
+   "row_major_ms": 0.818,
+   "row_major_GBps": 13.02,
+   "block_major_ms": 0.242,
+   "block_major_GBps": 43.84
+  },
+  {
+   "tau": 0.4,
+   "kept_blocks": 173,
+   "row_major_lines": 125440,
+   "block_major_lines": 124560,
+   "row_major_MB": 8.03,
+   "block_major_MB": 7.97,
+   "lines_per_skipped_block_row_major": 725.1,
+   "lines_per_skipped_block_major": 720.0,
+   "line_ratio": 0.993,
+   "row_major_ms": 0.669,
+   "row_major_GBps": 11.99,
+   "block_major_ms": 0.241,
+   "block_major_GBps": 33.07
+  },
+  {
+   "tau": 0.6,
+   "kept_blocks": 115,
+   "row_major_lines": 84480,
+   "block_major_lines": 82800,
+   "row_major_MB": 5.41,
+   "block_major_MB": 5.3,
+   "lines_per_skipped_block_row_major": 734.6,
+   "lines_per_skipped_block_major": 720.0,
+   "line_ratio": 0.98,
+   "row_major_ms": 0.661,
+   "row_major_GBps": 8.18,
+   "block_major_ms": 0.202,
+   "block_major_GBps": 26.27
+  },
+  {
+   "tau": 0.8,
+   "kept_blocks": 58,
+   "row_major_lines": 43520,
+   "block_major_lines": 41760,
+   "row_major_MB": 2.79,
+   "block_major_MB": 2.67,
+   "lines_per_skipped_block_row_major": 750.3,
+   "lines_per_skipped_block_major": 720.0,
+   "line_ratio": 0.96,
+   "row_major_ms": 0.648,
+   "row_major_GBps": 4.3,
+   "block_major_ms": 0.164,
+   "block_major_GBps": 16.32
+  }
+ ]
+}

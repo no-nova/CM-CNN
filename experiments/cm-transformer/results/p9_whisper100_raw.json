@@ -1,0 +1,1987 @@
+{
+  "phase": "P6 task 3 -- real-speech Whisper evaluation",
+  "model": "models/whisper-base",
+  "device": "cpu",
+  "torch_threads": 16,
+  "seed": 1234,
+  "arch": {
+    "n_encoder_layers": 6,
+    "d_model": 512,
+    "encoder_ffn_dim": 2048,
+    "n_decoder_layers": 6,
+    "decoder_ffn_dim": 2048,
+    "activation": "gelu",
+    "vocab": 51865,
+    "n_mels": 80,
+    "heads": 8,
+    "max_source_positions": 1500,
+    "lane": 32,
+    "blocks_per_ffn": 64,
+    "ffn_shape": "fc2(act(fc1(x))), 512 -> 2048 -> 512",
+    "torch": "2.15.0",
+    "load_seconds": 0.31
+  },
+  "dataset": {
+    "corpus": "LibriSpeech dev-clean (OpenSLR SLR12)",
+    "url": "https://www.openslr.org/resources/12/dev-clean.tar.gz",
+    "url_total_bytes": 337926286,
+    "chapters": [
+      {
+        "speaker": "2277",
+        "chapter": "149896",
+        "utterances": 35
+      },
+      {
+        "speaker": "2277",
+        "chapter": "149897",
+        "utterances": 38
+      },
+      {
+        "speaker": "2277",
+        "chapter": "149874",
+        "utterances": 22
+      },
+      {
+        "speaker": "2035",
+        "chapter": "147960",
+        "utterances": 17
+      },
+      {
+        "speaker": "2035",
+        "chapter": "152373",
+        "utterances": 19
+      },
+      {
+        "speaker": "2035",
+        "chapter": "147961",
+        "utterances": 41
+      },
+      {
+        "speaker": "2086",
+        "chapter": "149214",
+        "utterances": 5
+      },
+      {
+        "speaker": "2086",
+        "chapter": "149220",
+        "utterances": 50
+      },
+      {
+        "speaker": "7976",
+        "chapter": "110124",
+        "utterances": 26
+      },
+      {
+        "speaker": "7976",
+        "chapter": "105575",
+        "utterances": 30
+      }
+    ],
+    "speakers": [
+      "2035",
+      "2086",
+      "2277",
+      "7976"
+    ],
+    "n_utterances": 100,
+    "n_calib": 40,
+    "n_eval": 60,
+    "total_audio_seconds": 694.3,
+    "mean_audio_seconds": 6.94,
+    "audio_root": "data/p6_whisper_audio",
+    "audio_manifest": "data/p6_whisper_manifest.json",
+    "audio_manifest_sha256": "ce78cd5d3564bb826288701edc481dcc39035a85696b6a73b8361bc6f90a0da3",
+    "provenance_file": "data/p6_whisper_audio/provenance.json",
+    "decoder": "ffmpeg -f f32le -ac 1 -ar 16000",
+    "normalizer": "local lowercase/punctuation strip",
+    "prompt_ids": [
+      50258,
+      50259,
+      50359,
+      50363
+    ],
+    "decoding": "greedy, suppress_tokens applied, stop at <|eot|>, max 96 new tokens, no timestamps"
+  },
+  "rows": [
+    {
+      "tau": -1.0,
+      "label": "dense",
+      "wer": 0.06083333989201199,
+      "wer_std": 0.09335208328286532,
+      "cer": 0.027947366697730913,
+      "cer_std": 0.05406258252182891,
+      "wer_corpus": 0.04900181488203267,
+      "exact_match": 0.0,
+      "enc_rel_l2": 0.0,
+      "teacher_forced_top1": 1.0,
+      "energy_captured": 1.0,
+      "actual_skip": 0.0,
+      "n_utterances": 60
+    },
+    {
+      "tau": 0.2,
+      "label": "0.2",
+      "wer": 0.06514922159126083,
+      "wer_std": 0.09276038988126512,
+      "cer": 0.030508124332018337,
+      "cer_std": 0.05441396615044945,
+      "wer_corpus": 0.05353901996370236,
+      "exact_match": 0.0,
+      "enc_rel_l2": 0.05214718909313281,
+      "teacher_forced_top1": 0.9761922836303711,
+      "energy_captured": 0.9971591041084428,
+      "actual_skip": 0.14692190147260967,
+      "n_utterances": 60
+    },
+    {
+      "tau": 0.4,
+      "label": "0.4",
+      "wer": 0.06975302737153719,
+      "wer_std": 0.09525291691132182,
+      "cer": 0.03138661751522373,
+      "cer_std": 0.056134386880564324,
+      "wer_corpus": 0.05716878402903811,
+      "exact_match": 0.0,
+      "enc_rel_l2": 0.12529841264088948,
+      "teacher_forced_top1": 0.9284237861633301,
+      "energy_captured": 0.979700138147674,
+      "actual_skip": 0.41957437662748276,
+      "n_utterances": 60
+    }
+  ],
+  "timing": [
+    {
+      "tau": -1.0,
+      "label": "dense",
+      "enc_ms_per_utt": 224.86139755055774,
+      "dec_ms_per_utt": 498.6170548116206,
+      "dec_ms_per_token": 21.757835119052537,
+      "enc_speedup": 1.0,
+      "dec_speedup": 1.0
+    },
+    {
+      "tau": 0.2,
+      "label": "0.2",
+      "enc_ms_per_utt": 370.7172366829279,
+      "dec_ms_per_utt": 452.77459898255375,
+      "dec_ms_per_token": 19.786216998509268,
+      "enc_speedup": 0.6065577084101981,
+      "dec_speedup": 1.10124785253431
+    },
+    {
+      "tau": 0.4,
+      "label": "0.4",
+      "enc_ms_per_utt": 369.99228513353347,
+      "dec_ms_per_utt": 544.6005865077798,
+      "dec_ms_per_token": 24.079613257528955,
+      "enc_speedup": 0.6077461790031737,
+      "dec_speedup": 0.9155646673261483
+    }
+  ],
+  "dead_blocks": {
+    "enc.0": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "enc.1": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "enc.2": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "enc.3": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "enc.4": {
+      "before_mean": 0.022296874970197677,
+      "before_std": 0.008697181164464747,
+      "after_mean": 0.3753273946046829,
+      "after_std": 0.010860727255525506,
+      "n_utterances": 100
+    },
+    "enc.5": {
+      "before_mean": 0.03183854164555669,
+      "before_std": 0.003251687997436994,
+      "after_mean": 0.36797510355710983,
+      "after_std": 0.012901630557679027,
+      "n_utterances": 100
+    },
+    "dec.0": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "dec.1": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "dec.2": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "dec.3": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "dec.4": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    },
+    "dec.5": {
+      "before_mean": 0.0,
+      "before_std": 0.0,
+      "after_mean": 0.0,
+      "after_std": 0.0,
+      "n_utterances": 100
+    }
+  },
+  "kernel_avx512": {
+    "available": true,
+    "build": "g++ -O3 -fopenmp -mavx512f -mavx512bw -mfma -march=native -shared -fPIC",
+    "source": "experiments/cm-transformer/lanemlp_avx512.cpp",
+    "function": "down_skip_avx512_auto2(A,W,M,out,T,I,O)",
+    "omp_threads": 16,
+    "omp_wait_policy": "passive",
+    "max_abs_diff_vs_torch_gate": 0.00015687942504882812,
+    "verified": true,
+    "enc_ms_per_utt": {
+      "dense": 222.12503847501165,
+      "0.2": 424.8753461167022,
+      "0.4": 412.6256429080968
+    },
+    "enc_speedup": {
+      "dense": 1.0,
+      "0.2": 0.5228004884378481,
+      "0.4": 0.5383209751810919
+    }
+  },
+  "iso_check": {
+    "tol_enc_rel_l2": 1e-05,
+    "tol_dec_max_abs": 0.0001,
+    "passed": true,
+    "max_enc_rel_l2": 0.0,
+    "max_dec_max_abs": 0.0,
+    "max_dec_max_abs_tf": 0.0,
+    "min_top1_tf": 1.0,
+    "token_mismatch": 0
+  },
+  "theta": {
+    "0.2": {
+      "enc.0": 0.070458322763443,
+      "enc.1": 0.02134651504456997,
+      "enc.2": 0.03553551062941551,
+      "enc.3": 0.002976013580337167,
+      "enc.4": 0.0,
+      "enc.5": 0.0,
+      "dec.0": 0.013645246624946594,
+      "dec.1": 0.0051657576113939285,
+      "dec.2": 0.046519599854946136,
+      "dec.3": 0.11943478882312775,
+      "dec.4": 0.16976328194141388,
+      "dec.5": 0.09482041001319885
+    },
+    "0.4": {
+      "enc.0": 0.24733291566371918,
+      "enc.1": 0.10035530477762222,
+      "enc.2": 0.13537205755710602,
+      "enc.3": 0.04771173745393753,
+      "enc.4": 1.0003503830412902e-13,
+      "enc.5": 1.8012762505528745e-12,
+      "dec.0": 0.039158158004283905,
+      "dec.1": 0.02207430638372898,
+      "dec.2": 0.0953800231218338,
+      "dec.3": 0.21969974040985107,
+      "dec.4": 0.30773961544036865,
+      "dec.5": 0.2724796235561371
+    }
+  },
+  "samples": [
+    {
+      "id": "2086-149220-0022",
+      "seconds": 9.265,
+      "ref": "IF YOU WOULD PERMIT ME SAID THE ARTIST LOOKING AT PHOEBE I SHOULD LIKE TO TRY WHETHER THE DAGUERREOTYPE CAN BRING OUT DISAGREEABLE TRAITS ON A PERFECTLY AMIABLE FACE",
+      "hyp_dense": "If you would permit me, said the artist, looking at Phoebe, I should like to try whether the daguerreotype can bring out disagreeable traits on a perfectly amiable face.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0026",
+      "seconds": 4.81,
+      "ref": "YET THE ORIGINAL WEARS TO COMMON EYES A VERY DIFFERENT EXPRESSION",
+      "hyp_dense": "Yet the original wares to common eyes are very different expression.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0028",
+      "seconds": 2.855,
+      "ref": "PHOEBE MERELY GLANCED AT IT AND GAVE IT BACK",
+      "hyp_dense": "Phoebe merrily glanced at it and gave it back.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0029",
+      "seconds": 5.58,
+      "ref": "I CAN ASSURE YOU THAT THIS IS A MODERN FACE AND ONE WHICH YOU WILL VERY PROBABLY MEET",
+      "hyp_dense": "I can assure you that this is a modern face and one which you will very probably meet.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0030",
+      "seconds": 8.1,
+      "ref": "THE SUN AS YOU SEE TELLS QUITE ANOTHER STORY AND WILL NOT BE COAXED OUT OF IT AFTER HALF A DOZEN PATIENT ATTEMPTS ON MY PART",
+      "hyp_dense": "The sun, as you see, tells quite another story, and will not be coped out of it, after half a dozen patience attempts on my part.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0033",
+      "seconds": 7.435,
+      "ref": "WELL I DON'T WISH TO SEE IT ANY MORE OBSERVED PHOEBE TURNING AWAY HER EYES IT IS CERTAINLY VERY LIKE THE OLD PORTRAIT",
+      "hyp_dense": "Well, I don't wish to see it anymore, observe Phoebe, turning away her eyes. It is certainly very like the old portrait.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0040",
+      "seconds": 6.7,
+      "ref": "OH REJOINED THE DAGUERREOTYPIST BECAUSE LIKE AN OLD LADY'S CUP OF TEA IT IS WATER BEWITCHED",
+      "hyp_dense": "Oh, rejoin the degarotipus, because like an old lady's cup of tea, it is water bewitched.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0043",
+      "seconds": 2.77,
+      "ref": "WHAT AN INSTRUMENT IS THE HUMAN VOICE",
+      "hyp_dense": "What an instrument is the human voice.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0047",
+      "seconds": 3.92,
+      "ref": "I WILL SIT IN THE PARLOR AWHILE AND COLLECT MY THOUGHTS",
+      "hyp_dense": "I will sit in the parlour a while and collect my thoughts.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2086-149220-0049",
+      "seconds": 11.605,
+      "ref": "AT SOME UNCERTAIN PERIOD IN THE DEPTHS OF NIGHT AND AS IT WERE THROUGH THE THIN VEIL OF A DREAM SHE WAS CONSCIOUS OF A FOOTSTEP MOUNTING THE STAIRS HEAVILY BUT NOT WITH FORCE AND DECISION",
+      "hyp_dense": "At some uncertain period in the depths of night, and as it were through the thin veil of a dream, she was conscious of a footstep mounting the stairs heavily, but not with force and decision.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2277-149874-0000",
+      "seconds": 15.505,
+      "ref": "MINNIE'S FLAT AS THE ONE FLOOR RESIDENT APARTMENTS WERE THEN BEING CALLED WAS IN A PART OF WEST VAN BUREN STREET INHABITED BY FAMILIES OF LABOURERS AND CLERKS MEN WHO HAD COME AND WERE STILL COMING WITH THE RUSH OF POPULATION POURING IN AT THE RATE OF FIFTY THOUSAND A YEAR",
+      "hyp_dense": "Minis Flat, as the one-floor resident apartments were then being called, was in a part of West Van Bearden Street inhabited by families of laborers and clerks, men who had come and were still coming with the rush of population pouring in at the rate of 50,000 a year.",
+      "hyp_tau0.6": null
+    },
+    {
+      "id": "2277-149874-0002",
+      "seconds": 5.095,
+      "ref": "TO HIM THE PRESENCE OR ABSENCE OF HIS WIFE'S SISTER WAS A MATTER OF INDIFFERENCE",
+      "hyp_dense": "To him, the presence or absence of his wife's sister was a matter of indifference.",
+      "hyp_tau0.6": null
+    }
+  ],
+  "per_utterance": [
+    {
+      "id": "2086-149220-0022",
+      "ref_words": 29,
+      "seconds": 9.265,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.10344827586206896,
+        "cer": 0.04242424242424243,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05200376734137535,
+        "teacher_forced_top1": 0.9848484992980957
+      },
+      "tau0.40": {
+        "wer": 0.10344827586206896,
+        "cer": 0.04242424242424243,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12400279939174652,
+        "teacher_forced_top1": 0.8636363744735718
+      }
+    },
+    {
+      "id": "2086-149220-0026",
+      "ref_words": 11,
+      "seconds": 4.81,
+      "dense": {
+        "wer": 0.18181818181818182,
+        "cer": 0.06153846153846154,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.18181818181818182,
+        "cer": 0.06153846153846154,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.051534853875637054,
+        "teacher_forced_top1": 0.9655172228813171
+      },
+      "tau0.40": {
+        "wer": 0.18181818181818182,
+        "cer": 0.06153846153846154,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12502847611904144,
+        "teacher_forced_top1": 0.931034505367279
+      }
+    },
+    {
+      "id": "2086-149220-0028",
+      "ref_words": 9,
+      "seconds": 2.855,
+      "dense": {
+        "wer": 0.1111111111111111,
+        "cer": 0.045454545454545456,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.1111111111111111,
+        "cer": 0.045454545454545456,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.04890309274196625,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.2222222222222222,
+        "cer": 0.1590909090909091,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12329254299402237,
+        "teacher_forced_top1": 0.8999999761581421
+      }
+    },
+    {
+      "id": "2086-149220-0029",
+      "ref_words": 18,
+      "seconds": 5.58,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05373179912567139,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12680257856845856,
+        "teacher_forced_top1": 0.9677419066429138
+      }
+    },
+    {
+      "id": "2086-149220-0030",
+      "ref_words": 26,
+      "seconds": 8.1,
+      "dense": {
+        "wer": 0.07692307692307693,
+        "cer": 0.03225806451612903,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.07692307692307693,
+        "cer": 0.03225806451612903,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05282427743077278,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.038461538461538464,
+        "cer": 0.016129032258064516,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1259833723306656,
+        "teacher_forced_top1": 0.9795918464660645
+      }
+    },
+    {
+      "id": "2086-149220-0033",
+      "ref_words": 23,
+      "seconds": 7.435,
+      "dense": {
+        "wer": 0.13043478260869565,
+        "cer": 0.017094017094017096,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.13043478260869565,
+        "cer": 0.017094017094017096,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05305423587560654,
+        "teacher_forced_top1": 0.9800000190734863
+      },
+      "tau0.40": {
+        "wer": 0.13043478260869565,
+        "cer": 0.017094017094017096,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12288162857294083,
+        "teacher_forced_top1": 0.8799999952316284
+      }
+    },
+    {
+      "id": "2086-149220-0040",
+      "ref_words": 16,
+      "seconds": 6.7,
+      "dense": {
+        "wer": 0.125,
+        "cer": 0.10989010989010989,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.125,
+        "cer": 0.10989010989010989,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.04950854554772377,
+        "teacher_forced_top1": 0.9523809552192688
+      },
+      "tau0.40": {
+        "wer": 0.125,
+        "cer": 0.10989010989010989,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12980574369430542,
+        "teacher_forced_top1": 0.9285714030265808
+      }
+    },
+    {
+      "id": "2086-149220-0043",
+      "ref_words": 7,
+      "seconds": 2.77,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05232924222946167,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.13061542809009552,
+        "teacher_forced_top1": 1.0
+      }
+    },
+    {
+      "id": "2086-149220-0047",
+      "ref_words": 11,
+      "seconds": 3.92,
+      "dense": {
+        "wer": 0.2727272727272727,
+        "cer": 0.03636363636363636,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.2727272727272727,
+        "cer": 0.03636363636363636,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.048282843083143234,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.2727272727272727,
+        "cer": 0.03636363636363636,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1269320398569107,
+        "teacher_forced_top1": 1.0
+      }
+    },
+    {
+      "id": "2086-149220-0049",
+      "ref_words": 36,
+      "seconds": 11.605,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.047707755118608475,
+        "teacher_forced_top1": 0.9733333587646484
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12642453610897064,
+        "teacher_forced_top1": 0.9599999785423279
+      }
+    },
+    {
+      "id": "2277-149874-0000",
+      "ref_words": 51,
+      "seconds": 15.505,
+      "dense": {
+        "wer": 0.09803921568627451,
+        "cer": 0.07326007326007326,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.09803921568627451,
+        "cer": 0.07326007326007326,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.04294215887784958,
+        "teacher_forced_top1": 0.9711538553237915
+      },
+      "tau0.40": {
+        "wer": 0.09803921568627451,
+        "cer": 0.0695970695970696,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.11660430580377579,
+        "teacher_forced_top1": 0.9230769276618958
+      }
+    },
+    {
+      "id": "2277-149874-0002",
+      "ref_words": 15,
+      "seconds": 5.095,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.052629806101322174,
+        "teacher_forced_top1": 0.9354838728904724
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12523119151592255,
+        "teacher_forced_top1": 0.8709677457809448
+      }
+    },
+    {
+      "id": "2277-149874-0005",
+      "ref_words": 16,
+      "seconds": 6.37,
+      "dense": {
+        "wer": 0.0625,
+        "cer": 0.022988505747126436,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0625,
+        "cer": 0.022988505747126436,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.050346244126558304,
+        "teacher_forced_top1": 0.9696969985961914
+      },
+      "tau0.40": {
+        "wer": 0.0625,
+        "cer": 0.022988505747126436,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12019515037536621,
+        "teacher_forced_top1": 0.939393937587738
+      }
+    },
+    {
+      "id": "2277-149874-0006",
+      "ref_words": 8,
+      "seconds": 2.745,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05719206854701042,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12867091596126556,
+        "teacher_forced_top1": 1.0
+      }
+    },
+    {
+      "id": "2277-149874-0009",
+      "ref_words": 13,
+      "seconds": 3.35,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05213144049048424,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12263309955596924,
+        "teacher_forced_top1": 1.0
+      }
+    },
+    {
+      "id": "2277-149874-0013",
+      "ref_words": 10,
+      "seconds": 3.16,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.04740457609295845,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12185009568929672,
+        "teacher_forced_top1": 0.95652174949646
+      }
+    },
+    {
+      "id": "2277-149874-0014",
+      "ref_words": 33,
+      "seconds": 8.6,
+      "dense": {
+        "wer": 0.12121212121212122,
+        "cer": 0.07547169811320754,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.09090909090909091,
+        "cer": 0.050314465408805034,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.04576544463634491,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.09090909090909091,
+        "cer": 0.050314465408805034,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.11370263993740082,
+        "teacher_forced_top1": 0.9538461565971375
+      }
+    },
+    {
+      "id": "2277-149874-0016",
+      "ref_words": 17,
+      "seconds": 5.325,
+      "dense": {
+        "wer": 0.11764705882352941,
+        "cer": 0.14814814814814814,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.11764705882352941,
+        "cer": 0.14814814814814814,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.04788724705576897,
+        "teacher_forced_top1": 0.9696969985961914
+      },
+      "tau0.40": {
+        "wer": 0.11764705882352941,
+        "cer": 0.14814814814814814,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.11924748122692108,
+        "teacher_forced_top1": 0.9090909361839294
+      }
+    },
+    {
+      "id": "2277-149874-0017",
+      "ref_words": 10,
+      "seconds": 3.36,
+      "dense": {
+        "wer": 0.2,
+        "cer": 0.01818181818181818,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.2,
+        "cer": 0.01818181818181818,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.052563443779945374,
+        "teacher_forced_top1": 0.95652174949646
+      },
+      "tau0.40": {
+        "wer": 0.2,
+        "cer": 0.01818181818181818,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.11807051301002502,
+        "teacher_forced_top1": 0.95652174949646
+      }
+    },
+    {
+      "id": "2277-149896-0001",
+      "ref_words": 26,
+      "seconds": 7.145,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05256594344973564,
+        "teacher_forced_top1": 0.9318181872367859
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12290217727422714,
+        "teacher_forced_top1": 0.9545454382896423
+      }
+    },
+    {
+      "id": "2277-149896-0006",
+      "ref_words": 14,
+      "seconds": 4.97,
+      "dense": {
+        "wer": 0.07142857142857142,
+        "cer": 0.024390243902439025,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.14285714285714285,
+        "cer": 0.07317073170731707,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05382736027240753,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.14285714285714285,
+        "cer": 0.07317073170731707,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12962603569030762,
+        "teacher_forced_top1": 0.9428571462631226
+      }
+    },
+    {
+      "id": "2277-149896-0008",
+      "ref_words": 26,
+      "seconds": 6.94,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05311446636915207,
+        "teacher_forced_top1": 0.982758641242981
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.11925893276929855,
+        "teacher_forced_top1": 0.982758641242981
+      }
+    },
+    {
+      "id": "2277-149896-0009",
+      "ref_words": 20,
+      "seconds": 5.815,
+      "dense": {
+        "wer": 0.05,
+        "cer": 0.010101010101010102,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.05,
+        "cer": 0.010101010101010102,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05237124487757683,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.05,
+        "cer": 0.010101010101010102,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12069354951381683,
+        "teacher_forced_top1": 0.925000011920929
+      }
+    },
+    {
+      "id": "2277-149896-0011",
+      "ref_words": 14,
+      "seconds": 4.465,
+      "dense": {
+        "wer": 0.07142857142857142,
+        "cer": 0.03896103896103896,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.07142857142857142,
+        "cer": 0.03896103896103896,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.052214957773685455,
+        "teacher_forced_top1": 0.9411764740943909
+      },
+      "tau0.40": {
+        "wer": 0.07142857142857142,
+        "cer": 0.03896103896103896,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12185751646757126,
+        "teacher_forced_top1": 0.8823529481887817
+      }
+    },
+    {
+      "id": "2277-149896-0013",
+      "ref_words": 24,
+      "seconds": 6.09,
+      "dense": {
+        "wer": 0.08333333333333333,
+        "cer": 0.00980392156862745,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.08333333333333333,
+        "cer": 0.00980392156862745,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05250575393438339,
+        "teacher_forced_top1": 0.9444444179534912
+      },
+      "tau0.40": {
+        "wer": 0.08333333333333333,
+        "cer": 0.00980392156862745,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12792786955833435,
+        "teacher_forced_top1": 0.9444444179534912
+      }
+    },
+    {
+      "id": "2277-149896-0014",
+      "ref_words": 14,
+      "seconds": 4.07,
+      "dense": {
+        "wer": 0.07142857142857142,
+        "cer": 0.08450704225352113,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.07142857142857142,
+        "cer": 0.08450704225352113,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.056723590940237045,
+        "teacher_forced_top1": 0.9655172228813171
+      },
+      "tau0.40": {
+        "wer": 0.07142857142857142,
+        "cer": 0.08450704225352113,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12625867128372192,
+        "teacher_forced_top1": 0.9655172228813171
+      }
+    },
+    {
+      "id": "2277-149896-0016",
+      "ref_words": 8,
+      "seconds": 2.785,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.055409692227840424,
+        "teacher_forced_top1": 0.9545454382896423
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1260124295949936,
+        "teacher_forced_top1": 0.8636363744735718
+      }
+    },
+    {
+      "id": "2277-149896-0019",
+      "ref_words": 13,
+      "seconds": 3.56,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05467592552304268,
+        "teacher_forced_top1": 0.9615384340286255
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.11985461413860321,
+        "teacher_forced_top1": 0.9230769276618958
+      }
+    },
+    {
+      "id": "2277-149896-0028",
+      "ref_words": 11,
+      "seconds": 2.9,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0561477430164814,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1340213268995285,
+        "teacher_forced_top1": 0.9090909361839294
+      }
+    },
+    {
+      "id": "2277-149896-0032",
+      "ref_words": 36,
+      "seconds": 10.77,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.048473767936229706,
+        "teacher_forced_top1": 0.9701492786407471
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12073291838169098,
+        "teacher_forced_top1": 0.9850746393203735
+      }
+    },
+    {
+      "id": "2277-149897-0001",
+      "ref_words": 10,
+      "seconds": 2.755,
+      "dense": {
+        "wer": 0.3,
+        "cer": 0.08163265306122448,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.3,
+        "cer": 0.08163265306122448,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.055277373641729355,
+        "teacher_forced_top1": 0.9473684430122375
+      },
+      "tau0.40": {
+        "wer": 0.3,
+        "cer": 0.08163265306122448,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12672080099582672,
+        "teacher_forced_top1": 0.8421052694320679
+      }
+    },
+    {
+      "id": "2277-149897-0002",
+      "ref_words": 27,
+      "seconds": 6.54,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05129469186067581,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.11884348094463348,
+        "teacher_forced_top1": 0.9767441749572754
+      }
+    },
+    {
+      "id": "2277-149897-0005",
+      "ref_words": 36,
+      "seconds": 11.465,
+      "dense": {
+        "wer": 0.027777777777777776,
+        "cer": 0.005208333333333333,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.027777777777777776,
+        "cer": 0.005208333333333333,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.04819031059741974,
+        "teacher_forced_top1": 0.9868420958518982
+      },
+      "tau0.40": {
+        "wer": 0.027777777777777776,
+        "cer": 0.005208333333333333,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12693986296653748,
+        "teacher_forced_top1": 0.8947368264198303
+      }
+    },
+    {
+      "id": "2277-149897-0011",
+      "ref_words": 11,
+      "seconds": 3.3,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05402239039540291,
+        "teacher_forced_top1": 0.9615384340286255
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12810809910297394,
+        "teacher_forced_top1": 0.9230769276618958
+      }
+    },
+    {
+      "id": "2277-149897-0012",
+      "ref_words": 11,
+      "seconds": 3.09,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05322868749499321,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.13287882506847382,
+        "teacher_forced_top1": 1.0
+      }
+    },
+    {
+      "id": "2277-149897-0013",
+      "ref_words": 15,
+      "seconds": 4.415,
+      "dense": {
+        "wer": 0.06666666666666667,
+        "cer": 0.04819277108433735,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.06666666666666667,
+        "cer": 0.04819277108433735,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.053149159997701645,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.06666666666666667,
+        "cer": 0.04819277108433735,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12162220478057861,
+        "teacher_forced_top1": 0.9714285731315613
+      }
+    },
+    {
+      "id": "2277-149897-0014",
+      "ref_words": 18,
+      "seconds": 4.62,
+      "dense": {
+        "wer": 0.1111111111111111,
+        "cer": 0.03296703296703297,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.1111111111111111,
+        "cer": 0.03296703296703297,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0529034323990345,
+        "teacher_forced_top1": 0.9354838728904724
+      },
+      "tau0.40": {
+        "wer": 0.1111111111111111,
+        "cer": 0.03296703296703297,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1207469180226326,
+        "teacher_forced_top1": 0.8709677457809448
+      }
+    },
+    {
+      "id": "2277-149897-0017",
+      "ref_words": 23,
+      "seconds": 7.3,
+      "dense": {
+        "wer": 0.043478260869565216,
+        "cer": 0.01680672268907563,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.043478260869565216,
+        "cer": 0.01680672268907563,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.052129752933979034,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.043478260869565216,
+        "cer": 0.01680672268907563,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12703800201416016,
+        "teacher_forced_top1": 0.9375
+      }
+    },
+    {
+      "id": "2277-149897-0019",
+      "ref_words": 9,
+      "seconds": 4.85,
+      "dense": {
+        "wer": 0.4444444444444444,
+        "cer": 0.34782608695652173,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.4444444444444444,
+        "cer": 0.34782608695652173,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.051019325852394104,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.4444444444444444,
+        "cer": 0.34782608695652173,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.13182269036769867,
+        "teacher_forced_top1": 0.8636363744735718
+      }
+    },
+    {
+      "id": "2277-149897-0020",
+      "ref_words": 13,
+      "seconds": 4.62,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.054447367787361145,
+        "teacher_forced_top1": 0.96875
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12462658435106277,
+        "teacher_forced_top1": 0.9375
+      }
+    },
+    {
+      "id": "2277-149897-0021",
+      "ref_words": 13,
+      "seconds": 4.685,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05395808070898056,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.15384615384615385,
+        "cer": 0.07575757575757576,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12345683574676514,
+        "teacher_forced_top1": 0.9333333373069763
+      }
+    },
+    {
+      "id": "2277-149897-0025",
+      "ref_words": 17,
+      "seconds": 4.285,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.058823529411764705,
+        "cer": 0.03571428571428571,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05434828996658325,
+        "teacher_forced_top1": 0.9696969985961914
+      },
+      "tau0.40": {
+        "wer": 0.11764705882352941,
+        "cer": 0.011904761904761904,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12441913783550262,
+        "teacher_forced_top1": 0.9090909361839294
+      }
+    },
+    {
+      "id": "2277-149897-0032",
+      "ref_words": 34,
+      "seconds": 8.69,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05046556517481804,
+        "teacher_forced_top1": 0.984375
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12249690294265747,
+        "teacher_forced_top1": 0.953125
+      }
+    },
+    {
+      "id": "7976-105575-0000",
+      "ref_words": 28,
+      "seconds": 9.16,
+      "dense": {
+        "wer": 0.03571428571428571,
+        "cer": 0.027972027972027972,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.03571428571428571,
+        "cer": 0.027972027972027972,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.049982547760009766,
+        "teacher_forced_top1": 0.9821428656578064
+      },
+      "tau0.40": {
+        "wer": 0.03571428571428571,
+        "cer": 0.027972027972027972,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12017252296209335,
+        "teacher_forced_top1": 0.9821428656578064
+      }
+    },
+    {
+      "id": "7976-105575-0001",
+      "ref_words": 7,
+      "seconds": 2.8,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.054027896374464035,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1349392980337143,
+        "teacher_forced_top1": 0.9411764740943909
+      }
+    },
+    {
+      "id": "7976-105575-0003",
+      "ref_words": 22,
+      "seconds": 9.175,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.051349908113479614,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.09090909090909091,
+        "cer": 0.007407407407407408,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12838983535766602,
+        "teacher_forced_top1": 0.9444444179534912
+      }
+    },
+    {
+      "id": "7976-105575-0011",
+      "ref_words": 18,
+      "seconds": 6.425,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.051407571882009506,
+        "teacher_forced_top1": 0.9459459185600281
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12390794605016708,
+        "teacher_forced_top1": 0.837837815284729
+      }
+    },
+    {
+      "id": "7976-105575-0012",
+      "ref_words": 14,
+      "seconds": 5.155,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05468478053808212,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1279478371143341,
+        "teacher_forced_top1": 0.9032257795333862
+      }
+    },
+    {
+      "id": "7976-105575-0015",
+      "ref_words": 19,
+      "seconds": 7.355,
+      "dense": {
+        "wer": 0.10526315789473684,
+        "cer": 0.10476190476190476,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.10526315789473684,
+        "cer": 0.10476190476190476,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.052390869706869125,
+        "teacher_forced_top1": 0.9777777791023254
+      },
+      "tau0.40": {
+        "wer": 0.10526315789473684,
+        "cer": 0.10476190476190476,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12839575111865997,
+        "teacher_forced_top1": 0.8666666746139526
+      }
+    },
+    {
+      "id": "7976-105575-0022",
+      "ref_words": 13,
+      "seconds": 5.38,
+      "dense": {
+        "wer": 0.15384615384615385,
+        "cer": 0.04285714285714286,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.15384615384615385,
+        "cer": 0.04285714285714286,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05438069626688957,
+        "teacher_forced_top1": 0.90625
+      },
+      "tau0.40": {
+        "wer": 0.15384615384615385,
+        "cer": 0.04285714285714286,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12782050669193268,
+        "teacher_forced_top1": 0.84375
+      }
+    },
+    {
+      "id": "7976-105575-0026",
+      "ref_words": 6,
+      "seconds": 3.55,
+      "dense": {
+        "wer": 0.3333333333333333,
+        "cer": 0.08823529411764706,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.3333333333333333,
+        "cer": 0.11764705882352941,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.053296513855457306,
+        "teacher_forced_top1": 0.9411764740943909
+      },
+      "tau0.40": {
+        "wer": 0.3333333333333333,
+        "cer": 0.058823529411764705,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.13197161257266998,
+        "teacher_forced_top1": 0.9411764740943909
+      }
+    },
+    {
+      "id": "7976-105575-0027",
+      "ref_words": 18,
+      "seconds": 6.675,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.052851904183626175,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1267748475074768,
+        "teacher_forced_top1": 0.9722222089767456
+      }
+    },
+    {
+      "id": "7976-105575-0029",
+      "ref_words": 34,
+      "seconds": 11.79,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05032212287187576,
+        "teacher_forced_top1": 0.9696969985961914
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12408814579248428,
+        "teacher_forced_top1": 0.9545454382896423
+      }
+    },
+    {
+      "id": "7976-110124-0004",
+      "ref_words": 10,
+      "seconds": 4.735,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05311441794037819,
+        "teacher_forced_top1": 0.9545454382896423
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.13063709437847137,
+        "teacher_forced_top1": 0.8636363744735718
+      }
+    },
+    {
+      "id": "7976-110124-0011",
+      "ref_words": 18,
+      "seconds": 5.47,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.05555555555555555,
+        "cer": 0.02247191011235955,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05442468822002411,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.05555555555555555,
+        "cer": 0.02247191011235955,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12958025932312012,
+        "teacher_forced_top1": 0.9230769276618958
+      }
+    },
+    {
+      "id": "7976-110124-0012",
+      "ref_words": 26,
+      "seconds": 8.295,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0455314926803112,
+        "teacher_forced_top1": 0.9821428656578064
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12073726207017899,
+        "teacher_forced_top1": 0.9107142686843872
+      }
+    },
+    {
+      "id": "7976-110124-0013",
+      "ref_words": 19,
+      "seconds": 6.555,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05793067067861557,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12599396705627441,
+        "teacher_forced_top1": 0.9729729890823364
+      }
+    },
+    {
+      "id": "7976-110124-0016",
+      "ref_words": 12,
+      "seconds": 4.18,
+      "dense": {
+        "wer": 0.08333333333333333,
+        "cer": 0.030303030303030304,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.08333333333333333,
+        "cer": 0.030303030303030304,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.055885426700115204,
+        "teacher_forced_top1": 0.8888888955116272
+      },
+      "tau0.40": {
+        "wer": 0.08333333333333333,
+        "cer": 0.030303030303030304,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1341036856174469,
+        "teacher_forced_top1": 0.8148148059844971
+      }
+    },
+    {
+      "id": "7976-110124-0018",
+      "ref_words": 26,
+      "seconds": 8.075,
+      "dense": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.054659292101860046,
+        "teacher_forced_top1": 0.9583333134651184
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.12338050454854965,
+        "teacher_forced_top1": 0.9166666865348816
+      }
+    },
+    {
+      "id": "7976-110124-0024",
+      "ref_words": 10,
+      "seconds": 3.15,
+      "dense": {
+        "wer": 0.1,
+        "cer": 0.041666666666666664,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.0,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.20": {
+        "wer": 0.1,
+        "cer": 0.041666666666666664,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.05138282850384712,
+        "teacher_forced_top1": 1.0
+      },
+      "tau0.40": {
+        "wer": 0.0,
+        "cer": 0.0,
+        "exact_match": 0.0,
+        "enc_rel_l2": 0.1322227567434311,
+        "teacher_forced_top1": 0.9047619104385376
+      }
+    }
+  ],
+  "notes": [
+    "Real English speech with published reference transcripts, unlike P5 (synthetic tones/chirp/harmonics, no ground truth). Source: LibriSpeech dev-clean (OpenSLR SLR12), 10 chapters / 4 speakers, streamed from https://www.openslr.org/resources/12/dev-clean.tar.gz and aborted after 30 MB (338 MB total). Audio decoded to 16 kHz mono fp32 by ffmpeg (no soundfile/librosa/torchaudio on this box; the HF `librispeech_asr_dummy` mirror now only ships a parquet shard, unreadable without pyarrow).",
+    "Split: 40 calibration utterances build the permutation pi per layer and calibrate theta_l (quantile of permuted block energies, target tau of (token, block) pairs); 60 disjoint utterances are evaluated. All WER/CER/exact-match numbers are on the evaluation split only.",
+    "WER/CER use a local two-row Levenshtein (no jiwer) on local lowercase/punctuation strip-normalized text; values are per-utterance rates averaged over utterances (mean +- sample std, ddof=1), with wer_corpus (total edits / total reference words) reported alongside.",
+    "exact_match = fraction of utterances whose hypothesis tokenization equals the reference tokenization exactly (whisper tokenizer on the normalized hypothesis vs the normalized reference). It is a strict metric: dense whisper-base itself is not 1.0 (0.000).",
+    "teacher_forced_top1 = argmax agreement between the gated and dense decoder logits when both are teacher-forced on the prompt + the *reference* tokens, so unlike P5's free-running agreement it is a label-bearing metric. enc_rel_l2 is the relative L2 between the gated and dense encoder output, averaged over utterances.",
+    "Timing is CPU only (torch.set_num_threads(32), 16-core Zen 5 / 32 SMT threads): the full 6-layer audio encoder (no lm_head) and the full decoder loop (prefill + greedy steps up to <|eot|>). Values are ms/utterance, median over repeated rounds that alternate configs round-robin so drift hits all configs alike. tau=-1 is the unmodified dense model (original fc2.forward); tau=0 keeps every block but still permutes, and is verified isomorphic to dense before any result is reported.",
+    "The honest wall-clock result: the per-token gate still executes a dense fc1 and a dense fc2 GEMM inside PyTorch (mask + gather + alpha), so PyTorch-level E2E shows no speedup. The AVX-512 kernel mounts the *real* 32-lane skipping down-projection (down_skip_avx512_auto2), verified to match the PyTorch gated path, which removes the skipped tiles from fc2; fc1 remains dense, so the encoder gain is bounded by fc2's share of the pass.",
+    "dead-block numbers are the fraction of 32-lane blocks with *exactly* zero energy in the fc2 input, measured on every selected utterance (calib + eval), before (natural lane order) and after (pi order) the permutation; mean +- std across utterances. This replaces P5's single-clip 51-54% claim on enc.4/enc.5 with the real distribution over utterances.",
+    "`energy_captured` / `actual_skip` are measured on exactly the quantity the gate thresholds (block L2 in pi order). At tau=0.6 WER is 0.070 vs 0.061 dense: the mechanism is not free, and the trade is now measured in absolute WER/CER instead of dense-vs-gated agreement."
+  ],
+  "runtime_seconds": 774.2
+}

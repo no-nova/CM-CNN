@@ -1,0 +1,62 @@
+[
+ {
+  "path": "Qwen3.5-0.8B/model.safetensors",
+  "bytes": 1746942600,
+  "sha256": "04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696"
+ },
+ {
+  "path": "Qwen3-0.6B/model.safetensors",
+  "bytes": 1503300328,
+  "sha256": "f47f71177f32bcd101b7573ec9171e6a57f4f4d31148d38e382306f42996874b"
+ },
+ {
+  "path": "Qwen3.5-4B-IQ4_NL.gguf",
+  "bytes": 2579944608,
+  "sha256": "ff5c3e9740a5aa53f04fdf3b0b8cc75da556bf8948cdb19d61c512d3a43465d9"
+ },
+ {
+  "path": "whisper-base/model.safetensors",
+  "bytes": 290403936,
+  "sha256": "07cadb9f25677c8d50df603e66a98fbd842cce45047139baeb16e6219a1e807b"
+ },
+ {
+  "path": "SmolVLM2-256M-Video-Instruct/model.safetensors",
+  "bytes": 1025998224,
+  "sha256": "dcc8f4c00d30d70bb3028a1bfc373e1b1972e25919f8788183cae4ae72431ce2"
+ },
+ {
+  "path": "data/benchmarks/arc_easy_test.jsonl",
+  "bytes": 144995,
+  "sha256": "fa2b2ec09922d1f88fa0a27fc16ba3613fe72f67a388d87fa00810cc68367754"
+ },
+ {
+  "path": "data/benchmarks/boolq_val.jsonl",
+  "bytes": 333611,
+  "sha256": "6a7e666be0fbc122789ac8d359bfc570bdc7271bf6217f486c50133d935aaf09"
+ },
+ {
+  "path": "data/benchmarks/gsm8k_test.jsonl",
+  "bytes": 55921,
+  "sha256": "a997525daea66435ca08907c9b4c020d494c8581b54f8f4cf1d4e6e924016890"
+ },
+ {
+  "path": "data/benchmarks/gsm8k_test200.jsonl",
+  "bytes": 173169,
+  "sha256": "72813874f21da675e729ba2d8de858ff001ed23f062e6c963bbf51b4a044786f"
+ },
+ {
+  "path": "data/benchmarks/piqa_val.jsonl",
+  "bytes": 148319,
+  "sha256": "8ad11ff11db323710ea28a6e28d499ebbf1f91002856b6ea3ccfbf7c8be6e665"
+ },
+ {
+  "path": "data/benchmarks/pope_test.jsonl",
+  "bytes": 29935,
+  "sha256": "a5384c504bd1ff01ca255c0dd09534b1964030dc7a771848965221ffb6cd8579"
+ },
+ {
+  "path": "data/benchmarks/wikitext2_test.jsonl",
+  "bytes": 1364061,
+  "sha256": "da44fafb60ce64d65eb0b541df2cc37690680543054e153237cfe5c5c75f3171"
+ }
+]

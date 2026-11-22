@@ -1,0 +1,295 @@
+{
+ "dataset": {
+  "corpus": "LibriSpeech dev-clean (OpenSLR SLR12)",
+  "url": "https://www.openslr.org/resources/12/dev-clean.tar.gz",
+  "url_total_bytes": 337926286,
+  "chapters": [
+   {
+    "speaker": "2277",
+    "chapter": "149896",
+    "utterances": 35
+   },
+   {
+    "speaker": "2277",
+    "chapter": "149897",
+    "utterances": 38
+   },
+   {
+    "speaker": "2277",
+    "chapter": "149874",
+    "utterances": 22
+   },
+   {
+    "speaker": "2035",
+    "chapter": "147960",
+    "utterances": 17
+   },
+   {
+    "speaker": "2035",
+    "chapter": "152373",
+    "utterances": 19
+   },
+   {
+    "speaker": "2035",
+    "chapter": "147961",
+    "utterances": 41
+   },
+   {
+    "speaker": "2086",
+    "chapter": "149214",
+    "utterances": 5
+   },
+   {
+    "speaker": "2086",
+    "chapter": "149220",
+    "utterances": 50
+   },
+   {
+    "speaker": "7976",
+    "chapter": "110124",
+    "utterances": 26
+   },
+   {
+    "speaker": "7976",
+    "chapter": "105575",
+    "utterances": 30
+   }
+  ],
+  "speakers": [
+   "2035",
+   "2086",
+   "2277",
+   "7976"
+  ],
+  "n_utterances": 100,
+  "n_calib": 40,
+  "n_eval": 60,
+  "total_audio_seconds": 694.3,
+  "mean_audio_seconds": 6.94,
+  "audio_root": "data/p6_whisper_audio",
+  "audio_manifest": "data/p6_whisper_manifest.json",
+  "audio_manifest_sha256": "ce78cd5d3564bb826288701edc481dcc39035a85696b6a73b8361bc6f90a0da3",
+  "provenance_file": "data/p6_whisper_audio/provenance.json",
+  "decoder": "ffmpeg -f f32le -ac 1 -ar 16000",
+  "normalizer": "local lowercase/punctuation strip",
+  "prompt_ids": [
+   50258,
+   50259,
+   50359,
+   50363
+  ],
+  "decoding": "greedy, suppress_tokens applied, stop at <|eot|>, max 96 new tokens, no timestamps"
+ },
+ "rows": [
+  {
+   "label": "dense",
+   "n_utterances": 60,
+   "wer": 0.0608,
+   "wer_ci": [
+    0.0392,
+    0.0855
+   ],
+   "cer": 0.0279,
+   "cer_ci": [
+    0.0161,
+    0.0431
+   ],
+   "teacher_forced_top1": 1.0,
+   "enc_rel_l2": 0.0,
+   "paired_wer_vs_dense": null,
+   "actual_skip": 0.0,
+   "enc_ms_per_utt": 224.86139755055774
+  },
+  {
+   "label": "tau0.20",
+   "n_utterances": 60,
+   "wer": 0.0651,
+   "wer_ci": [
+    0.0432,
+    0.0889
+   ],
+   "cer": 0.0305,
+   "cer_ci": [
+    0.0183,
+    0.0457
+   ],
+   "teacher_forced_top1": 0.9762,
+   "enc_rel_l2": 0.0521,
+   "paired_wer_vs_dense": {
+    "mean": 0.0043,
+    "lo": 0.0,
+    "hi": 0.01
+   },
+   "actual_skip": 0.14692190147260967
+  },
+  {
+   "label": "tau0.40",
+   "n_utterances": 60,
+   "wer": 0.0698,
+   "wer_ci": [
+    0.0462,
+    0.0949
+   ],
+   "cer": 0.0314,
+   "cer_ci": [
+    0.0187,
+    0.0473
+   ],
+   "teacher_forced_top1": 0.9284,
+   "enc_rel_l2": 0.1253,
+   "paired_wer_vs_dense": {
+    "mean": 0.0089,
+    "lo": -0.0004,
+    "hi": 0.019
+   },
+   "actual_skip": 0.41957437662748276
+  }
+ ],
+ "dead_blocks": {
+  "enc.0": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "enc.1": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "enc.2": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "enc.3": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "enc.4": {
+   "before_mean": 0.022296874970197677,
+   "before_std": 0.008697181164464747,
+   "after_mean": 0.3753273946046829,
+   "after_std": 0.010860727255525506,
+   "n_utterances": 100
+  },
+  "enc.5": {
+   "before_mean": 0.03183854164555669,
+   "before_std": 0.003251687997436994,
+   "after_mean": 0.36797510355710983,
+   "after_std": 0.012901630557679027,
+   "n_utterances": 100
+  },
+  "dec.0": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "dec.1": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "dec.2": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "dec.3": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "dec.4": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  },
+  "dec.5": {
+   "before_mean": 0.0,
+   "before_std": 0.0,
+   "after_mean": 0.0,
+   "after_std": 0.0,
+   "n_utterances": 100
+  }
+ },
+ "kernel_avx512": {
+  "available": true,
+  "build": "g++ -O3 -fopenmp -mavx512f -mavx512bw -mfma -march=native -shared -fPIC",
+  "source": "experiments/cm-transformer/lanemlp_avx512.cpp",
+  "function": "down_skip_avx512_auto2(A,W,M,out,T,I,O)",
+  "omp_threads": 16,
+  "omp_wait_policy": "passive",
+  "max_abs_diff_vs_torch_gate": 0.00015687942504882812,
+  "verified": true,
+  "enc_ms_per_utt": {
+   "dense": 222.12503847501165,
+   "0.2": 424.8753461167022,
+   "0.4": 412.6256429080968
+  },
+  "enc_speedup": {
+   "dense": 1.0,
+   "0.2": 0.5228004884378481,
+   "0.4": 0.5383209751810919
+  }
+ },
+ "iso_check": {
+  "tol_enc_rel_l2": 1e-05,
+  "tol_dec_max_abs": 0.0001,
+  "passed": true,
+  "max_enc_rel_l2": 0.0,
+  "max_dec_max_abs": 0.0,
+  "max_dec_max_abs_tf": 0.0,
+  "min_top1_tf": 1.0,
+  "token_mismatch": 0
+ },
+ "theta": {
+  "0.2": {
+   "enc.0": 0.070458322763443,
+   "enc.1": 0.02134651504456997,
+   "enc.2": 0.03553551062941551,
+   "enc.3": 0.002976013580337167,
+   "enc.4": 0.0,
+   "enc.5": 0.0,
+   "dec.0": 0.013645246624946594,
+   "dec.1": 0.0051657576113939285,
+   "dec.2": 0.046519599854946136,
+   "dec.3": 0.11943478882312775,
+   "dec.4": 0.16976328194141388,
+   "dec.5": 0.09482041001319885
+  },
+  "0.4": {
+   "enc.0": 0.24733291566371918,
+   "enc.1": 0.10035530477762222,
+   "enc.2": 0.13537205755710602,
+   "enc.3": 0.04771173745393753,
+   "enc.4": 1.0003503830412902e-13,
+   "enc.5": 1.8012762505528745e-12,
+   "dec.0": 0.039158158004283905,
+   "dec.1": 0.02207430638372898,
+   "dec.2": 0.0953800231218338,
+   "dec.3": 0.21969974040985107,
+   "dec.4": 0.30773961544036865,
+   "dec.5": 0.2724796235561371
+  }
+ },
+ "note": "LibriSpeech dev-clean, whisper-base, CPU 16 threads, 100 utterances; intervals are sentence-level bootstrap with 1,000 resamples."
+}

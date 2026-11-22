@@ -1,0 +1,150 @@
+{
+  "device": "cuda",
+  "layer": 11,
+  "d_model": 1024,
+  "intermediate": 3584,
+  "n_blocks": 112,
+  "isomorphism_tau0_max_abs": 4.0978193283081055e-08,
+  "operator": {
+    "torch_ms": 0.13563820102717727,
+    "fused_dense_ms": 0.3224101004889235,
+    "dense_vs_torch": 0.42070084287522863
+  },
+  "rows": [
+    {
+      "rate": 0.2,
+      "gate": "plain",
+      "ms": 0.26773624995257705,
+      "speedup_vs_torch": 0.5066112678100267,
+      "speedup_vs_dense_kernel": 1.2042078745258835,
+      "rel_l2": 0.2708151638507843,
+      "cosine": 0.9629395008087158,
+      "kept": 0.8
+    },
+    {
+      "rate": 0.2,
+      "gate": "weighted",
+      "ms": 0.25614290207158774,
+      "speedup_vs_torch": 0.5295411269654023,
+      "speedup_vs_dense_kernel": 1.2587118279733363,
+      "rel_l2": 0.26164087653160095,
+      "cosine": 0.9652887582778931,
+      "kept": 0.8
+    },
+    {
+      "rate": 0.4,
+      "gate": "plain",
+      "ms": 0.1603948010597378,
+      "speedup_vs_torch": 0.8456521042515579,
+      "speedup_vs_dense_kernel": 2.010103185132817,
+      "rel_l2": 0.45642638206481934,
+      "cosine": 0.8900838494300842,
+      "kept": 0.6
+    },
+    {
+      "rate": 0.4,
+      "gate": "weighted",
+      "ms": 0.15319425147026777,
+      "speedup_vs_torch": 0.8854000703381627,
+      "speedup_vs_dense_kernel": 2.1045835427545234,
+      "rel_l2": 0.4278278946876526,
+      "cosine": 0.904160737991333,
+      "kept": 0.6
+    },
+    {
+      "rate": 0.6,
+      "gate": "plain",
+      "ms": 0.09805644804146141,
+      "speedup_vs_torch": 1.3832665136904112,
+      "speedup_vs_dense_kernel": 3.2880050922566375,
+      "rel_l2": 0.6044016480445862,
+      "cosine": 0.796684741973877,
+      "kept": 0.4
+    },
+    {
+      "rate": 0.6,
+      "gate": "weighted",
+      "ms": 0.09067009959835559,
+      "speedup_vs_torch": 1.4959529285620994,
+      "speedup_vs_dense_kernel": 3.5558591191265303,
+      "rel_l2": 0.5892188549041748,
+      "cosine": 0.8079743385314941,
+      "kept": 0.4
+    },
+    {
+      "rate": 0.75,
+      "gate": "plain",
+      "ms": 0.06180380005389452,
+      "speedup_vs_torch": 2.1946579483607356,
+      "speedup_vs_dense_kernel": 5.216671146560139,
+      "rel_l2": 0.7431617975234985,
+      "cosine": 0.669447660446167,
+      "kept": 0.25
+    },
+    {
+      "rate": 0.75,
+      "gate": "weighted",
+      "ms": 0.05990919889882207,
+      "speedup_vs_torch": 2.2640630073563575,
+      "speedup_vs_dense_kernel": 5.381645997861319,
+      "rel_l2": 0.7175235152244568,
+      "cosine": 0.6966236233711243,
+      "kept": 0.25
+    },
+    {
+      "rate": 0.85,
+      "gate": "plain",
+      "ms": 0.04566689895000309,
+      "speedup_vs_torch": 2.9701644768057567,
+      "speedup_vs_dense_kernel": 7.060039282323586,
+      "rel_l2": 0.8437466025352478,
+      "cosine": 0.5384434461593628,
+      "kept": 0.15000000000000002
+    },
+    {
+      "rate": 0.85,
+      "gate": "weighted",
+      "ms": 0.04510435101110488,
+      "speedup_vs_torch": 3.007208794419469,
+      "speedup_vs_dense_kernel": 7.1480931054643655,
+      "rel_l2": 0.8003741502761841,
+      "cosine": 0.5995281934738159,
+      "kept": 0.15000000000000002
+    }
+  ],
+  "chain_24_layers": {
+    "torch_ms": 3.2765206997282803,
+    "rows": [
+      {
+        "rate": 0.0,
+        "ms": 4.358278901781887,
+        "speedup_vs_torch_chain": 0.7517923413273693
+      },
+      {
+        "rate": 0.2,
+        "ms": 3.043004299979657,
+        "speedup_vs_torch_chain": 1.0767387675890516
+      },
+      {
+        "rate": 0.4,
+        "ms": 2.7088836999610066,
+        "speedup_vs_torch_chain": 1.2095464636504862
+      },
+      {
+        "rate": 0.6,
+        "ms": 2.3872294987086207,
+        "speedup_vs_torch_chain": 1.3725201961104805
+      },
+      {
+        "rate": 0.75,
+        "ms": 2.08759669912979,
+        "speedup_vs_torch_chain": 1.5695180496760177
+      }
+    ]
+  },
+  "block_weight_stats": {
+    "min": 0.7100170254707336,
+    "max": 2.152899980545044,
+    "std": 0.21606554090976715
+  }
+}

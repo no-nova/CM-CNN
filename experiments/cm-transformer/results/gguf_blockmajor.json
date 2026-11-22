@@ -1,0 +1,100 @@
+{
+ "layout": "block-major [nb, M*18]",
+ "line_bytes": 64,
+ "block_bytes": 18,
+ "row_major_from": "results/gguf_groups.json",
+ "single_layer": {
+  "layer": "blk.16.ffn_down.weight",
+  "rows": 2560,
+  "blocks": 288,
+  "activation": {
+   "model": "0.90*N(0,1)+0.10*N(0,6); +-12 spikes on 1/1024 elements; per-32-block lognormal(0,0.9) gain; rescaled to std=0.047",
+   "n": 9216,
+   "std": 0.04700000211596489,
+   "abs_max": 1.2834806442260742,
+   "kurtosis": 132.05906478019236,
+   "n_spikes": 9,
+   "block_energy_cv": 2.829767003601882,
+   "real_reference": "Qwen3.5-0.8B hidden states (results/p1_activations.pt): std 0.037-0.047, kurtosis 130-590, top-20% of blocks carry 56-80% of energy"
+  },
+  "repack_ms": 13.989592960570008,
+  "max_abs_err_full": 2.123415470123291e-07,
+  "rel_l2_full": 9.067348401003983e-07,
+  "rows_table": [
+   {
+    "G": 1,
+    "skip": 0.2,
+    "blocks_active": 230,
+    "line_bytes": 10598400,
+    "ms_cold": 1.828135980758816,
+    "speedup_cold": 1.131013247084572,
+    "energy_captured": 0.9955957277864312
+   },
+   {
+    "G": 1,
+    "skip": 0.4,
+    "blocks_active": 173,
+    "line_bytes": 7971840,
+    "ms_cold": 2.1554509876295924,
+    "speedup_cold": 0.9592637566693237,
+    "energy_captured": 0.9795923049933055
+   },
+   {
+    "G": 1,
+    "skip": 0.6,
+    "blocks_active": 115,
+    "line_bytes": 5299200,
+    "ms_cold": 1.1403129901736975,
+    "speedup_cold": 1.8132267452247597,
+    "energy_captured": 0.9384252045105024
+   },
+   {
+    "G": 1,
+    "skip": 0.8,
+    "blocks_active": 58,
+    "line_bytes": 2672640,
+    "ms_cold": 0.4556869971565902,
+    "speedup_cold": 4.537425962583809,
+    "energy_captured": 0.8114060037674949
+   }
+  ],
+  "dense_ms_cold": 2.067646011710167
+ },
+ "stream_all_layers": {
+  "dense_ms_per_token": 62.75764398742467,
+  "rows_table": [
+   {
+    "G": 1,
+    "skip": 0.2,
+    "ms_per_token": 59.02415775926784,
+    "speedup": 1.0632535282143964,
+    "line_bytes_per_token": 339148800,
+    "energy_captured": 0.9970404959554342
+   },
+   {
+    "G": 1,
+    "skip": 0.4,
+    "ms_per_token": 55.92786177294329,
+    "speedup": 1.122117706595132,
+    "line_bytes_per_token": 255098880,
+    "energy_captured": 0.9848384436140518
+   },
+   {
+    "G": 1,
+    "skip": 0.6,
+    "ms_per_token": 46.65504611330107,
+    "speedup": 1.3451416130855105,
+    "line_bytes_per_token": 169574400,
+    "energy_captured": 0.9510590297495318
+   },
+   {
+    "G": 1,
+    "skip": 0.8,
+    "ms_per_token": 22.096782049629837,
+    "speedup": 2.8401259444234768,
+    "line_bytes_per_token": 85524480,
+    "energy_captured": 0.8541678261840026
+   }
+  ]
+ }
+}

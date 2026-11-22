@@ -1,0 +1,57 @@
+{
+ "dtype": "bfloat16",
+ "tokens": 7,
+ "rows": [
+  {
+   "rate": 0.2,
+   "mode": "block",
+   "ms": 15.396141970995814,
+   "speedup": 0.8612948654159683,
+   "max_abs": 2.234375,
+   "rel_l2": 0.108622245490551
+  },
+  {
+   "rate": 0.2,
+   "mode": "coupled",
+   "ms": 16.494956973474473,
+   "speedup": 0.8039195281417448,
+   "max_abs": 2.9765625,
+   "rel_l2": 0.15605765581130981
+  },
+  {
+   "rate": 0.4,
+   "mode": "block",
+   "ms": 15.28200798202306,
+   "speedup": 0.8677274637228999,
+   "max_abs": 3.71875,
+   "rel_l2": 0.21904559433460236
+  },
+  {
+   "rate": 0.4,
+   "mode": "coupled",
+   "ms": 16.95905503584072,
+   "speedup": 0.7819196292959377,
+   "max_abs": 5.0546875,
+   "rel_l2": 0.2777256965637207
+  },
+  {
+   "rate": 0.6,
+   "mode": "block",
+   "ms": 16.3241769769229,
+   "speedup": 0.8123299597633744,
+   "max_abs": 5.5,
+   "rel_l2": 0.35051000118255615
+  },
+  {
+   "rate": 0.6,
+   "mode": "coupled",
+   "ms": 17.02713198028505,
+   "speedup": 0.7787934011545723,
+   "max_abs": 7.5625,
+   "rel_l2": 0.44132208824157715
+  }
+ ],
+ "note": "prefill latency of one forward over the prompt; 'dense' is the unpermuted baseline, 'block' skips only down_proj columns, 'coupled' keeps gate dense and skips active rows of up_proj plus the matching columns of down_proj",
+ "isomorphism_max_abs": 0.15625,
+ "dense_ms": 13.260618026833981
+}

@@ -1,0 +1,409 @@
+{
+  "model": "models/whisper-base",
+  "device": "cuda",
+  "arch": {
+    "n_encoder_layers": 6,
+    "d_model": 512,
+    "encoder_ffn_dim": 2048,
+    "n_decoder_layers": 6,
+    "decoder_ffn_dim": 2048,
+    "activation": "gelu",
+    "vocab": 51865,
+    "n_mels": 80,
+    "heads": 8,
+    "max_source_positions": 1500,
+    "lane": 32,
+    "blocks_per_ffn": 64,
+    "ffn_shape": "fc2(act(fc1(x))), 512 -> 2048 -> 512",
+    "torch": "2.15.0",
+    "load_seconds": 0.21
+  },
+  "control": {
+    "kind": "gaussian noise on the dense encoder output (no FFN skipping)",
+    "target_rel_l2": 0.05,
+    "enc_rel_l2": 0.04999999701976776,
+    "dec_top1_tf": 0.7407407760620117,
+    "token_agree": 0.0,
+    "first_div": 0,
+    "transcript": "...and I'm glad I'm doing it. I'm glad I'm doing it. I'm glad I'm doing"
+  },
+  "calibr": {
+    "audio": {
+      "kinds": [
+        "tones",
+        "chirp",
+        "harmonics",
+        "amnoise"
+      ],
+      "seconds": 5.0,
+      "sample_rate": 16000,
+      "synthetic": true,
+      "eval_clip": "harmonics",
+      "eval_clip_rule": "clip with the most distinct dense greedy tokens",
+      "mel_shape": [
+        4,
+        80,
+        3000
+      ],
+      "enc_frames": 1500
+    },
+    "calib_tokens": {
+      "pi_build": {
+        "enc.0": 6000,
+        "enc.1": 6000,
+        "enc.2": 6000,
+        "enc.3": 6000,
+        "enc.4": 6000,
+        "enc.5": 6000,
+        "dec.0": 12,
+        "dec.1": 12,
+        "dec.2": 12,
+        "dec.3": 12,
+        "dec.4": 12,
+        "dec.5": 12
+      },
+      "theta_clip": {
+        "enc.0": 1500,
+        "enc.1": 1500,
+        "enc.2": 1500,
+        "enc.3": 1500,
+        "enc.4": 1500,
+        "enc.5": 1500,
+        "dec.0": 12,
+        "dec.1": 12,
+        "dec.2": 12,
+        "dec.3": 12,
+        "dec.4": 12,
+        "dec.5": 12
+      }
+    },
+    "theta": {
+      "0": {
+        "enc.0": "-inf",
+        "enc.1": "-inf",
+        "enc.2": "-inf",
+        "enc.3": "-inf",
+        "enc.4": "-inf",
+        "enc.5": "-inf",
+        "dec.0": "-inf",
+        "dec.1": "-inf",
+        "dec.2": "-inf",
+        "dec.3": "-inf",
+        "dec.4": "-inf",
+        "dec.5": "-inf"
+      },
+      "0.2": {
+        "enc.0": 0.054160285741090775,
+        "enc.1": 0.014823890291154385,
+        "enc.2": 0.02949967235326767,
+        "enc.3": 0.003648957470431924,
+        "enc.4": 0.0,
+        "enc.5": 0.0,
+        "dec.0": 0.0032244992908090353,
+        "dec.1": 0.0016326094046235085,
+        "dec.2": 0.018403828144073486,
+        "dec.3": 0.07285477221012115,
+        "dec.4": 0.16157154738903046,
+        "dec.5": 0.18464472889900208
+      },
+      "0.4": {
+        "enc.0": 0.23749084770679474,
+        "enc.1": 0.06958579272031784,
+        "enc.2": 0.1338324397802353,
+        "enc.3": 0.05011571943759918,
+        "enc.4": 0.0,
+        "enc.5": 0.0,
+        "dec.0": 0.013501082547008991,
+        "dec.1": 0.00900671910494566,
+        "dec.2": 0.0472598634660244,
+        "dec.3": 0.15778318047523499,
+        "dec.4": 0.286934494972229,
+        "dec.5": 0.40206292271614075
+      },
+      "0.6": {
+        "enc.0": 0.4824070930480957,
+        "enc.1": 0.20309039950370789,
+        "enc.2": 0.3067382276058197,
+        "enc.3": 0.20117968320846558,
+        "enc.4": 7.025524259574034e-12,
+        "enc.5": 2.922010688966026e-10,
+        "dec.0": 0.038514554500579834,
+        "dec.1": 0.028587564826011658,
+        "dec.2": 0.10009265691041946,
+        "dec.3": 0.2939147651195526,
+        "dec.4": 0.4430162012577057,
+        "dec.5": 0.7909854650497437
+      }
+    },
+    "dead_block_fraction_after_perm": {
+      "enc.0": 0.0,
+      "enc.1": 0.0,
+      "enc.2": 0.0,
+      "enc.3": 0.0,
+      "enc.4": 0.5414896011352539,
+      "enc.5": 0.5054895877838135,
+      "dec.0": 0.0,
+      "dec.1": 0.0,
+      "dec.2": 0.0,
+      "dec.3": 0.0,
+      "dec.4": 0.0,
+      "dec.5": 0.0
+    },
+    "block_error": {
+      "enc.0": {
+        "ours": 6.713919639587402,
+        "natural": 5.613894939422607
+      },
+      "enc.1": {
+        "ours": 2.2522192001342773,
+        "natural": 2.3916821479797363
+      },
+      "enc.2": {
+        "ours": 7.587086200714111,
+        "natural": 6.358273983001709
+      },
+      "enc.3": {
+        "ours": 2708.866943359375,
+        "natural": 230.28965759277344
+      },
+      "enc.4": {
+        "ours": 109.70957946777344,
+        "natural": 99.62129211425781
+      },
+      "enc.5": {
+        "ours": 184.284423828125,
+        "natural": 189.44122314453125
+      },
+      "dec.0": {
+        "ours": 4.970737934112549,
+        "natural": 5.190197467803955
+      },
+      "dec.1": {
+        "ours": 1.4981714487075806,
+        "natural": 1.637575387954712
+      },
+      "dec.2": {
+        "ours": 2292.8837890625,
+        "natural": 2296.146484375
+      },
+      "dec.3": {
+        "ours": 4.362466335296631,
+        "natural": 4.756389617919922
+      },
+      "dec.4": {
+        "ours": 11.697591781616211,
+        "natural": 12.895025253295898
+      },
+      "dec.5": {
+        "ours": 341.52532958984375,
+        "natural": 355.729248046875
+      }
+    },
+    "lane": 32,
+    "blocks_per_ffn": 64,
+    "prompt_ids": [
+      50258,
+      50259,
+      50359,
+      50363
+    ]
+  },
+  "iso_check": {
+    "tol_enc_rel_l2": 1e-05,
+    "tol_dec_max_abs": 0.0001,
+    "tau0": {
+      "enc_rel_l2": 5.784793302154867e-07,
+      "enc_cosine": 1.0,
+      "dec_max_abs": 1.0013580322265625e-05,
+      "dec_top1": 1.0,
+      "dec_top1_tf": 1.0,
+      "dec_max_abs_tf": 2.6702880859375e-05,
+      "token_agree": 1.0
+    },
+    "passed": true
+  },
+  "rows": [
+    {
+      "tau": 0.0,
+      "enc_rel_l2": 5.784793302154867e-07,
+      "enc_cosine": 1.0,
+      "dec_max_abs": 1.0013580322265625e-05,
+      "dec_top1": 1.0,
+      "dec_top1_tf": 1.0,
+      "dec_max_abs_tf": 2.6702880859375e-05,
+      "token_agree": 1.0,
+      "energy_captured": 1.0,
+      "actual_skip": 0.0,
+      "first_div": 24,
+      "text_rouge_l": 1.0,
+      "transcript": "You're the only one who can't be a good friend. You're the only one who can't be a good"
+    },
+    {
+      "tau": 0.2,
+      "enc_rel_l2": 0.06179581210017204,
+      "enc_cosine": 0.9981639385223389,
+      "dec_max_abs": 2.4804205894470215,
+      "dec_top1": 0.75,
+      "dec_top1_tf": 0.8888888955116272,
+      "dec_max_abs_tf": 4.648284912109375,
+      "token_agree": 0.0,
+      "energy_captured": 0.9978399549280584,
+      "actual_skip": 0.13305972044045328,
+      "first_div": 0,
+      "text_rouge_l": 0.0,
+      "transcript": "... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ..."
+    },
+    {
+      "tau": 0.4,
+      "enc_rel_l2": 0.16494135558605194,
+      "enc_cosine": 0.9864782691001892,
+      "dec_max_abs": 7.868459224700928,
+      "dec_top1": 0.75,
+      "dec_top1_tf": 0.8148148059844971,
+      "dec_max_abs_tf": 11.691656112670898,
+      "token_agree": 0.0,
+      "energy_captured": 0.9829498799907468,
+      "actual_skip": 0.26659049604447294,
+      "first_div": 0,
+      "text_rouge_l": 0.0,
+      "transcript": "Ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+    },
+    {
+      "tau": 0.6,
+      "enc_rel_l2": 0.32458797097206116,
+      "enc_cosine": 0.9459189772605896,
+      "dec_max_abs": 16.2232666015625,
+      "dec_top1": 0.75,
+      "dec_top1_tf": 0.6666666865348816,
+      "dec_max_abs_tf": 18.78529930114746,
+      "token_agree": 0.0,
+      "energy_captured": 0.9345253054399907,
+      "actual_skip": 0.5775954805430832,
+      "first_div": 0,
+      "text_rouge_l": 0.0,
+      "transcript": "...or... ...or... ...or... ...or... ...or... ...or... ...or... ...or..."
+    }
+  ],
+  "speed": {
+    "enc_ms_dense": 12.306504009757191,
+    "enc_ms_by_tau": {
+      "0": 12.629500997718424,
+      "0.2": 14.94169601937756,
+      "0.4": 14.900529000442475,
+      "0.6": 14.919303997885436
+    },
+    "dec_prefill_ms_dense": 4.076379002071917,
+    "dec_prefill_ms_by_tau": {
+      "0": 4.0784640004858375,
+      "0.2": 5.596285976935178,
+      "0.4": 5.4707800154574215,
+      "0.6": 5.459178006276488
+    },
+    "decay_ms_per_tok": {
+      "dense": 2.1844857023097575,
+      "0": 2.211406303104013,
+      "0.2": 3.6230428027920425,
+      "0.4": 3.6542355024721473,
+      "0.6": 3.6839592969045043
+    },
+    "decay_n_tokens": 10,
+    "ffn_operator_speedup": {
+      "enc": {
+        "T": 1500,
+        "by_tau": {
+          "0": {
+            "dense_ms": 0.7047489925753325,
+            "partial_ms": 0.7111710147000849,
+            "speedup": 0.9907029481007975,
+            "kept_fraction": 1.0,
+            "layers": 6
+          },
+          "0.2": {
+            "dense_ms": 0.7047489925753325,
+            "partial_ms": 0.624749023700133,
+            "speedup": 1.1292312593159566,
+            "kept_fraction": 0.7998046875,
+            "layers": 6
+          },
+          "0.4": {
+            "dense_ms": 0.7047489925753325,
+            "partial_ms": 0.5054845241829753,
+            "speedup": 1.398566283572145,
+            "kept_fraction": 0.60009765625,
+            "layers": 6
+          },
+          "0.6": {
+            "dense_ms": 0.7047489925753325,
+            "partial_ms": 0.38119652890600264,
+            "speedup": 1.8487374734233422,
+            "kept_fraction": 0.39990234375,
+            "layers": 6
+          }
+        }
+      },
+      "dec": {
+        "T": 4,
+        "by_tau": {
+          "0": {
+            "dense_ms": 0.11774100130423903,
+            "partial_ms": 0.11855250340886414,
+            "speedup": 0.9967472945139306,
+            "kept_fraction": 1.0,
+            "layers": 6
+          },
+          "0.2": {
+            "dense_ms": 0.11774100130423903,
+            "partial_ms": 0.11510151671245694,
+            "speedup": 1.0142553393592424,
+            "kept_fraction": 0.7998046875,
+            "layers": 6
+          },
+          "0.4": {
+            "dense_ms": 0.11774100130423903,
+            "partial_ms": 0.1152070180978626,
+            "speedup": 1.0278495403048757,
+            "kept_fraction": 0.60009765625,
+            "layers": 6
+          },
+          "0.6": {
+            "dense_ms": 0.11774100130423903,
+            "partial_ms": 0.11280199396423995,
+            "speedup": 1.0479255011200315,
+            "kept_fraction": 0.39990234375,
+            "layers": 6
+          }
+        }
+      }
+    },
+    "enc_ms_ceiling_by_tau": {
+      "0": 12.345036142505705,
+      "0.2": 11.826504196505994,
+      "0.4": 11.110917199403048,
+      "0.6": 10.365189227741212
+    },
+    "cpu": {
+      "enc_ms_dense": 224.982550018467,
+      "enc_ms_by_tau": {
+        "0": 250.42301398934796,
+        "0.2": 366.6102800052613,
+        "0.4": 363.62811498111114,
+        "0.6": 367.1456129522994
+      }
+    }
+  },
+  "dense_transcript": "You're the only one who can't be a good friend. You're the only one who can't be a good",
+  "notes": [
+    "tau=0 runs the full permutation + block-energy path with every block kept (theta=-inf); measured max|dlogit| = 1.00e-05 and top-1 agreement 1.0, i.e. the mechanism is isomorphic at the fp32 rounding floor.",
+    "Input audio is synthetic and deterministic (4 kinds: tones, chirp, harmonics, AM noise; 5 s at 16 kHz), zero-padded by the feature extractor to the 30 s window, so the encoder always runs the full T=1500 frames (no truncation was needed; 8 GB VRAM is ample). The evaluated clip is 'harmonics' -- the one whose dense greedy transcript is the most diverse of the four, because tone/chirp inputs make whisper emit <|endoftext|> immediately and token agreement would then be trivially 1.0.",
+    "<|endoftext|> (50257) is added to whisper's suppress_tokens during the probe so the greedy 24-token comparison is not dominated by repeated end-of-text tokens.",
+    "No human reference transcript exists for synthetic audio, so WER is NOT reported: fidelity is measured as dense-vs-gated agreement (encoder rel-L2/cosine, decoder max|dlogit|, top-1, greedy token agreement, first divergence) plus ROUGE-L against the dense transcript. Absolute transcripts of synthetic audio are meaningless.",
+    "Greedy decode is a manual KV-cache loop on proj_out with whisper's suppress_tokens applied; no beam search or timestamp rules.",
+    "Block energy is the plain L2 energy of the permuted activation, so energy_captured and actual_skip are measured on exactly the quantity the gate thresholds. p1_v2 additionally scales channels by ||W_down[:,i]|| before thresholding.",
+    "The per-token gate still executes dense GEMMs inside PyTorch (mask + gather), so the honest encoder wall-clock number is 'no speedup'; the achievable gain is shown by ffn_operator_speedup, which times fc1+fc2 truncated to the kept-lane count in pi-order (union-of-blocks shape) against the dense pair on the same shapes.",
+    "alpha = min(1.5, ||a||/||a_keep||) is applied per token; blocks are chosen per token by the calibrated per-layer threshold theta_l (quantile of calibration block energies). theta_l is calibrated in-sample on the evaluated clip so that tau matches the measured skip rate; pi is built from all four clips.",
+    "Note the encoder is NOT FFN-bound: the dense FFN (fc1+fc2) is only ~4.2 ms of the 12.3 ms encoder pass, so a perfectly block-sparse FFN caps end-to-end encoder speedup at enc_ms_ceiling_by_tau.",
+    "The two deepest encoder layers are mostly dead on this input: 54% / 51% of their blocks (in pi order) have exactly zero energy because ~86% / ~89% of their GELU activations are exactly 0 (pre-permutation all-zero blocks: ~1% / ~3%). So pi turns scattered dead channels into fully dead 32-lane blocks, theta_l collapses to ~0 there, and those layers are skipped for free -- their theta is not a quantile failure but the requested rate being satisfied at zero energy.",
+    "Control for the token-agreement column: adding isotropic gaussian noise to the DENSE encoder output at 0.050 relative L2 (comparable to tau=0.2, no FFN skipping at all) already yields token agreement 0.000 (first divergence at 0) and teacher-forced top-1 0.741. Free-running agreement is a step function of any encoder perturbation on this prompt, so token_agree = 0 at every tau is a property of greedy decoding, not of the gate; dec_top1_tf and first_div are the graded fidelity signal."
+  ],
+  "runtime_seconds": 11.5
+}
