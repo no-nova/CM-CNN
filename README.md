@@ -10,8 +10,8 @@ contiguous?), load-port throughput (load µops per FMA), and convolution topolog
 arithmetic one skipping decision controls).
 
 **Manuscript:** [`paper1_bundle/CM_CNN_Accel_Paper1_Final.pdf`](paper1_bundle/CM_CNN_Accel_Paper1_Final.pdf)
-(31 pages, English) · Chinese edition `CM_CNN_Accel_Paper1_ZH.pdf` · TeX-free build via
-`paper1_bundle/` sources and `file/cm_cnn_accel_paper/build_paper_pdf.sh`.
+(31 pages, English) · Chinese edition `paper1_bundle/CM_CNN_Accel_Paper1_ZH.pdf` · Markdown
+source `CM_CNN_Accel_Paper1_v2.md` · TeX-free build via `file/cm_cnn_accel_paper/build_paper_pdf.sh`.
 
 **Release:** [paper1-v1.0.0](https://github.com/no-nova/CM-CNN/releases/tag/paper1-v1.0.0)
 carries the compiled PDF as a standalone asset.
@@ -42,14 +42,14 @@ majority filter and a global-change fallback.
 
 | Path | Contents |
 |---|---|
-| `paper1_bundle/` | manuscript (EN/ZH, Markdown + PDF), figures, and the 14 result JSONs behind the tables |
+| `paper1_bundle/` | manuscript PDFs (EN/ZH), Markdown source, figures, and the 14 result JSONs behind the tables |
 | `native/` | AVX-512 kernels: `conv_tile`, structured pruning, production and RGB pipelines |
 | `experiments/cm-cnn-{accel,enterprise,production,rgb-v4,universal}/` | compiled drivers, datasets, per-phase result JSONs, training logs |
 | `src/lib/vision/` | TypeScript models and dataset generators used by the benchmark drivers |
 | `src/__tests__/cm-cnn-*.test.ts` | acceptance tests that pin the published numbers |
 | `scripts/` | dataset generation (`gen-cm-cnn-dataset.ts`, `gen-cm-rgb-dataset.ts`), video stream building, PyTorch cross-checks |
 | `docs/CM_CNN_ACCELERATION.md` | methodology, phase notes, and the reproduction recipe |
-| `file/cm_cnn_accel_paper/` | paper working directory: Markdown sources, figure scripts, PDF build |
+| `file/cm_cnn_accel_paper/` | paper working directory: Markdown source, figure scripts, PDF build |
 | `data/real_videos/` | real-video frame manifests (frames themselves are fetched) |
 
 ## Running things
@@ -69,30 +69,15 @@ node --test src/__tests__/cm-cnn-accel.test.ts
 node --test src/__tests__/cm-cnn-production.test.ts
 ```
 
-`package.json` carries the same entry points (`bench:cm-cnn`, `test:cm-cnn`,
-`bench:cm-cnn:universal`, `bench:cm-cnn:enterprise`, plus the `*:universal` / `*:enterprise`
-test aliases). Its `name` field and the Vite/React scripts belong to the UCZ project described
-below, not to this paper.
+`package.json` carries the same entry points (`bench:cm-cnn`, `bench:cm-cnn:universal`,
+`bench:cm-cnn:enterprise`, `test:cm-cnn`, `test:cm-cnn:universal`, `test:cm-cnn:production`,
+`test:cm-cnn:enterprise`, `test:cm-cnn:all`). It has no runtime dependencies; the TypeScript
+sources run on Node's type stripping.
 
 Weight and dataset files larger than 5 MB are not committed (exported `.bin` weights,
 `dataset/*.bin` streams): `paper1_bundle/08_PhaseE_Model_Export_SHA256.json` and the per-phase
 `weights.sha256` files pin their digests, and the generators under `scripts/` rebuild the
 derived ones.
-
-## Other projects in this repository
-
-Two unrelated projects were developed in the same tree and are still here, which is why the
-root `README.md` used to describe a compression engine:
-
-| Project | Where | What it is |
-|---|---|---|
-| **UCZ** (Universal Context-Mixing, Zero-Prior) | `src/` (React app + `src/lib/*.ts` codec), `tests/*.test.ts`, `docs/UCZ_V*.md`, `BENCHMARKS.md`, `CONSTITUTION.md`, `PRIOR_REGISTRY.md`, `index.html`, `vite.config.ts`, `benchmark/` | TypeScript zero-prior compression engine |
-| **SNN** | `src/lib/snn/`, `src/lib/sequence/`, `docs/SNN_*.md`, `tests/snn.test.ts` | spiking-neural-network experiments |
-
-Neither is used by the CM-CNN numbers. `src/lib/codec.ts` belongs to UCZ; the CM-CNN
-experiments never modify it, and `docs/CM_CNN_ACCELERATION.md` asserts its SHA-256 as a
-provenance check. Splitting these two projects into their own repositories is pending; until
-then the file lists above are the boundary.
 
 ## Citation
 

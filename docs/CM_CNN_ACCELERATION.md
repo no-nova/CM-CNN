@@ -4,8 +4,9 @@ Hardware: AMD Ryzen 9 9955HX (Zen 5, AVX-512F/BW/DQ/VL/VNNI), single core
 (`OMP_NUM_THREADS=1`), g++ 16.2.1, `-O3 -march=native -mavx512f -mfma -std=c++20`.
 Weights: `experiments/cm-cnn-accel/pretrained_vgg4.bin`, read-only, SHA-256
 `f074cbc21b22c4a23fe2198642e9feab893f9e30feeca868bccf9362a070b5e4`.
-`src/lib/codec.ts` is untouched (`git diff -- src/lib/codec.ts` is empty; its
-SHA-256 is asserted in the test suite).
+The repository holding the codec (`src/lib/codec.ts`) that these experiments ran
+alongside is a separate project; where that tree was present, the file was never
+modified by the CM-CNN work and its SHA-256 was asserted by the test suite.
 
 > **Status note (v2 attempt).** Section 8 reports a follow-up per-channel
 > (`C_in`-vectorised) output gate that fixes the 16-lane granularity problem
@@ -1398,7 +1399,7 @@ it also lands within noise of S1.
 | S2 >= 2.5x vs M0 (ResNet) / >= 2.0x (MobileNetV2) | 2.45x | 1.70x | ResNet yes, MobileNetV2 no |
 | S2 within 0.50 pp of M0 | +0.00 pp | +1.39 pp | yes |
 | S2 clearly better than S2-random at equal skip rate | 97.78% vs 96.39% | n/a (both skip nothing) | yes (ResNet) |
-| `src/lib/codec.ts` untouched | — | — | yes |
+| codec source unmodified | — | — | yes |
 
 What the experiment establishes, in one sentence: **on a dense full-canvas workload, enterprise structured pruning is
 worth 2.40x on ResNet-18 and 1.70x on MobileNetV2 with no accuracy cost, while content-adaptive 2x2
@@ -1574,7 +1575,7 @@ before it can turn MACs into milliseconds. Phase D does not claim more than that
 ## 14.7 Phase D.2 - turning the tile gate into wall clock
 
 Phase D.1 removed 43-57% of the MACs on four official production models and converted almost none of it into time.
-D.2 attacks the two reasons with kernel surgery; no weights, no retraining, `src/lib/codec.ts` untouched.
+D.2 attacks the two reasons with kernel surgery; no weights, no retraining, and no change to the codec source.
 
 ### 14.7.1 Surgery 1 - four-smooth-tile weight-shared batching
 

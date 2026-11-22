@@ -7,7 +7,7 @@
 以及卷积拓扑（一次跳过决策能控制多少算术量），并给出在这些约束下确实能跑快的方案。
 
 **手稿：** [`paper1_bundle/CM_CNN_Accel_Paper1_Final.pdf`](paper1_bundle/CM_CNN_Accel_Paper1_Final.pdf)
-（31 页英文）· 中文版 `CM_CNN_Accel_Paper1_ZH.pdf`
+（31 页英文）· 中文版 `paper1_bundle/CM_CNN_Accel_Paper1_ZH.pdf` · Markdown 源 `CM_CNN_Accel_Paper1_v2.md`
 
 **Release：** [paper1-v1.0.0](https://github.com/no-nova/CM-CNN/releases/tag/paper1-v1.0.0)，PDF 作为独立附件。
 
@@ -34,7 +34,7 @@ gather 吞吐而非 MAC 数；帧间变化在空间上散乱时会触发 halo pe
 
 | 路径 | 内容 |
 |---|---|
-| `paper1_bundle/` | 手稿（中英文 Markdown + PDF）、图、以及支撑各表格的 14 份结果 JSON |
+| `paper1_bundle/` | 手稿 PDF（中英文）、Markdown 源、图、以及支撑各表格的 14 份结果 JSON |
 | `native/` | AVX-512 内核源码：`conv_tile`、结构化剪枝、production 与 RGB 流水线 |
 | `experiments/cm-cnn-{accel,enterprise,production,rgb-v4,universal}/` | 已编译驱动、数据集、分阶段结果 JSON、训练日志 |
 | `src/lib/vision/` | 基准驱动使用的 TypeScript 模型与数据集生成器 |
@@ -57,22 +57,13 @@ node --test src/__tests__/cm-cnn-accel.test.ts
 node --test src/__tests__/cm-cnn-production.test.ts
 ```
 
+`package.json` 提供同样的入口：`bench:cm-cnn`、`bench:cm-cnn:universal`、`bench:cm-cnn:enterprise`、
+`test:cm-cnn`、`test:cm-cnn:universal`、`test:cm-cnn:production`、`test:cm-cnn:enterprise`、
+`test:cm-cnn:all`。没有运行时依赖，TypeScript 源码直接依赖 Node 的类型剥离运行。
+
 超过 5 MB 的权重与数据集（导出的 `.bin`、`dataset/*.bin`）不入库：摘要记录在
 `paper1_bundle/08_PhaseE_Model_Export_SHA256.json` 与各阶段的 `weights.sha256` 中，派生数据由
 `scripts/` 重建。
-
-## 本仓库中的其他项目
-
-同一个工作树里还开发了两个无关项目，这也是根目录 `README.md` 之前写成压缩引擎文档的原因：
-
-| 项目 | 位置 | 内容 |
-|---|---|---|
-| **UCZ**（Universal Context-Mixing, Zero-Prior） | `src/`（React 应用 + `src/lib/*.ts` 编解码器）、`tests/*.test.ts`、`docs/UCZ_V*.md`、`BENCHMARKS.md`、`CONSTITUTION.md`、`PRIOR_REGISTRY.md`、`index.html`、`vite.config.ts`、`benchmark/` | TypeScript 零先验压缩引擎 |
-| **SNN** | `src/lib/snn/`、`src/lib/sequence/`、`docs/SNN_*.md`、`tests/snn.test.ts` | 脉冲神经网络实验 |
-
-两者都不参与 CM-CNN 的任何数字。`src/lib/codec.ts` 属于 UCZ，CM-CNN 实验从不修改它，
-`docs/CM_CNN_ACCELERATION.md` 以它的 SHA-256 作为溯源校验。将这两个项目拆分为独立仓库的工作尚未进行，
-在此之前以上文件清单即为边界。
 
 ## 引用
 
