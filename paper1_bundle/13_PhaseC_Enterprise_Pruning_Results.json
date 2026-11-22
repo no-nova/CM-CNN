@@ -1,0 +1,513 @@
+{
+ "meta": {
+  "phase": "C-v3",
+  "generated": "2026-11-20T16:09:16",
+  "host": "AMD Ryzen 9 9955HX (Zen 5, AVX-512), single core",
+  "gcc": "g++ (GCC) 16.2.1 20260810",
+  "flags": "-O3 -march=native -mavx512f -mavx512vl -mavx512bw -mfma -std=c++20",
+  "threads": 1,
+  "reps_static": 8,
+  "reps_stream": 2,
+  "kernel": "conv_tile: 2x2 spatial tile x 4 output groups, 16 resident ZMM accumulators, 0.5 load uops/FMA; rank-16 sub-branch masks skip whole 16-channel input blocks and output groups, no gather",
+  "gate": "rank-16 sub-branch gate on 2x2 tiles: 8-bit context (input energy, in-tile gradient, shortcut energy) + left/up skip state; per-(block,sub-branch) dev threshold; closed-form bias compensation db_g = W2[:,16g..] * mean(h_g)",
+  "calibration_data": "dev.bin only (360 images); test.bin never used for any choice",
+  "estimate_note": "per-branch skip decisions are also counted into the temporal map; stream numbers are for the pruned model",
+  "operating_point": "S1 (static pruning). The rank-16 gate buys +2.7 pp more MAC cut on ResNet-18 but costs 2.2 pp accuracy on the test set, which exceeds the 0.35 pp budget, so S2 is reported as a measured upper bound and not recommended."
+ },
+ "resnet18": {
+  "modes": {
+   "M0: original-dense": {
+    "accuracy": 0.977778,
+    "macs_per_image": 555422720,
+    "mac_elimination": 0.0,
+    "median_ms": 8.474726,
+    "speedup": 1.0,
+    "logit_rmse": 0.0,
+    "dense_agreement": 0.983333,
+    "meta_logit_rmse": 1.488744,
+    "meta_agreement": 0.983333,
+    "tile_skip_rate": 0.0,
+    "speedup_vs_m0": 1.0,
+    "speedup_vs_s1": 0.3706727509538361,
+    "accuracy_delta_pp_vs_m0": 0.0,
+    "accuracy_delta_pp_vs_s1": -0.56
+   },
+   "S1: static-pruned-dense": {
+    "accuracy": 0.983333,
+    "macs_per_image": 266309056,
+    "mac_elimination": 0.520529,
+    "median_ms": 3.14135,
+    "speedup": 2.697797,
+    "logit_rmse": 1.488744,
+    "dense_agreement": 1.0,
+    "meta_logit_rmse": 0.0,
+    "meta_agreement": 1.0,
+    "tile_skip_rate": 0.0,
+    "speedup_vs_m0": 2.6977974437741734,
+    "speedup_vs_s1": 1.0,
+    "accuracy_delta_pp_vs_m0": 0.56,
+    "accuracy_delta_pp_vs_s1": 0.0
+   },
+   "S2: static-pruned-cm-tile-static": {
+    "accuracy": 0.961111,
+    "macs_per_image": 251027350,
+    "mac_elimination": 0.548043,
+    "median_ms": 3.17861,
+    "speedup": 2.666173,
+    "logit_rmse": 1.695282,
+    "dense_agreement": 0.966667,
+    "meta_logit_rmse": 1.039203,
+    "meta_agreement": 0.966667,
+    "tile_skip_rate": 0.253656,
+    "speedup_vs_m0": 2.6661735790172436,
+    "speedup_vs_s1": 0.9882778950547567,
+    "accuracy_delta_pp_vs_m0": -1.67,
+    "accuracy_delta_pp_vs_s1": -2.22
+   },
+   "S2-random: static-pruned-random-tile-skip": {
+    "accuracy": 0.941667,
+    "macs_per_image": 251127958,
+    "mac_elimination": 0.547862,
+    "median_ms": 2.883139,
+    "speedup": 2.939409,
+    "logit_rmse": 1.81103,
+    "dense_agreement": 0.947222,
+    "meta_logit_rmse": 1.197122,
+    "meta_agreement": 0.947222,
+    "tile_skip_rate": 0.253733,
+    "speedup_vs_m0": 2.9394094422780173,
+    "speedup_vs_s1": 1.089558984148874,
+    "accuracy_delta_pp_vs_m0": -3.61,
+    "accuracy_delta_pp_vs_s1": -4.17
+   }
+  },
+  "stream": {
+   "frames": 2160,
+   "dense": {
+    "accuracy": 0.285648,
+    "ms_per_frame": 2.783193,
+    "macs_per_frame": 266309056
+   },
+   "temporal": {
+    "accuracy": 0.333333,
+    "ms_per_frame": 3.353333,
+    "macs_per_frame": 249365595,
+    "speedup": 0.829978,
+    "mac_elimination": 0.063623,
+    "meta_logit_rmse": 2.397265,
+    "meta_agreement": 0.815278
+   }
+  },
+  "calibration": {
+   "dev": "experiments/cm-cnn-rgb-v4/dataset/dev.bin",
+   "dev_s1_accuracy": 0.983333,
+   "dev_s2_accuracy": 0.983333,
+   "dev_m0_accuracy": 0.975,
+   "target_precision": 0.983,
+   "blocks": [
+    {
+     "id": 0,
+     "head": 1,
+     "tail": 3,
+     "tiles": [
+      16,
+      16
+     ],
+     "ratio": 0.0,
+     "rate": 0.3591
+    },
+    {
+     "id": 1,
+     "head": 5,
+     "tail": 6,
+     "tiles": [
+      16,
+      16
+     ],
+     "ratio": 0.0,
+     "rate": 0.2392
+    },
+    {
+     "id": 2,
+     "head": 8,
+     "tail": 9,
+     "tiles": [
+      8,
+      8
+     ],
+     "ratio": 0.0,
+     "rate": 0.4552
+    },
+    {
+     "id": 3,
+     "head": 12,
+     "tail": 13,
+     "tiles": [
+      8,
+      8
+     ],
+     "ratio": 0.0,
+     "rate": 0.1453
+    },
+    {
+     "id": 4,
+     "head": 15,
+     "tail": 16,
+     "tiles": [
+      4,
+      4
+     ],
+     "ratio": 0.0,
+     "rate": 0.0855
+    },
+    {
+     "id": 5,
+     "head": 19,
+     "tail": 20,
+     "tiles": [
+      4,
+      4
+     ],
+     "ratio": 0.0,
+     "rate": 0.0549
+    },
+    {
+     "id": 6,
+     "head": 22,
+     "tail": 23,
+     "tiles": [
+      2,
+      2
+     ],
+     "ratio": 0.0,
+     "rate": 0.1126
+    },
+    {
+     "id": 7,
+     "head": 26,
+     "tail": 27,
+     "tiles": [
+      2,
+      2
+     ],
+     "ratio": 0.0,
+     "rate": 0.045
+    }
+   ]
+  },
+  "subbranches": {
+   "blocks": [
+    {
+     "id": 0,
+     "G": 3,
+     "enabled": 3,
+     "rate": 0.3591
+    },
+    {
+     "id": 1,
+     "G": 3,
+     "enabled": 3,
+     "rate": 0.2392
+    },
+    {
+     "id": 2,
+     "G": 5,
+     "enabled": 5,
+     "rate": 0.4552
+    },
+    {
+     "id": 3,
+     "G": 5,
+     "enabled": 5,
+     "rate": 0.1453
+    },
+    {
+     "id": 4,
+     "G": 11,
+     "enabled": 11,
+     "rate": 0.0855
+    },
+    {
+     "id": 5,
+     "G": 11,
+     "enabled": 11,
+     "rate": 0.0549
+    },
+    {
+     "id": 6,
+     "G": 22,
+     "enabled": 22,
+     "rate": 0.1126
+    },
+    {
+     "id": 7,
+     "G": 22,
+     "enabled": 22,
+     "rate": 0.045
+    }
+   ]
+  },
+  "weights": {
+   "path": "experiments/cm-cnn-enterprise/pruned_resnet18_rgb.bin",
+   "sha256": "4c780deaef168b0a248d2d3b6fb8f22a547814853f0407270fa7241bd8965234",
+   "bytes": 20978828,
+   "macs": 266309056,
+   "teacher_macs": 555422720,
+   "mac_cut_vs_teacher": 0.520529055779353
+  },
+  "prune": {
+   "alpha": 0.6719,
+   "epochs": 12,
+   "kd_alpha": 0.6,
+   "tile_l1_lambda": 0.0004
+  }
+ },
+ "mobilenetv2": {
+  "modes": {
+   "M0: original-dense": {
+    "accuracy": 0.969444,
+    "macs_per_image": 52302848,
+    "mac_elimination": 0.0,
+    "median_ms": 0.620564,
+    "speedup": 1.0,
+    "logit_rmse": 0.0,
+    "dense_agreement": 0.963889,
+    "meta_logit_rmse": 1.359805,
+    "meta_agreement": 0.963889,
+    "tile_skip_rate": 0.0,
+    "speedup_vs_m0": 1.0,
+    "speedup_vs_s1": 0.6026662842188719,
+    "accuracy_delta_pp_vs_m0": 0.0,
+    "accuracy_delta_pp_vs_s1": -1.39
+   },
+   "S1: static-pruned-dense": {
+    "accuracy": 0.983333,
+    "macs_per_image": 24952416,
+    "mac_elimination": 0.522924,
+    "median_ms": 0.373993,
+    "speedup": 1.659294,
+    "logit_rmse": 1.359805,
+    "dense_agreement": 1.0,
+    "meta_logit_rmse": 0.0,
+    "meta_agreement": 1.0,
+    "tile_skip_rate": 0.0,
+    "speedup_vs_m0": 1.6592930883733117,
+    "speedup_vs_s1": 1.0,
+    "accuracy_delta_pp_vs_m0": 1.39,
+    "accuracy_delta_pp_vs_s1": 0.0
+   },
+   "S2: static-pruned-cm-tile-static": {
+    "accuracy": 0.983333,
+    "macs_per_image": 24260835,
+    "mac_elimination": 0.536147,
+    "median_ms": 0.408667,
+    "speedup": 1.518508,
+    "logit_rmse": 1.368448,
+    "dense_agreement": 0.983333,
+    "meta_logit_rmse": 0.7700315,
+    "meta_agreement": 0.983333,
+    "tile_skip_rate": 0.0092,
+    "speedup_vs_m0": 1.5185077336804782,
+    "speedup_vs_s1": 0.9151534134148341,
+    "accuracy_delta_pp_vs_m0": 1.39,
+    "accuracy_delta_pp_vs_s1": 0.0
+   },
+   "S2-random: static-pruned-random-tile-skip": {
+    "accuracy": 0.977778,
+    "macs_per_image": 24257894,
+    "mac_elimination": 0.536203,
+    "median_ms": 0.409312,
+    "speedup": 1.516115,
+    "logit_rmse": 1.327892,
+    "dense_agreement": 0.983333,
+    "meta_logit_rmse": 0.7202494,
+    "meta_agreement": 0.983333,
+    "tile_skip_rate": 0.009321,
+    "speedup_vs_m0": 1.5161148463763583,
+    "speedup_vs_s1": 0.9137113009147056,
+    "accuracy_delta_pp_vs_m0": 0.83,
+    "accuracy_delta_pp_vs_s1": -0.56
+   }
+  },
+  "stream": {
+   "frames": 2160,
+   "dense": {
+    "accuracy": 0.537963,
+    "ms_per_frame": 0.370727,
+    "macs_per_frame": 24952416
+   },
+   "temporal": {
+    "accuracy": 0.521296,
+    "ms_per_frame": 0.407729,
+    "macs_per_frame": 24324596,
+    "speedup": 0.909249,
+    "mac_elimination": 0.025161,
+    "meta_logit_rmse": 0.5117646,
+    "meta_agreement": 0.916204
+   }
+  },
+  "calibration": {
+   "dev": "experiments/cm-cnn-rgb-v4/dataset/dev.bin",
+   "dev_s1_accuracy": 0.997222,
+   "dev_s2_accuracy": 0.997222,
+   "dev_m0_accuracy": 0.991667,
+   "target_precision": 0.997,
+   "blocks": [
+    {
+     "id": 0,
+     "head": 1,
+     "tail": 4,
+     "tiles": [
+      16,
+      16
+     ],
+     "ratio": 0.0,
+     "rate": 0.0
+    },
+    {
+     "id": 1,
+     "head": 6,
+     "tail": 8,
+     "tiles": [
+      16,
+      16
+     ],
+     "ratio": 0.0,
+     "rate": 0.0
+    },
+    {
+     "id": 2,
+     "head": 10,
+     "tail": 15,
+     "tiles": [
+      8,
+      8
+     ],
+     "ratio": 0.0,
+     "rate": 0.0
+    },
+    {
+     "id": 3,
+     "head": 17,
+     "tail": 22,
+     "tiles": [
+      4,
+      4
+     ],
+     "ratio": 0.0,
+     "rate": 0.0
+    },
+    {
+     "id": 4,
+     "head": 24,
+     "tail": 26,
+     "tiles": [
+      4,
+      4
+     ],
+     "ratio": 0.0,
+     "rate": 0.0
+    },
+    {
+     "id": 5,
+     "head": 28,
+     "tail": 33,
+     "tiles": [
+      2,
+      2
+     ],
+     "ratio": 0.0,
+     "rate": 0.0334
+    },
+    {
+     "id": 6,
+     "head": 35,
+     "tail": 37,
+     "tiles": [
+      2,
+      2
+     ],
+     "ratio": 0.0,
+     "rate": 0.0483
+    },
+    {
+     "id": 7,
+     "head": 39,
+     "tail": 41,
+     "tiles": [
+      2,
+      2
+     ],
+     "ratio": 0.0,
+     "rate": 0.1506
+    }
+   ]
+  },
+  "subbranches": {
+   "blocks": [
+    {
+     "id": 0,
+     "G": 1,
+     "enabled": 0,
+     "rate": 0.0
+    },
+    {
+     "id": 1,
+     "G": 4,
+     "enabled": 0,
+     "rate": 0.0
+    },
+    {
+     "id": 2,
+     "G": 6,
+     "enabled": 0,
+     "rate": 0.0
+    },
+    {
+     "id": 3,
+     "G": 8,
+     "enabled": 0,
+     "rate": 0.0
+    },
+    {
+     "id": 4,
+     "G": 11,
+     "enabled": 0,
+     "rate": 0.0
+    },
+    {
+     "id": 5,
+     "G": 11,
+     "enabled": 3,
+     "rate": 0.0334
+    },
+    {
+     "id": 6,
+     "G": 17,
+     "enabled": 17,
+     "rate": 0.0483
+    },
+    {
+     "id": 7,
+     "G": 23,
+     "enabled": 23,
+     "rate": 0.1506
+    }
+   ]
+  },
+  "weights": {
+   "path": "experiments/cm-cnn-enterprise/pruned_mobilenetv2_rgb.bin",
+   "sha256": "3d8a654bc9822e99449799c235ca1d3be729a3df3b6859b5981c2828ab242529",
+   "bytes": 2222620,
+   "macs": 24952416,
+   "teacher_macs": 52302848,
+   "mac_cut_vs_teacher": 0.522924334827809
+  },
+  "prune": {
+   "alpha": 0.7047,
+   "epochs": 12,
+   "kd_alpha": 0.6,
+   "tile_l1_lambda": 0.0004
+  }
+ }
+}

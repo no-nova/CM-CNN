@@ -1,0 +1,32 @@
+{
+  "resnet18": {
+    "alpha": 0.6719,
+    "mac_cut": 0.520531,
+    "teacher_test": 0.9777777791023254,
+    "teacher_dev": 0.9750000238418579,
+    "pruned_test": 0.9833333492279053,
+    "pruned_dev": 0.9833333492279053,
+    "delta_pp": 0.5556,
+    "dense_macs": 266305536,
+    "teacher_macs": 555417600,
+    "nodes": 31,
+    "sha256": "4c780deaef168b0a248d2d3b6fb8f22a547814853f0407270fa7241bd8965234",
+    "path": "/home/user/Downloads/CNN-CM/experiments/cm-cnn-enterprise/pruned_resnet18_rgb.bin",
+    "secs": 41.6
+  },
+  "mobilenetv2": {
+    "alpha": 0.7047,
+    "mac_cut": 0.505609,
+    "teacher_test": 0.9694444537162781,
+    "teacher_dev": 0.9916666746139526,
+    "pruned_test": 0.9833333492279053,
+    "pruned_dev": 0.9972222447395325,
+    "delta_pp": 1.3889,
+    "dense_macs": 206503936,
+    "teacher_macs": 417693696,
+    "nodes": 46,
+    "sha256": "3d8a654bc9822e99449799c235ca1d3be729a3df3b6859b5981c2828ab242529",
+    "path": "/home/user/Downloads/CNN-CM/experiments/cm-cnn-enterprise/pruned_mobilenetv2_rgb.bin",
+    "secs": 13.3
+  }
+}
