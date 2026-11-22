@@ -1,0 +1,565 @@
+{
+  "provenance": {
+    "task": "P6-T4 50+ sample SmolVLM2 evaluation with end-to-end timing",
+    "model": "SmolVLM2-256M-Video-Instruct",
+    "model_dir": "models/SmolVLM2-256M-Video-Instruct",
+    "script": "experiments/cm-transformer/bench_p6_smolvlm.py",
+    "script_sha256": "44f80efcbea6f13acc431873116d8d2874e01fcaf72286b2e8890e918fc8be40",
+    "data_generator": "experiments/cm-transformer/make_p6_vlm.py",
+    "dataset": "data/p6_vlm (synthetic-controlled)",
+    "device": "cuda",
+    "dtype": "float32",
+    "transformers": "5.23.0",
+    "torch": "2.15.0",
+    "python": "3.14.10",
+    "threads": 16,
+    "nproc": 32,
+    "kernel": "experiments/cm-transformer/lanemlp_avx512.cpp -> down_skip_avx512_auto2 (AVX-512, OpenMP)",
+    "build": "g++ -O3 -fopenmp -mavx512f -mavx512bw -mfma -march=native -shared -fPIC",
+    "timestamp": "2026-11-22T05:58:09",
+    "git_commit": "545c726"
+  },
+  "seed": 1234,
+  "n_samples": 52,
+  "manifest_sha256": "458bf2ff51d9401f05c2c1c268ac472bdfa1dfab70bff5ddbfc14ada1cc420a9",
+  "manifest_counts": {
+    "ocr": 16,
+    "counting": 14,
+    "scene": 14,
+    "motion": 14
+  },
+  "arch": {
+    "vision": {
+      "n_layers": 12,
+      "d_model": 768,
+      "ffn_dim": 3072,
+      "activation": "gelu_pytorch_tanh",
+      "ffn_kind": "gelu fc1/fc2 (bias)",
+      "patch_size": 16,
+      "n_heads": 12,
+      "image_size_used": 512,
+      "n_patches_per_image": 1024,
+      "n_image_tokens_one_image": 64,
+      "pixel_shuffle": 4,
+      "lanes": 96
+    },
+    "text": {
+      "n_layers": 30,
+      "d_model": 576,
+      "ffn_dim": 1536,
+      "activation": "silu",
+      "ffn_kind": "swiglu gate/up/down (no bias)",
+      "n_heads": 9,
+      "n_kv_heads": 3,
+      "vocab_size": 49280,
+      "lanes": 48,
+      "rms_norm_eps": 1e-05
+    },
+    "connector": {
+      "in_features": 12288,
+      "out_features": 576,
+      "image_seq_len": 64
+    },
+    "lane": 32
+  },
+  "rows": [
+    {
+      "tower": "dense",
+      "tau": 0.0,
+      "acc": 0.27952507317916525,
+      "acc_ci_lo": 0.17166901220050199,
+      "acc_ci_hi": 0.39725823209718675,
+      "rouge_l": 1.0,
+      "first_div": 8.0,
+      "feat_rel_l2": 0.0,
+      "logit_rel_l2": 0.0,
+      "acc_by_family": {
+        "ocr": 0.46153846153846156,
+        "counting": 0.15384615384615385,
+        "scene": 0.19502336963973793,
+        "motion": 0.3076923076923077
+      },
+      "n_samples": 52,
+      "exact_match_ocr": 0.46153846153846156,
+      "exact_match_motion": 0.3076923076923077,
+      "mean_decode_ms_per_token": 9.03544642194622
+    },
+    {
+      "tower": "text",
+      "tau": 0.2,
+      "acc": 0.1914309366431119,
+      "acc_ci_lo": 0.10283473570194109,
+      "acc_ci_hi": 0.28804516453310447,
+      "rouge_l": 0.44396506271506275,
+      "first_div": 2.3461538461538463,
+      "feat_rel_l2": 0.0,
+      "logit_rel_l2": 0.25783860970001954,
+      "acc_by_family": {
+        "ocr": 0.0,
+        "counting": 0.07692307692307693,
+        "scene": 0.2272622081109092,
+        "motion": 0.46153846153846156
+      },
+      "n_samples": 52,
+      "exact_match_ocr": 0.0,
+      "exact_match_motion": 0.46153846153846156,
+      "mean_decode_ms_per_token": 12.13977260172564,
+      "answers_sample": [
+        {
+          "id": "ocr_00",
+          "answer": "The word 'K7Q2'",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_01",
+          "answer": "The word 'SABLE' is written",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_02",
+          "answer": "The word 'MINT' is written",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_03",
+          "answer": "The text is \"Hello 20",
+          "score": 0.0
+        }
+      ],
+      "dense_acc_check": 0.27952507317916525,
+      "actual_skip": 0.20720690703329592,
+      "energy_captured": 0.998851151983423,
+      "mean_alpha": 1.020456210771639,
+      "kernel_block_skip": 0.20720690703329592,
+      "wall_s": 7.095181465148926
+    },
+    {
+      "tower": "text",
+      "tau": 0.4,
+      "acc": 0.17207951334347887,
+      "acc_ci_lo": 0.09126287368154123,
+      "acc_ci_hi": 0.25969103307178754,
+      "rouge_l": 0.25335641922180385,
+      "first_div": 0.9423076923076923,
+      "feat_rel_l2": 0.0,
+      "logit_rel_l2": 0.5237406497964492,
+      "acc_by_family": {
+        "ocr": 0.0,
+        "counting": 0.23076923076923078,
+        "scene": 0.22677959183545401,
+        "motion": 0.23076923076923078
+      },
+      "n_samples": 52,
+      "exact_match_ocr": 0.0,
+      "exact_match_motion": 0.23076923076923078,
+      "mean_decode_ms_per_token": 11.975718285472025,
+      "answers_sample": [
+        {
+          "id": "ocr_00",
+          "answer": "The video begins with a white screen that",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_01",
+          "answer": "The text is written in black, and",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_02",
+          "answer": "The video begins with a white screen that",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_03",
+          "answer": "\"Hello 2020.",
+          "score": 0.0
+        }
+      ],
+      "dense_acc_check": 0.27952507317916525,
+      "actual_skip": 0.4047228850832865,
+      "energy_captured": 0.9956986789664286,
+      "mean_alpha": 1.0570486526687382,
+      "kernel_block_skip": 0.4047228850832866,
+      "wall_s": 7.007164478302002
+    },
+    {
+      "tower": "vision",
+      "tau": 0.2,
+      "acc": 0.30859277657551315,
+      "acc_ci_lo": 0.19367024067151942,
+      "acc_ci_hi": 0.4343426720604629,
+      "rouge_l": 0.7325778388278389,
+      "first_div": 3.3846153846153846,
+      "feat_rel_l2": 0.2608820148385488,
+      "logit_rel_l2": 0.13266434914504105,
+      "acc_by_family": {
+        "ocr": 0.46153846153846156,
+        "counting": 0.23076923076923078,
+        "scene": 0.23437110630205263,
+        "motion": 0.3076923076923077
+      },
+      "n_samples": 52,
+      "exact_match_ocr": 0.46153846153846156,
+      "exact_match_motion": 0.3076923076923077,
+      "mean_decode_ms_per_token": 9.098182289073101,
+      "answers_sample": [
+        {
+          "id": "ocr_00",
+          "answer": "K7Q2 is a popular game",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_01",
+          "answer": "SABLE 42",
+          "score": 1.0
+        },
+        {
+          "id": "ocr_02",
+          "answer": "MINT-38 is a",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_03",
+          "answer": "2020",
+          "score": 0.0
+        }
+      ],
+      "dense_acc_check": 0.27952507317916525,
+      "actual_skip": 0.1919565554018374,
+      "energy_captured": 0.9993643213750631,
+      "mean_alpha": 1.010902279426181,
+      "kernel_block_skip": 0.20940715134745902,
+      "wall_s": 5.556674480438232
+    },
+    {
+      "tower": "vision",
+      "tau": 0.4,
+      "acc": 0.227881187440011,
+      "acc_ci_lo": 0.13504702711504182,
+      "acc_ci_hi": 0.33302081190867955,
+      "rouge_l": 0.4224893162393162,
+      "first_div": 1.8461538461538463,
+      "feat_rel_l2": 0.4790110456255766,
+      "logit_rel_l2": 0.25360234110401225,
+      "acc_by_family": {
+        "ocr": 0.0,
+        "counting": 0.38461538461538464,
+        "scene": 0.2192170574523516,
+        "motion": 0.3076923076923077
+      },
+      "n_samples": 52,
+      "exact_match_ocr": 0.0,
+      "exact_match_motion": 0.3076923076923077,
+      "mean_decode_ms_per_token": 9.13268006731344,
+      "answers_sample": [
+        {
+          "id": "ocr_00",
+          "answer": "K7Q2 is a game developed",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_01",
+          "answer": "SABBLES 42",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_02",
+          "answer": "The word \"MINT\" is written",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_03",
+          "answer": "2022",
+          "score": 0.0
+        }
+      ],
+      "dense_acc_check": 0.27952507317916525,
+      "actual_skip": 0.39811689386922844,
+      "energy_captured": 0.9979152674650781,
+      "mean_alpha": 1.0394712562362354,
+      "kernel_block_skip": 0.39811689386922844,
+      "wall_s": 5.671478748321533
+    },
+    {
+      "tower": "both",
+      "tau": 0.2,
+      "acc": 0.22534178843322067,
+      "acc_ci_lo": 0.1226516586035448,
+      "acc_ci_hi": 0.3306366438335748,
+      "rouge_l": 0.5047098734598735,
+      "first_div": 1.9423076923076923,
+      "feat_rel_l2": 0.2608820148385488,
+      "logit_rel_l2": 0.3011453409607594,
+      "acc_by_family": {
+        "ocr": 0.0,
+        "counting": 0.3076923076923077,
+        "scene": 0.20905946142519036,
+        "motion": 0.38461538461538464
+      },
+      "n_samples": 52,
+      "exact_match_ocr": 0.0,
+      "exact_match_motion": 0.38461538461538464,
+      "mean_decode_ms_per_token": 12.222848106690575,
+      "answers_sample": [
+        {
+          "id": "ocr_00",
+          "answer": "The word 'K7Q2'",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_01",
+          "answer": "The word 'SABLE' is written",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_02",
+          "answer": "The word 'MINT' is written",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_03",
+          "answer": "The text is \"2020",
+          "score": 0.0
+        }
+      ],
+      "dense_acc_check": 0.27952507317916525,
+      "actual_skip": 0.1952060114092188,
+      "energy_captured": 0.9992861814915573,
+      "mean_alpha": 1.0129617393911172,
+      "kernel_block_skip": 0.21115254644271086,
+      "wall_s": 6.640923261642456
+    },
+    {
+      "tower": "both",
+      "tau": 0.4,
+      "acc": 0.120234731168235,
+      "acc_ci_lo": 0.05747289129242454,
+      "acc_ci_hi": 0.19674010505692094,
+      "rouge_l": 0.22444339848186004,
+      "first_div": 0.5769230769230769,
+      "feat_rel_l2": 0.4790110456255766,
+      "logit_rel_l2": 0.7152319590632732,
+      "acc_by_family": {
+        "ocr": 0.0,
+        "counting": 0.23076923076923078,
+        "scene": 0.2501696939037093,
+        "motion": 0.0
+      },
+      "n_samples": 52,
+      "exact_match_ocr": 0.0,
+      "exact_match_motion": 0.0,
+      "mean_decode_ms_per_token": 12.21069485976701,
+      "answers_sample": [
+        {
+          "id": "ocr_00",
+          "answer": "The image does not contain any text.",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_01",
+          "answer": "The text is in black and white,",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_02",
+          "answer": "The image is a black and white photograph",
+          "score": 0.0
+        },
+        {
+          "id": "ocr_03",
+          "answer": "The image provided is a screenshot of a",
+          "score": 0.0
+        }
+      ],
+      "dense_acc_check": 0.27952507317916525,
+      "actual_skip": 0.40414461817116254,
+      "energy_captured": 0.9976168081505734,
+      "mean_alpha": 1.0453581199070041,
+      "kernel_block_skip": 0.40414461817116254,
+      "wall_s": 7.36013650894165
+    }
+  ],
+  "timing": {
+    "cpu": {
+      "device": "cpu",
+      "arch": "gelu_pytorch_tanh",
+      "threads": 16,
+      "nproc": 32,
+      "kernel": "down_skip_avx512_auto2 (AVX-512, OpenMP)",
+      "workload": {
+        "sample": "motion_01",
+        "n_images": 4,
+        "n_image_tokens": 256,
+        "seq_len": 304
+      },
+      "warmup": "1 full forward + 1 prefill per config before timing; median of 3 timed reps (decode: faster of 2 runs, median of 8 steps)",
+      "rows": [
+        {
+          "config": "dense",
+          "tau": 0.0,
+          "tower": "dense",
+          "vit_prefill_ms": 132.90299498476088,
+          "vit_prefill_ms_per_image": 33.22574874619022,
+          "lm_prefill_ms": 20.976797968614846,
+          "lm_decode_ms_per_token": 9.011029498651624,
+          "n_images": 4,
+          "decode_steps": 8,
+          "runs": [
+            {
+              "vit_prefill_ms": 132.9326909617521,
+              "vit_prefill_ms_per_image": 33.23317274043802,
+              "lm_prefill_ms": 21.21371799148619,
+              "lm_decode_ms_per_token": 9.179843502352014
+            },
+            {
+              "vit_prefill_ms": 132.90299498476088,
+              "vit_prefill_ms_per_image": 33.22574874619022,
+              "lm_prefill_ms": 20.976797968614846,
+              "lm_decode_ms_per_token": 9.011029498651624
+            }
+          ]
+        },
+        {
+          "config": "kernel both tau=0.2",
+          "tau": 0.2,
+          "tower": "both",
+          "vit_prefill_ms": 119.3751020473428,
+          "vit_prefill_ms_per_image": 29.8437755118357,
+          "lm_prefill_ms": 19.568618037737906,
+          "lm_decode_ms_per_token": 11.991086008492857,
+          "n_images": 4,
+          "decode_steps": 8,
+          "kernel_block_skip": 0.21617613974777294,
+          "kernel_keep_rate": 0.7838238602522271,
+          "runs": [
+            {
+              "vit_prefill_ms": 119.37977297930047,
+              "vit_prefill_ms_per_image": 29.844943244825117,
+              "lm_prefill_ms": 19.75239801686257,
+              "lm_decode_ms_per_token": 12.032818514853716
+            },
+            {
+              "vit_prefill_ms": 119.3751020473428,
+              "vit_prefill_ms_per_image": 29.8437755118357,
+              "lm_prefill_ms": 19.568618037737906,
+              "lm_decode_ms_per_token": 11.991086008492857
+            }
+          ]
+        },
+        {
+          "config": "kernel both tau=0.4",
+          "tau": 0.4,
+          "tower": "both",
+          "vit_prefill_ms": 117.78677796246484,
+          "vit_prefill_ms_per_image": 29.44669449061621,
+          "lm_prefill_ms": 19.52428399818018,
+          "lm_decode_ms_per_token": 12.012936000246555,
+          "n_images": 4,
+          "decode_steps": 8,
+          "kernel_block_skip": 0.40726096988341964,
+          "kernel_keep_rate": 0.5927390301165804,
+          "runs": [
+            {
+              "vit_prefill_ms": 117.81705700559542,
+              "vit_prefill_ms_per_image": 29.454264251398854,
+              "lm_prefill_ms": 19.52428399818018,
+              "lm_decode_ms_per_token": 12.012936000246555
+            },
+            {
+              "vit_prefill_ms": 117.78677796246484,
+              "vit_prefill_ms_per_image": 29.44669449061621,
+              "lm_prefill_ms": 19.576582999434322,
+              "lm_decode_ms_per_token": 12.023897026665509
+            }
+          ]
+        }
+      ],
+      "kernel_micro": [
+        {
+          "tau": 0.2,
+          "layer": "text.9",
+          "T": 304,
+          "I": 1536,
+          "O": 576,
+          "blk_skip": 0.2551397681236267,
+          "dense_f_linear_ms": 0.006471993401646614,
+          "kernel_ms": 0.11584500316530466,
+          "speedup": 0.05586769584192961
+        },
+        {
+          "tau": 0.4,
+          "layer": "text.9",
+          "T": 304,
+          "I": 1536,
+          "O": 576,
+          "blk_skip": 0.4741639494895935,
+          "dense_f_linear_ms": 0.006511982064694166,
+          "kernel_ms": 0.11895201168954372,
+          "speedup": 0.054744614842580176
+        }
+      ]
+    },
+    "gpu": {
+      "attempted": true,
+      "status": "usable",
+      "device": "NVIDIA GeForce RTX 5070 Laptop GPU",
+      "free_mem_mb": 3181.0
+    }
+  },
+  "checks": {
+    "tau0_max_abs_dlogit": 0.0,
+    "tau0_feat_rel_l2": 0.0,
+    "tau0_top1_agree": 1.0,
+    "tau0_gen_identical": true,
+    "tau0_iso_tol": 0.001,
+    "manifest_files_sha256_verified": true,
+    "n_samples": 52,
+    "restore_feat_rel_l2": 1.4116463944446878e-06
+  },
+  "calibration": [
+    {
+      "id": "ocr_00",
+      "family": "ocr"
+    },
+    {
+      "id": "ocr_06",
+      "family": "ocr"
+    },
+    {
+      "id": "ocr_12",
+      "family": "ocr"
+    },
+    {
+      "id": "count_05",
+      "family": "counting"
+    },
+    {
+      "id": "count_11",
+      "family": "counting"
+    },
+    {
+      "id": "scene_04",
+      "family": "scene"
+    },
+    {
+      "id": "scene_10",
+      "family": "scene"
+    },
+    {
+      "id": "motion_03",
+      "family": "motion"
+    }
+  ],
+  "gen_len": 8,
+  "img_edge": 512,
+  "notes": [
+    "dataset is SYNTHETIC and controlled (PIL, seed 1234, no photographs): OCR strings, coloured-shape counts on a 3x3 grid, fixed compositions for ROUGE-L, and 3-4 frame motion sequences. Every image is byte-reproducible from make_p6_vlm.py; per-file sha256, prompt and reference answer are in data/p6_vlm/manifest.json. It is a controlled capability probe, not a natural-image benchmark.",
+    "dense baseline generation is the same model with permuted-but-unskipped weights (tau=0 path); the tau=0 check verifies this is bit-comparable to the unpermuted model (max|dlogit|=0.00e+00, identical token ids on all 52 samples).",
+    "scoring: OCR = exact match on the first non-empty answer line after stripping quotes/backticks and non-alphanumerics (the model often appends commentary); counting = first integer in the answer equals the rendered count; scene = ROUGE-L F1 against a reference sentence; motion = exact match of the first answer word (direction / bigger / smaller). Aggregate acc is the unweighted mean per-sample score across all families, so scene/motion contribute fractional ROUGE-style credit; acc_by_family gives the per-family view.",
+    "tau rows use the per-layer theta quantiles of per-token block energies calibrated on 8 images from this set (ocr, ocr, ocr, counting, counting, scene, scene, motion); actual_skip is measured on the eval pass, energy_captured is the retained activation energy fraction.",
+    "feature rel-L2 is on the connector image features, logit rel-L2 on the prefill logits at the last prompt position, averaged over samples. first_div is the mean index of the first token where the greedy answer differs from dense (gen_len is the cap).",
+    "TIMING: CPU fp32, 16 threads (OMP_WAIT_POLICY=passive), the real AVX-512 kernel down_skip_avx512_auto2 replaces BOTH down projections (vision fc2 and text down_proj); a warm-up forward+prefill runs before every timed config, then medians are taken. The dense row uses plain F.linear (torch/MKL). Kernel and F.linear are both given the same thread count, so the comparison is honest but kernel-vs-MKL: at low tau the mask bookkeeping (energy + threshold + numpy/ctypes hand-off) can cost more than the skipped FMAs, see kernel_micro for the pure GEMM comparison at the same shapes.",
+    "GPU timing is deliberately not attempted beyond a liveness probe: the 8 GB GPU is shared with another job (usable). The P5 numbers in results/p5_smolvlm.json remain the GPU reference for the masking path.",
+    "p5_smolvlm.json is untouched; this file is the 58-sample replacement for its 4-prompt VQA weakness."
+  ]
+}

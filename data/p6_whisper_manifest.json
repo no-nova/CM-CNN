@@ -1,0 +1,866 @@
+{
+  "corpus": "LibriSpeech dev-clean (OpenSLR SLR12)",
+  "url": "https://www.openslr.org/resources/12/dev-clean.tar.gz",
+  "url_total_bytes": 337926286,
+  "download_mode": "streamed tar.gz, aborted after N complete chapters",
+  "chapters": [
+    {
+      "speaker": "2277",
+      "chapter": "149896",
+      "utterances": 35
+    },
+    {
+      "speaker": "2277",
+      "chapter": "149897",
+      "utterances": 38
+    },
+    {
+      "speaker": "2277",
+      "chapter": "149874",
+      "utterances": 22
+    },
+    {
+      "speaker": "2035",
+      "chapter": "147960",
+      "utterances": 17
+    },
+    {
+      "speaker": "2035",
+      "chapter": "152373",
+      "utterances": 19
+    },
+    {
+      "speaker": "2035",
+      "chapter": "147961",
+      "utterances": 41
+    },
+    {
+      "speaker": "2086",
+      "chapter": "149214",
+      "utterances": 5
+    },
+    {
+      "speaker": "2086",
+      "chapter": "149220",
+      "utterances": 50
+    },
+    {
+      "speaker": "7976",
+      "chapter": "110124",
+      "utterances": 26
+    },
+    {
+      "speaker": "7976",
+      "chapter": "105575",
+      "utterances": 30
+    }
+  ],
+  "n_files": 100,
+  "total_audio_seconds": 694.345,
+  "containers": "flac, 16 kHz mono, decoded with ffmpeg",
+  "selection": "np.random.RandomState(1234).permutation(283)[:100], sorted by id; first 40 = calib",
+  "canonicalization": "sha256 of json.dumps(sorted by id, keys sorted, separators=(',',':'))",
+  "manifest_sha256": "ce78cd5d3564bb826288701edc481dcc39035a85696b6a73b8361bc6f90a0da3",
+  "files": [
+    {
+      "id": "2035-147960-0005",
+      "path": "data/p6_whisper_audio/2035/147960/2035-147960-0005.flac",
+      "sha256": "fdd16c1fd8d793082899e31eae9566a661351c874a19265937238fbc1a7ab2ae",
+      "bytes": 125971,
+      "seconds": 6.585,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147960-0006",
+      "path": "data/p6_whisper_audio/2035/147960/2035-147960-0006.flac",
+      "sha256": "1bc106cdd521d18a3637f1eb7e7287b83a4255002f394f34667249c52b373845",
+      "bytes": 69223,
+      "seconds": 3.315,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147960-0007",
+      "path": "data/p6_whisper_audio/2035/147960/2035-147960-0007.flac",
+      "sha256": "aebb2dfbd4ee1a7fb1df5db68b74f3a1369899f5850d8c246604038c7a063a23",
+      "bytes": 87069,
+      "seconds": 4.6,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147960-0009",
+      "path": "data/p6_whisper_audio/2035/147960/2035-147960-0009.flac",
+      "sha256": "256e14a2aeb4fa9b72ca0119cd052614131b39776f1e2fbe7ab7bf72856a09c4",
+      "bytes": 65413,
+      "seconds": 3.5,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0006",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0006.flac",
+      "sha256": "6eefaa5c94ae13845463457deedf0a98445595a71fd1737ec48a441268170b78",
+      "bytes": 56250,
+      "seconds": 2.795,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0010",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0010.flac",
+      "sha256": "69322bd8cfb38e8d8b3955864ca95385431444bdb774e0a46ccde243d78436fa",
+      "bytes": 59537,
+      "seconds": 2.91,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0012",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0012.flac",
+      "sha256": "147ab345b1ea3b230aaa3ae5fee6fda098940f8468f92297903a026cb755fbfd",
+      "bytes": 71918,
+      "seconds": 4.025,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0014",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0014.flac",
+      "sha256": "bbee59be77040a9707c5826ebcf9054b62a195780bdde6b98a26a8aa10810837",
+      "bytes": 74135,
+      "seconds": 3.92,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0015",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0015.flac",
+      "sha256": "0d87d81a6ebbf01c2489b32cefee7e1861e05512ba8db1086082d0b0af1ac0d6",
+      "bytes": 55111,
+      "seconds": 2.785,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0016",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0016.flac",
+      "sha256": "aff51bd3f7bff593275c966c4b1b35fc9e9550e7338a4ee3488b3a1aad2b3888",
+      "bytes": 63114,
+      "seconds": 3.265,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0023",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0023.flac",
+      "sha256": "7208b2b7d9340d05c95100834cbcaa657ec9d5daf0885e4dd38c40e97b3af749",
+      "bytes": 83841,
+      "seconds": 4.31,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0025",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0025.flac",
+      "sha256": "1a1071d12d8b233329cf3af2f93dd3b238f2d2e95ede231444896d21d403a57d",
+      "bytes": 94934,
+      "seconds": 5.525,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0026",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0026.flac",
+      "sha256": "0a48c12a5c62becf45d2725ea18d570472420b52441a528401b0dd2d0202d83a",
+      "bytes": 59078,
+      "seconds": 2.875,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0027",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0027.flac",
+      "sha256": "20998a3a3f5d1634e9234c962bf4adc48c20333bcb564f46a7008e35f219676e",
+      "bytes": 48885,
+      "seconds": 2.875,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0031",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0031.flac",
+      "sha256": "1a46ec87b2b81c709241b142e46e17bb9796940053227d72fcf628c60bdad462",
+      "bytes": 69941,
+      "seconds": 3.55,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0034",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0034.flac",
+      "sha256": "242135a717db9b9b44ffb6a622335b00765f39630b9d559b114e466b644cd395",
+      "bytes": 56964,
+      "seconds": 2.805,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0035",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0035.flac",
+      "sha256": "579db07c535607db4c7bf0a1aa348fd8e20328e816b28abd60836bde3bceb713",
+      "bytes": 98326,
+      "seconds": 5.445,
+      "split": "calib"
+    },
+    {
+      "id": "2035-147961-0037",
+      "path": "data/p6_whisper_audio/2035/147961/2035-147961-0037.flac",
+      "sha256": "d21aab543c47141f0693eb569c8868aeb96abdfa34954f005f1ecd3c23f0a6a3",
+      "bytes": 91309,
+      "seconds": 4.835,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0000",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0000.flac",
+      "sha256": "b3c5a79feb3d2b71fa8c65e4cbc29d3ef8f74f3ede28bb100557312ff53e3a84",
+      "bytes": 149130,
+      "seconds": 7.875,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0005",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0005.flac",
+      "sha256": "2678f3763a53fddda4d39fcf946ce2f4304b14f0f26ce2691eb6f16dacf66212",
+      "bytes": 430810,
+      "seconds": 24.03,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0007",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0007.flac",
+      "sha256": "1c77bb7953e987271f7cd1afc0fe59b61dfc797c41feaa7977b05d5a0d3efa30",
+      "bytes": 236170,
+      "seconds": 12.94,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0008",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0008.flac",
+      "sha256": "7f7e3dfbecaa708ffec4534c8368d04478a3ab05a9e3ef83926eeb2e1a132141",
+      "bytes": 125334,
+      "seconds": 6.665,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0009",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0009.flac",
+      "sha256": "ca12e65f14eb078593f549f48f2535f2503884003701c7f632ad5efb0e2b58c9",
+      "bytes": 310206,
+      "seconds": 17.32,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0011",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0011.flac",
+      "sha256": "13ff8ac1a4ba218c08822dfc5c10c1bb3b83050fd5fd56a60bf8c82a9b866a41",
+      "bytes": 194321,
+      "seconds": 10.465,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0013",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0013.flac",
+      "sha256": "aaa615b41c4e11cf552e2d39cdb06ae733bae2c53cb6ce5fa27a07e9fabb8bb7",
+      "bytes": 370400,
+      "seconds": 20.47,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0015",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0015.flac",
+      "sha256": "6769aeeeb099eb34339d05f336972cdcc17a713032de323143424c7bd3527303",
+      "bytes": 162322,
+      "seconds": 8.51,
+      "split": "calib"
+    },
+    {
+      "id": "2035-152373-0016",
+      "path": "data/p6_whisper_audio/2035/152373/2035-152373-0016.flac",
+      "sha256": "b70e3f9a5cf9e5a330e066d3bd908b6b16b6223550a8399484ffcc0caa553c36",
+      "bytes": 122570,
+      "seconds": 6.59,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149214-0000",
+      "path": "data/p6_whisper_audio/2086/149214/2086-149214-0000.flac",
+      "sha256": "eea381d7cfb33707d92d56bacb9222accd15a59c5b5ffa6a3bd22dfe5956b332",
+      "bytes": 166760,
+      "seconds": 9.81,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149214-0003",
+      "path": "data/p6_whisper_audio/2086/149214/2086-149214-0003.flac",
+      "sha256": "cda6f9efb12201abbd2721d67e74e5cb1ec326128a161de4dff7b63433abc5ea",
+      "bytes": 152610,
+      "seconds": 8.995,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0001",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0001.flac",
+      "sha256": "da86074b92673c85dd7d41542324fd61ddf37c960ef6082122a497dfffad46ce",
+      "bytes": 316400,
+      "seconds": 19.78,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0009",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0009.flac",
+      "sha256": "72a791cc3cdc6577fe7d0b5c67c10116fb46b3ab6875bc11ac870bd0a521cd6d",
+      "bytes": 163990,
+      "seconds": 10.6,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0010",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0010.flac",
+      "sha256": "077a0738d83a23fb463027e522451f5ffade2d4b3d936536adf264a6d57156fc",
+      "bytes": 221137,
+      "seconds": 13.95,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0011",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0011.flac",
+      "sha256": "b56661096185a5c7ebd83e9e57c3d11a9f9f0bab7504d9a5763d946e30bbe951",
+      "bytes": 310748,
+      "seconds": 19.43,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0012",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0012.flac",
+      "sha256": "d1d1a5e0569331b111a5fb1f9df5e44bbea1e6b301d8c02c654ea66583c93564",
+      "bytes": 244949,
+      "seconds": 14.995,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0013",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0013.flac",
+      "sha256": "4ec0fc999278de1051ab5938169a1dc89f709ff174107f3005027417662756c4",
+      "bytes": 275658,
+      "seconds": 17.57,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0015",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0015.flac",
+      "sha256": "3d88c1b4cf9f74a20e100b679e2221029e3619fc0c7e9787d2fb47c24767bb3d",
+      "bytes": 128903,
+      "seconds": 8.19,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0017",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0017.flac",
+      "sha256": "8ce6a240fb9e2915aebd5a2206b23af3d83b63670364d4a87bd60e2a47ed2ab1",
+      "bytes": 141774,
+      "seconds": 8.7,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0018",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0018.flac",
+      "sha256": "d1292261d6a53d6a128cee75251a58fc0471b9b8b28b3a9058e8313a856d27ea",
+      "bytes": 101835,
+      "seconds": 6.83,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0019",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0019.flac",
+      "sha256": "567441930855419517c4327c57b79469fdc4103b8d537bc8342704e4a79a5684",
+      "bytes": 203432,
+      "seconds": 13.18,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0020",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0020.flac",
+      "sha256": "3095154252a8f8160c0acb04a4c7a070ec1d263509235ced34dae0d308d96011",
+      "bytes": 48696,
+      "seconds": 2.93,
+      "split": "calib"
+    },
+    {
+      "id": "2086-149220-0022",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0022.flac",
+      "sha256": "aea1efee66f0d6e3ea5eeb9cb87a6aebde7a24da78e00ef74324ce906300b4ca",
+      "bytes": 147774,
+      "seconds": 9.265,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0026",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0026.flac",
+      "sha256": "206aa3aa9052149612f6dc4318165678d6fd3cc73563a2b72c63e215d192d679",
+      "bytes": 79427,
+      "seconds": 4.81,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0028",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0028.flac",
+      "sha256": "9b9510823efbc12793f8385f4688ad42246fc12377b9e83debca7e127e786e89",
+      "bytes": 46453,
+      "seconds": 2.855,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0029",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0029.flac",
+      "sha256": "47088574548ba1d8b7c246d4658d9b944923ef9249c7ed75fd5cff0c4f5132d3",
+      "bytes": 92458,
+      "seconds": 5.58,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0030",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0030.flac",
+      "sha256": "bddccb39a2d8d46a2d04ef8c921a90c157b40113a2886facecf5e92a67c43deb",
+      "bytes": 130083,
+      "seconds": 8.1,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0033",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0033.flac",
+      "sha256": "220c124b9c58023763ccc64033679f442c7c7299a52121139473b9d4cf6fa441",
+      "bytes": 118276,
+      "seconds": 7.435,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0040",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0040.flac",
+      "sha256": "d208e9cc2ce9696e760cbc7b072852f7b7f879c2f8336dc20f835de98007b5a4",
+      "bytes": 105617,
+      "seconds": 6.7,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0043",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0043.flac",
+      "sha256": "b01fdf7b8efd053d3ef518df03c64f5126b6523cae241e8293a79a0d1a6f63d2",
+      "bytes": 44836,
+      "seconds": 2.77,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0047",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0047.flac",
+      "sha256": "5b89ce36a228b0cd4344e241bb9e6efdc4e9128d285e00977768311338312257",
+      "bytes": 59475,
+      "seconds": 3.92,
+      "split": "eval"
+    },
+    {
+      "id": "2086-149220-0049",
+      "path": "data/p6_whisper_audio/2086/149220/2086-149220-0049.flac",
+      "sha256": "72aaf37fe3fb554305614f32d742cc7c5e3672aaafd17688786ac6dd71a77c50",
+      "bytes": 175518,
+      "seconds": 11.605,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0000",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0000.flac",
+      "sha256": "c68896fa95aff5c7fdb3da1818829abe1b2f8b8c3a2660a92d739895e8294949",
+      "bytes": 281560,
+      "seconds": 15.505,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0002",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0002.flac",
+      "sha256": "5ed9607968dcf4d5c81628676d7efa75e7397a6628174c6094e8e05ec5f205e2",
+      "bytes": 97760,
+      "seconds": 5.095,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0005",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0005.flac",
+      "sha256": "058df714bba209bdec07e7b907ff0db816ae806356ae28c81265548063b3e231",
+      "bytes": 115226,
+      "seconds": 6.37,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0006",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0006.flac",
+      "sha256": "6923cd3c0099b3b71ea72717726b34936c4d719641cc36d8f70a8bd4b59f6607",
+      "bytes": 54790,
+      "seconds": 2.745,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0009",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0009.flac",
+      "sha256": "5c1430810d81b39bfec5f28e423f173db3f114be12dc0a5fab4ba541999e9ae2",
+      "bytes": 65303,
+      "seconds": 3.35,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0013",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0013.flac",
+      "sha256": "49c3ff7717e4327e2a11d90fcd0ca9eac2701cf343f69e2436dab3ff91343d18",
+      "bytes": 61455,
+      "seconds": 3.16,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0014",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0014.flac",
+      "sha256": "d6c87d0401fd3143cb6b51f046c8403a818b39b9277274d0abff04444e8dbcb0",
+      "bytes": 160104,
+      "seconds": 8.6,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0016",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0016.flac",
+      "sha256": "029c2a26fcc3827262cbaf8b46368db4d6a6542577d36bd942070b9dbbc56558",
+      "bytes": 101752,
+      "seconds": 5.325,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149874-0017",
+      "path": "data/p6_whisper_audio/2277/149874/2277-149874-0017.flac",
+      "sha256": "aa805fb4de90a4c0e0212c1b0ae750246ec8fefb29d683b04f3717d7d7532e13",
+      "bytes": 66334,
+      "seconds": 3.36,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0001",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0001.flac",
+      "sha256": "f9c3371b4d1c6e95e7c01298a26215c2be97bee22c5408885d8d29b6e0e4171c",
+      "bytes": 133145,
+      "seconds": 7.145,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0006",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0006.flac",
+      "sha256": "3d63f01a67b524514d7bee6b966b58d4b6f18f6cfa1f92c847353b824593ee8c",
+      "bytes": 94198,
+      "seconds": 4.97,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0008",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0008.flac",
+      "sha256": "fff4a9ac06e5a85348e1d12a498da564c7de250917e8733577b86f64cec7198c",
+      "bytes": 135135,
+      "seconds": 6.94,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0009",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0009.flac",
+      "sha256": "91f02445f3a28cf518aaf8667368e1aba09997cca55208a40bddf1d2d1f2936e",
+      "bytes": 116598,
+      "seconds": 5.815,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0011",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0011.flac",
+      "sha256": "1c4046f47f1398e9cc33f3bb673c4802f8baa5c018172d5acbb2c625802bfb6a",
+      "bytes": 87399,
+      "seconds": 4.465,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0013",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0013.flac",
+      "sha256": "91d24f91ba4da2e1d10c302f4fc624ecda2bb73577e1dc1642d28613667a3dd8",
+      "bytes": 110652,
+      "seconds": 6.09,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0014",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0014.flac",
+      "sha256": "759e0c012e13e7394478aa50535bd3a0a59078044101ae50ebd417bafc28f848",
+      "bytes": 82132,
+      "seconds": 4.07,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0016",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0016.flac",
+      "sha256": "35535a9a29d599998fb7addaa884a9272da4a80f2e92487008b4bcb66e2b7dfa",
+      "bytes": 59208,
+      "seconds": 2.785,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0019",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0019.flac",
+      "sha256": "5eb7bd90711107c2910b74d43f164ef66b162de88106c6ef610c2a8fe1139bf3",
+      "bytes": 71975,
+      "seconds": 3.56,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0028",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0028.flac",
+      "sha256": "1329424372f495a29b6f58485b377bbda860056606425f15c2f402afdb1d98af",
+      "bytes": 60327,
+      "seconds": 2.9,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149896-0032",
+      "path": "data/p6_whisper_audio/2277/149896/2277-149896-0032.flac",
+      "sha256": "56b640a079f27f9473478a20f068b8bd8af3afa7030d7a07cbbc7b3f19211689",
+      "bytes": 199967,
+      "seconds": 10.77,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0001",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0001.flac",
+      "sha256": "06ea43238e1c4a3ef1f8a70d6837081ebde7f2a9ace69134d153bebba4796e6e",
+      "bytes": 59373,
+      "seconds": 2.755,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0002",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0002.flac",
+      "sha256": "e4539cedd5df0dad08d18d2ec97dabf8e816c2ff1e1879eb285d04b004100e9b",
+      "bytes": 127362,
+      "seconds": 6.54,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0005",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0005.flac",
+      "sha256": "61a532c7d431449bfc8d5ed7573007007abd3407d1a16254762ae50f5c9fe56d",
+      "bytes": 207616,
+      "seconds": 11.465,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0011",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0011.flac",
+      "sha256": "63536024bf7e49966969ddd6f31bc31de9a96b3765c814dc2cf7d1c198a6ba6b",
+      "bytes": 65877,
+      "seconds": 3.3,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0012",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0012.flac",
+      "sha256": "e2576eb48c377e54e5ec160b1f9103b577424db91810240b23f2ac17cf86b199",
+      "bytes": 61417,
+      "seconds": 3.09,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0013",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0013.flac",
+      "sha256": "f048aaf0091e02b7c2fdc730a5d02b498e5141c623fc66296a583a5b275c0b06",
+      "bytes": 86914,
+      "seconds": 4.415,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0014",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0014.flac",
+      "sha256": "d1a3c56e2a1002533ca8a855012841eefc0b3367465e4af9876151e407d2c89b",
+      "bytes": 91776,
+      "seconds": 4.62,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0017",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0017.flac",
+      "sha256": "0c55b36ae9861122d3b4e45b4d8e427bacf9ecbd289536dc6fc0d3eb4d8a2cb7",
+      "bytes": 136198,
+      "seconds": 7.3,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0019",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0019.flac",
+      "sha256": "ac6871cec1feb1c90d0014211cdb9822bec2ca7460d10edc05aa6f3536a4ae27",
+      "bytes": 85957,
+      "seconds": 4.85,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0020",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0020.flac",
+      "sha256": "b69f8162c9d5c69fcbd44fc931663ebebafd9299ab896b7626f526ff1029e1c7",
+      "bytes": 89008,
+      "seconds": 4.62,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0021",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0021.flac",
+      "sha256": "afacb1ff9a10c43d6ff77bd5fefef3b2045d4dd946fbba9511729f8ed49146e8",
+      "bytes": 92381,
+      "seconds": 4.685,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0025",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0025.flac",
+      "sha256": "d8e3740ab74a1afe70c4beb6eca36a8c0eea7649ba03c5f69c7921d5e79b6713",
+      "bytes": 87072,
+      "seconds": 4.285,
+      "split": "eval"
+    },
+    {
+      "id": "2277-149897-0032",
+      "path": "data/p6_whisper_audio/2277/149897/2277-149897-0032.flac",
+      "sha256": "0c2b7c48ccdcc9ba42168033366d00f7f2d784df14f50581ef0d199723abb72c",
+      "bytes": 162721,
+      "seconds": 8.69,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0000",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0000.flac",
+      "sha256": "9f2e5c25ec4a4116abf793c2416a3a86a40ee6100f35ec72b393290630ebcb19",
+      "bytes": 159469,
+      "seconds": 9.16,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0001",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0001.flac",
+      "sha256": "69897bdf30a196b28cb03d53fa7bf383ee9112fadec40e175329794706e95f57",
+      "bytes": 54773,
+      "seconds": 2.8,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0003",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0003.flac",
+      "sha256": "5dd9197d34434111aa79465ffef1b8f0793db7be79223b7496ad1c490c9e0e76",
+      "bytes": 166743,
+      "seconds": 9.175,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0011",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0011.flac",
+      "sha256": "a8792dbeae73b4bf6eece26c9e7af61a03d891d82e7c79ef9cf8db66a5213d8f",
+      "bytes": 110477,
+      "seconds": 6.425,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0012",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0012.flac",
+      "sha256": "68711471aefadc8217068e8ed939a5abb3a1e4cefea368704926b0abeeccdf70",
+      "bytes": 94040,
+      "seconds": 5.155,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0015",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0015.flac",
+      "sha256": "91ac10b99aa631f0645391f24736ea194562e51c455ee35c4694b38d5f0924e5",
+      "bytes": 133073,
+      "seconds": 7.355,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0022",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0022.flac",
+      "sha256": "661e856d6b1e616672856525cade1cb7454386558968315d4939bf310539e518",
+      "bytes": 97695,
+      "seconds": 5.38,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0026",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0026.flac",
+      "sha256": "e023769a7393d765f623ffe05722e0b8a8d777f4aa359c541798703db952b1e6",
+      "bytes": 59533,
+      "seconds": 3.55,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0027",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0027.flac",
+      "sha256": "d945acf26020d0df20a98a840da5db88e13f6d525f1b712905eede6308cea75d",
+      "bytes": 117159,
+      "seconds": 6.675,
+      "split": "eval"
+    },
+    {
+      "id": "7976-105575-0029",
+      "path": "data/p6_whisper_audio/7976/105575/7976-105575-0029.flac",
+      "sha256": "84cf1e14e22e741a6ce2e2d28dbbf3620f45a628fc21a228e1fa7e7be857c6ad",
+      "bytes": 206625,
+      "seconds": 11.79,
+      "split": "eval"
+    },
+    {
+      "id": "7976-110124-0004",
+      "path": "data/p6_whisper_audio/7976/110124/7976-110124-0004.flac",
+      "sha256": "e86532cc48198150d89dbadef50490787ea4b69a0fc35886ec9a00da929ec48f",
+      "bytes": 84132,
+      "seconds": 4.735,
+      "split": "eval"
+    },
+    {
+      "id": "7976-110124-0011",
+      "path": "data/p6_whisper_audio/7976/110124/7976-110124-0011.flac",
+      "sha256": "32fec93b83bb1d606971f7f632751787579d81c84ec1a48019831cd6f3d2c776",
+      "bytes": 95135,
+      "seconds": 5.47,
+      "split": "eval"
+    },
+    {
+      "id": "7976-110124-0012",
+      "path": "data/p6_whisper_audio/7976/110124/7976-110124-0012.flac",
+      "sha256": "6fa4b9fb362290922afb686b103b8d7c7b63cd7d523add16012ee56d7898f10f",
+      "bytes": 144197,
+      "seconds": 8.295,
+      "split": "eval"
+    },
+    {
+      "id": "7976-110124-0013",
+      "path": "data/p6_whisper_audio/7976/110124/7976-110124-0013.flac",
+      "sha256": "c2dc16808b08d915de18156e2cc69db3596bf4f8a3156a740582f206bc53139a",
+      "bytes": 115314,
+      "seconds": 6.555,
+      "split": "eval"
+    },
+    {
+      "id": "7976-110124-0016",
+      "path": "data/p6_whisper_audio/7976/110124/7976-110124-0016.flac",
+      "sha256": "a7ea7369334e859376c7241681963fdf7f4c9e6ebc101fd272ed3387fbbc4a58",
+      "bytes": 78641,
+      "seconds": 4.18,
+      "split": "eval"
+    },
+    {
+      "id": "7976-110124-0018",
+      "path": "data/p6_whisper_audio/7976/110124/7976-110124-0018.flac",
+      "sha256": "b5ae69ad34e11f363a95c3bf01532d20dce4c1058d5d8d5bca0ea6f9f9088b6b",
+      "bytes": 142938,
+      "seconds": 8.075,
+      "split": "eval"
+    },
+    {
+      "id": "7976-110124-0024",
+      "path": "data/p6_whisper_audio/7976/110124/7976-110124-0024.flac",
+      "sha256": "aa989fff373bd80025a901d4b475ff31df83024d5a0128bd4bd71e4680bc4a4d",
+      "bytes": 64272,
+      "seconds": 3.15,
+      "split": "eval"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+ "rates": [
+  0.05,
+  0.1,
+  0.15,
+  0.2,
+  0.3,
+  0.4
+ ],
+ "windows": 8,
+ "seq_len": 512,
+ "evidenceA": {
+  "status": "not implemented",
+  "reason": "requires a GGUF GatedDeltaNet+attention runtime; the bridge below measures how well FFN-only residual propagation tracks full-model \u0394PPL instead"
+ },
+ "models": {
+  "qwen3.5-0.8b": {
+   "dense_ppl": 17.5231,
+   "rows": [
+    {
+     "rate": 0.05,
+     "rel_l2": 0.02541,
+     "delta_ppl": -0.0576,
+     "kl": 0.003773,
+     "top1": 0.9219
+    },
+    {
+     "rate": 0.1,
+     "rel_l2": 0.07017,
+     "delta_ppl": 0.0485,
+     "kl": 0.013763,
+     "top1": 0.8906
+    },
+    {
+     "rate": 0.15,
+     "rel_l2": 0.10943,
+     "delta_ppl": 0.2838,
+     "kl": 0.025808,
+     "top1": 0.875
+    },
+    {
+     "rate": 0.2,
+     "rel_l2": 0.16529,
+     "delta_ppl": 0.5187,
+     "kl": 0.037746,
+     "top1": 0.875
+    },
+    {
+     "rate": 0.3,
+     "rel_l2": 0.27162,
+     "delta_ppl": 1.214,
+     "kl": 0.075612,
+     "top1": 0.8281
+    },
+    {
+     "rate": 0.4,
+     "rel_l2": 0.37874,
+     "delta_ppl": 2.6547,
+     "kl": 0.171759,
+     "top1": 0.7188
+    }
+   ],
+   "layers": 24,
+   "fit": {
+    "form": "dPPL = a*relL2^2 + b",
+    "a": 18.37148045257343,
+    "b": -0.025469863244679165,
+    "r2": 0.99478,
+    "pearson": 0.9974,
+    "spearman": 1.0
+   }
+  },
+  "qwen3-0.6b": {
+   "dense_ppl": 20.3967,
+   "rows": [
+    {
+     "rate": 0.05,
+     "rel_l2": 0.06584,
+     "delta_ppl": -0.0216,
+     "kl": 0.003316,
+     "top1": 0.9531
+    },
+    {
+     "rate": 0.1,
+     "rel_l2": 0.03873,
+     "delta_ppl": -0.0252,
+     "kl": 0.024782,
+     "top1": 0.9531
+    },
+    {
+     "rate": 0.15,
+     "rel_l2": 0.05443,
+     "delta_ppl": 0.1523,
+     "kl": 0.024772,
+     "top1": 0.9062
+    },
+    {
+     "rate": 0.2,
+     "rel_l2": 0.07273,
+     "delta_ppl": 0.2834,
+     "kl": 0.105951,
+     "top1": 0.8281
+    },
+    {
+     "rate": 0.3,
+     "rel_l2": 0.11304,
+     "delta_ppl": 1.1949,
+     "kl": 0.189171,
+     "top1": 0.7031
+    },
+    {
+     "rate": 0.4,
+     "rel_l2": 0.16843,
+     "delta_ppl": 2.9745,
+     "kl": 0.29289,
+     "top1": 0.7188
+    }
+   ],
+   "layers": 28,
+   "fit": {
+    "form": "dPPL = a*relL2^2 + b",
+    "a": 115.01440180152622,
+    "b": -0.2990657149509412,
+    "r2": 0.98948,
+    "pearson": 0.9947,
+    "spearman": 0.9429
+   }
+  }
+ }
+}

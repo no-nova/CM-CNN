@@ -1,0 +1,97 @@
+{
+ "windows": 16,
+ "seq_len": 512,
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "note": "calibration from rows 0-120, evaluation from rows 300-420",
+ "models": {
+  "qwen3.5-0.8b": {
+   "dense_ppl": 21.0925,
+   "leak": {
+    "cal_rows": [
+     0,
+     120
+    ],
+    "eval_rows": [
+     300,
+     420
+    ],
+    "row_ranges_disjoint": true,
+    "cal_sha256_64tok_probe_hits": 0,
+    "cal_sha256": "f2b988d7d4ff1da205e46d509a4c0ecd356ae46a20003647d5af1837347030a8",
+    "eval_sha256": "83ac82a80a6787b505a2855a0ede4bd0ab34852eac052273a7943fd1475f9e60",
+    "cal_tokens": 11068,
+    "eval_tokens": 8200
+   },
+   "matrix": {
+    "wiki": {
+     "wiki": 0.9628,
+     "code": 0.2237,
+     "zh": 0.0363,
+     "math": 0.2057
+    },
+    "code": {
+     "wiki": 0.4028,
+     "code": 0.1681,
+     "zh": 0.01,
+     "math": 0.087
+    },
+    "zh": {
+     "wiki": -0.0178,
+     "code": 0.0341,
+     "zh": 0.0174,
+     "math": 0.0677
+    },
+    "math": {
+     "wiki": 0.7054,
+     "code": 0.1237,
+     "zh": 0.0193,
+     "math": 0.1655
+    }
+   },
+   "perm_similarity": {
+    "seed0_vs_seed1": {
+     "rank_spearman": 0.9445,
+     "block_jaccard": 0.0729
+    },
+    "seed0_vs_seed2": {
+     "rank_spearman": 0.9449,
+     "block_jaccard": 0.0728
+    },
+    "seed1_vs_seed2": {
+     "rank_spearman": 0.9418,
+     "block_jaccard": 0.0715
+    },
+    "wiki_vs_zh": {
+     "rank_spearman": 0.4608,
+     "block_jaccard": 0.0431
+    },
+    "code_vs_wiki": {
+     "rank_spearman": 0.5247,
+     "block_jaccard": 0.0442
+    },
+    "code_vs_zh": {
+     "rank_spearman": 0.4509,
+     "block_jaccard": 0.0419
+    },
+    "code_vs_math": {
+     "rank_spearman": 0.499,
+     "block_jaccard": 0.0432
+    },
+    "math_vs_wiki": {
+     "rank_spearman": 0.5821,
+     "block_jaccard": 0.0458
+    },
+    "math_vs_zh": {
+     "rank_spearman": 0.4259,
+     "block_jaccard": 0.0418
+    }
+   },
+   "size_sweep": {},
+   "active_overlap": {}
+  }
+ }
+}

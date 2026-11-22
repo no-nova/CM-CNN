@@ -1,0 +1,32 @@
+P2: computing vision 32-lane permutations on V3 calibration frames ...
+P2 V1 [tau] 0.0|isomorphic: dirty=0.062 81.59 ms/frame cos=0.7541 MAC-red=92.8%
+P2 V1 [tau] 0.5|clustered: dirty=0.062 102.87 ms/frame cos=0.8227 MAC-red=93.5%
+P2 V1 [tau+age4] 0.0|isomorphic: dirty=0.246 195.66 ms/frame cos=0.9330 MAC-red=74.4%
+P2 V1 [tau+age4] 0.5|clustered: dirty=0.246 195.12 ms/frame cos=0.8270 MAC-red=76.9%
+P2 V1: dense 389.38 ms/frame; dirty 6.2%
+P2 V2 [tau] 0.0|isomorphic: dirty=0.086 271.58 ms/frame cos=0.9275 MAC-red=90.5%
+P2 V2 [tau] 0.5|clustered: dirty=0.086 158.40 ms/frame cos=0.7906 MAC-red=91.4%
+P2 V2 [tau+age4] 0.0|isomorphic: dirty=0.260 245.11 ms/frame cos=0.9554 MAC-red=73.2%
+P2 V2 [tau+age4] 0.5|clustered: dirty=0.260 198.40 ms/frame cos=0.7896 MAC-red=75.8%
+P2 V2: dense 470.30 ms/frame; dirty 8.6%
+P2 V3 [tau] 0.0|isomorphic: dirty=0.032 54.16 ms/frame cos=0.8575 MAC-red=96.7%
+P2 V3 [tau] 0.5|clustered: dirty=0.032 74.70 ms/frame cos=0.7854 MAC-red=97.0%
+P2 V3 [tau+age4] 0.0|isomorphic: dirty=0.224 177.50 ms/frame cos=0.8882 MAC-red=77.4%
+P2 V3 [tau+age4] 0.5|clustered: dirty=0.224 132.90 ms/frame cos=0.7878 MAC-red=79.7%
+P2 V3: dense 452.64 ms/frame; dirty 3.2%
+P2 V4 [tau] 0.0|isomorphic: dirty=0.118 175.43 ms/frame cos=0.8294 MAC-red=87.9%
+P2 V4 [tau] 0.5|clustered: dirty=0.118 262.26 ms/frame cos=0.7493 MAC-red=89.1%
+P2 V4 [tau+age4] 0.0|isomorphic: dirty=0.291 204.71 ms/frame cos=0.8961 MAC-red=70.6%
+P2 V4 [tau+age4] 0.5|clustered: dirty=0.291 210.73 ms/frame cos=0.7502 MAC-red=73.5%
+P2 V4: dense 441.10 ms/frame; dirty 11.8%
+P2 V5 [tau] 0.0|isomorphic: dirty=0.114 132.78 ms/frame cos=0.9692 MAC-red=88.1%
+P2 V5 [tau] 0.5|clustered: dirty=0.114 140.02 ms/frame cos=0.8044 MAC-red=89.2%
+P2 V5 [tau+age4] 0.0|isomorphic: dirty=0.270 172.43 ms/frame cos=0.9733 MAC-red=72.5%
+P2 V5 [tau+age4] 0.5|clustered: dirty=0.270 213.23 ms/frame cos=0.8066 MAC-red=75.3%
+P2 V5: dense 434.17 ms/frame; dirty 11.4%
+P2 V6 [tau] 0.0|isomorphic: dirty=0.157 167.89 ms/frame cos=0.9438 MAC-red=83.5%
+P2 V6 [tau] 0.5|clustered: dirty=0.157 209.39 ms/frame cos=0.7340 MAC-red=85.1%
+P2 V6 [tau+age4] 0.0|isomorphic: dirty=0.260 177.49 ms/frame cos=0.9577 MAC-red=73.3%
+P2 V6 [tau+age4] 0.5|clustered: dirty=0.260 214.91 ms/frame cos=0.7333 MAC-red=76.0%
+P2 V6: dense 412.63 ms/frame; dirty 15.7%
+CPU P2 done

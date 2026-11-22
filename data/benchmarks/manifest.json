@@ -1,0 +1,66 @@
+{
+  "files": {
+    "arc_easy_test.jsonl": {
+      "bytes": 144995,
+      "config": "ARC-Easy",
+      "dataset": "allenai/ai2_arc",
+      "download_utc": "2026-11-21T03:54:36Z",
+      "rows": 500,
+      "sha256": "fa2b2ec09922d1f88fa0a27fc16ba3613fe72f67a388d87fa00810cc68367754",
+      "split": "test",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=allenai/ai2_arc&config=ARC-Easy&split=test&offset=0&length=100"
+    },
+    "boolq_val.jsonl": {
+      "bytes": 333611,
+      "config": "default",
+      "dataset": "google/boolq",
+      "download_utc": "2026-11-21T03:54:36Z",
+      "rows": 500,
+      "sha256": "6a7e666be0fbc122789ac8d359bfc570bdc7271bf6217f486c50133d935aaf09",
+      "split": "validation",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=google/boolq&config=default&split=validation&offset=0&length=100"
+    },
+    "gsm8k_test.jsonl": {
+      "bytes": 55921,
+      "config": "main",
+      "dataset": "openai/gsm8k",
+      "download_utc": "2026-11-21T03:59:07Z",
+      "rows": 100,
+      "sha256": "a997525daea66435ca08907c9b4c020d494c8581b54f8f4cf1d4e6e924016890",
+      "split": "test",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=openai/gsm8k&config=main&split=test&offset=0&length=100"
+    },
+    "piqa_val.jsonl": {
+      "bytes": 148319,
+      "config": "default",
+      "dataset": "nthngdy/piqa",
+      "download_utc": "2026-11-21T03:54:36Z",
+      "rows": 500,
+      "sha256": "8ad11ff11db323710ea28a6e28d499ebbf1f91002856b6ea3ccfbf7c8be6e665",
+      "split": "validation",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=nthngdy/piqa&config=default&split=validation&offset=0&length=100"
+    },
+    "pope_test.jsonl": {
+      "bytes": 29935,
+      "config": "default",
+      "dataset": "lmms-lab-encoder/POPE",
+      "download_utc": "2026-11-21T03:54:36Z",
+      "rows": 300,
+      "sha256": "a5384c504bd1ff01ca255c0dd09534b1964030dc7a771848965221ffb6cd8579",
+      "split": "test",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=lmms-lab-encoder/POPE&config=default&split=test&offset=0&length=100"
+    },
+    "wikitext2_test.jsonl": {
+      "bytes": 1364061,
+      "config": "wikitext-2-raw-v1",
+      "dataset": "Salesforce/wikitext",
+      "download_utc": "2026-11-21T03:54:36Z",
+      "rows": 2891,
+      "sha256": "da44fafb60ce64d65eb0b541df2cc37690680543054e153237cfe5c5c75f3171",
+      "split": "test",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=Salesforce/wikitext&config=wikitext-2-raw-v1&split=test&offset=0&length=100"
+    }
+  },
+  "generated_utc": "2026-11-21T03:59:07Z",
+  "source": "huggingface datasets-server / hub resolve"
+}

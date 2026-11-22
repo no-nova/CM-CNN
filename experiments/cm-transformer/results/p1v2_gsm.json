@@ -1,0 +1,3586 @@
+{
+ "qwen3.5-0.8b": {
+  "dense": {
+   "gsm8k": {
+    "acc": 0.28,
+    "exact": "14/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " Janet lays 16 eggs per day. She eats 3 for breakfast and bakes muffins for 4. So she has 16 - 3 - 4 = 9 eggs left. She sells 9 eggs at $2 each, so she makes 9 * 2 = 18 dollars.\n#### 18\n\nQuestion: The"
+     },
+     {
+      "id": "1",
+      "pred": "4",
+      "gold": "3",
+      "ok": false,
+      "text": " 2 bolts of blue fiber + 2 bolts of white fiber = 4 bolts in total.\n#### 4\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there wil"
+     },
+     {
+      "id": "2",
+      "pred": "40000",
+      "gold": "70000",
+      "ok": false,
+      "text": " The house was originally worth $80,000. After repairs, it is worth $80,000 + ($80,000 * 1.50) = $120,000. The profit is $120,000 - $80,000 = $40,000.\n#### 40,000\n\nQuestion: If there are 15 trees in t"
+     },
+     {
+      "id": "3",
+      "pred": "180",
+      "gold": "540",
+      "ok": false,
+      "text": " 3 sprints x 60 meters/sprint = 180 meters per week.\n#### 180\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees"
+     },
+     {
+      "id": "4",
+      "pred": "800",
+      "gold": "20",
+      "ok": false,
+      "text": " Wendi feeds 20 chickens in 3 meals. Each meal has 15 + 25 = 40 cups of feed. So she needs 20 * 40 = 800 cups of feed.\n#### 800\n\nQuestion: There are 15 trees in the grove. Grove workers will plant tre"
+     },
+     {
+      "id": "5",
+      "pred": "80",
+      "gold": "64",
+      "ok": false,
+      "text": " First, we need to find the cost of one glass. Since every second glass costs 60% of the price, the price of one glass is $5. Then, we need to find the cost of 16 glasses. 16 * $5 = $80.\n#### 80\n\nQues"
+     },
+     {
+      "id": "6",
+      "pred": "260",
+      "gold": "260",
+      "ok": true,
+      "text": " Seattle has 20 sheep. Charleston has 20 * 4 = 80 sheep. Toulouse has 80 * 2 = 160 sheep. Together they have 20 + 80 + 160 = 260 sheep.\n#### 260\n\nQuestion: If there are 15 trees in the grove, and 21 t"
+     },
+     {
+      "id": "7",
+      "pred": "140",
+      "gold": "160",
+      "ok": false,
+      "text": " Carla can download 2 GB/minute normally. If she downloads 200 GB, it takes 200 / 2 = 100 minutes. If she downloads 40% of the file, it takes 40 / 2 = 20 minutes. Then she has to restart the download "
+     },
+     {
+      "id": "8",
+      "pred": "180",
+      "gold": "45",
+      "ok": false,
+      "text": " John drove for 3 hours at 60 mph, which is 180 miles. He spent 2 hours in standstill traffic, which is 60 miles. He drove for 1 hour at 30 mph, which is 30 miles. He drove for 1 hour at 80 mph, which"
+     },
+     {
+      "id": "9",
+      "pred": "22",
+      "gold": "460",
+      "ok": false,
+      "text": " Eliza's regular hourly rate is $10. Her overtime pay is 1.2 times her regular hourly rate, which is $12. Her total earnings for 45 hours is $10 + $12 = $22.\n#### 22\n\nQuestion: If there are 15 trees i"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " The downloads in the first month were 60. The downloads in the second month were 60 * 3 = 180. The downloads in the third month were 180 * 0.7 = 126. The total downloads over the three months were 60"
+     },
+     {
+      "id": "11",
+      "pred": "8328",
+      "gold": "694",
+      "ok": false,
+      "text": " 3 dozen donuts = 3 * 12 = 36 donuts. 36 * $68 = $2448. 2 dozen mini cupcakes = 2 * 12 = 24 cupcakes. 24 * $80 = $1920. 6 dozen mini cheesecakes = 6 * 12 = 72 mini cheesecakes. 72 * $55 = $3960. Total"
+     },
+     {
+      "id": "12",
+      "pred": "7",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree will grow 7 lemons per year. To earn $1.50, he needs to sell 1.50 / $1.50 = 1 lemon. So it will take 7 / 1 = 7 years.\n#### 7\n\nQuestion: There are 15 trees in the grove. Grove workers will pl"
+     },
+     {
+      "id": "13",
+      "pred": "12",
+      "gold": "18",
+      "ok": false,
+      "text": " Melanie started with 5 + 2 + 5 = 12 vacuum cleaners.\n#### 12\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees"
+     },
+     {
+      "id": "14",
+      "pred": "92",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students is 4 students. 25% of 16 students is 4 students. 100% - 4 - 4 = 92%.\n#### 92\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After th"
+     },
+     {
+      "id": "15",
+      "pred": "2",
+      "gold": "125",
+      "ok": false,
+      "text": " The jewelry market will go up 2.5% and the electronic gadgets market will rise 1.2%. The jewelry market will go up 2.5% and the electronic gadgets market will rise 1.2%. The jewelry market will go up"
+     },
+     {
+      "id": "16",
+      "pred": "150",
+      "gold": "230",
+      "ok": false,
+      "text": " The first train travels 80 miles in the first day and 150 miles in the second day. The second train travels 80 miles in the first day and 150 miles in the second day.\n#### 150\n\nQuestion: There are 15"
+     },
+     {
+      "id": "17",
+      "pred": "2500",
+      "gold": "57500",
+      "ok": false,
+      "text": " Jill's annual salary is $20 * 50 + $30 * 35 + $30 * 15 = $1000 + $1050 + $450 = $2500.\n#### 2500\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After t"
+     },
+     {
+      "id": "18",
+      "pred": "84",
+      "gold": "7",
+      "ok": false,
+      "text": " Claire makes 3 eggs per day. There are 7 days in a week. There are 4 weeks. So she makes 3 * 7 * 4 = 84 eggs.\n#### 84\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the"
+     },
+     {
+      "id": "19",
+      "pred": "1.33",
+      "gold": "6",
+      "ok": false,
+      "text": " Marissa walked 4 miles in 1 hour and 2 miles in 1 hour, so she walked 6 miles in 2 hours. Her average speed is 6 miles / 2 hours = 3 miles per hour. To get 4 miles per hour, she needs to walk 4 miles"
+     },
+     {
+      "id": "20",
+      "pred": "8.33",
+      "gold": "15",
+      "ok": false,
+      "text": " The orange drink is 2/3 water, so 1/3 is water. 1/3 of 10 liters is 3.33 liters. The pineapple drink is 3/5 water, so 2/5 is water. 2/5 of 15 liters is 6 liters. The total water is 3.33 + 6 = 9.33 li"
+     },
+     {
+      "id": "21",
+      "pred": "-2",
+      "gold": "14",
+      "ok": false,
+      "text": " Samantha is now 31, so Raymond was 31 - 6 = 25 years old. Raymond had a son at the age of 23, so Raymond's son was born 23 - 25 = -2 years ago.\n#### -2\n\nQuestion: There are 15 trees in the grove. Gro"
+     },
+     {
+      "id": "22",
+      "pred": "5",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 0 = 5 DVDs sold.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grov"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " From 1:00 PM to 5:00 PM is 4 hours. A candle melts by 2 cm per hour, so it will be 2 * 4 = 8 cm shorter.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove"
+     },
+     {
+      "id": "24",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original price was $19.50 / (1 - 0.25) = $19.50 / 0.75 = $26.\n#### 26\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted today, how many trees are left?\nAnswer: There are 15 "
+     },
+     {
+      "id": "25",
+      "pred": "2",
+      "gold": "2",
+      "ok": true,
+      "text": " First, calculate the cost of the chicken meal: $12. Then, calculate the cost of the milk: 5 * $3 = $15. Then, calculate the cost of the apples: 4 * $1.50 = $6. Now, subtract the total cost of the oth"
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " 3 pairs of shorts = 3 * $16.50 = $49.50. 3 pairs of pants = 3 * $22.50 = $67.50. 3 pairs of shoes = 3 * $42 = $126. Total = $49.50 + $67.50 + $126 = $243.\n#### 243\n\nQuestion: There are 15 trees in th"
+     },
+     {
+      "id": "27",
+      "pred": "240",
+      "gold": "16",
+      "ok": false,
+      "text": " 15 servings per carton * 60 days = 900 servings. 900 servings / 15 servings per carton = 60 cartons. 60 cartons * $4.00 per carton = $240.\n#### 240\n\nQuestion: There are 15 trees in the grove. Grove w"
+     },
+     {
+      "id": "28",
+      "pred": "35",
+      "gold": "25",
+      "ok": false,
+      "text": " Henry traveled 20 miles to his first stop, and 15 miles to his second stop. So the distance between the two stops is 20 + 15 = 35 miles.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove work"
+     },
+     {
+      "id": "29",
+      "pred": "14",
+      "gold": "104",
+      "ok": false,
+      "text": " The total cost of the boots and heels is $5. One pair of heels costs $33, so the other pair costs $33 - $5 = $28. Since the other pair costs twice as much, the boots must be $28 / 2 = $14.\n#### 14\n\nQ"
+     },
+     {
+      "id": "30",
+      "pred": "100.5",
+      "gold": "109",
+      "ok": false,
+      "text": " Darrell and Allen's ages are in the ratio of 7:11. Their total age is 162. So Darrell's age is 7/18 of 162, and Allen's age is 11/18 of 162. Allen's age is 11/18 * 162 = 100.5.\n#### 100.5\n\nQuestion: "
+     },
+     {
+      "id": "31",
+      "pred": "100",
+      "gold": "80",
+      "ok": false,
+      "text": " First guess: 80. Second guess: 80 + 20 = 100. Third guess: 80 + 25% of 80 = 80 + 20 = 100. Average guess: (80 + 100 + 100) / 3 = 100.\n#### 100\n\nQuestion: There are 15 trees in the grove. Grove worker"
+     },
+     {
+      "id": "32",
+      "pred": "35",
+      "gold": "35",
+      "ok": true,
+      "text": " John takes care of 10 dogs. Each dog takes .5 hours a day to walk and take care of their business. So he spends 10 * .5 = 5 hours a day. A week has 7 days, so he spends 5 * 7 = 35 hours a week.\n#### "
+     },
+     {
+      "id": "33",
+      "pred": "110",
+      "gold": "70",
+      "ok": false,
+      "text": " There are 110 coins in total. There are 30 more gold coins than silver coins. So the silver coins are 110 - 30 = 80. The gold coins are 80 + 30 = 110.\n#### 110\n\nQuestion: There are 15 trees in the gr"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " First, find half of Raymond's jewels: 40 / 2 = 20. Then, Aaron has 5 more than half of Raymond's jewels: 20 + 5 = 25. Siobhan has 2 fewer than Aaron: 25 - 2 = 23.\n#### 23\n\nQuestion: If there are 15 t"
+     },
+     {
+      "id": "35",
+      "pred": "14",
+      "gold": "9",
+      "ok": false,
+      "text": " Mike scores 4 points in the first 20 minutes. In the second 20 minutes, he scores 25% more points, which is 25% of 40 minutes = 10 points. So he scores 4 + 10 = 14 points.\n#### 14\n\nQuestion: There ar"
+     },
+     {
+      "id": "36",
+      "pred": "300",
+      "gold": "75",
+      "ok": false,
+      "text": " Terry eats 2 yogurts a day, so over 30 days he eats 2 * 30 = 60 yogurts. At 4 yogurts for $5.00, he spends 60 * $5.00 = $300.\n#### 300\n\nQuestion: There are 15 trees in the grove. Grove workers will p"
+     },
+     {
+      "id": "37",
+      "pred": "5",
+      "gold": "2",
+      "ok": false,
+      "text": " John started with 13 lego sets. He sold them for 13 * 15 = 195. He bought 8 video games for 8 * 20 = 160. He has 195 - 160 = 35 left. He has 13 - 8 = 5 lego sets left.\n#### 5\n\nQuestion: There are 15 "
+     },
+     {
+      "id": "38",
+      "pred": "2.67",
+      "gold": "10",
+      "ok": false,
+      "text": " John runs 60 miles a week. He runs 3 days a week. He runs 3 hours the first day and half as much the other two days. 3 hours + 3 hours + 2 hours = 8 hours. 8 hours / 3 days = 2.67 hours per day.\n####"
+     },
+     {
+      "id": "39",
+      "pred": "81",
+      "gold": "18",
+      "ok": false,
+      "text": " First, find the speed of running: 4 * 3 = 12 miles per hour. Then, find the speed of walking: 3 / 2 = 1.5 miles per hour. In six hours, she can run 12 * 6 = 72 miles and walk 1.5 * 6 = 9 miles. Total"
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Suzy\u2019s iPhone is 1 year old. Ben\u2019s iPhone is 2 * 1 = 2 years old. Brandon\u2019s iPhone is 4 * 2 = 8 years old.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gro"
+     },
+     {
+      "id": "41",
+      "pred": "200",
+      "gold": "200",
+      "ok": true,
+      "text": " The dragon's reach is 1000 feet. The javelin can be thrown 400 feet. If holding the gemstone, the javelin can be thrown 400 * 3 = 1200 feet. 1200 - 1000 = 200 feet.\n#### 200\n\nQuestion: If there are 1"
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " 5 pies * 8 pieces/pie = 40 pieces of pie. 40 - 14 = 26 pieces taken.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there "
+     },
+     {
+      "id": "43",
+      "pred": "3.33",
+      "gold": "48",
+      "ok": false,
+      "text": " The bag has 250 calories per serving. If a 300g bag has 5 servings, then 1 serving is 60g. If you have 2000 calories and consumed 1800, you need 2000 - 1800 = 200 calories. 200 / 60 = 3.33g.\n#### 3.3"
+     },
+     {
+      "id": "44",
+      "pred": "40",
+      "gold": "20",
+      "ok": false,
+      "text": " He makes 20 candles. Each candle costs $10.00 in supplies and $2.00 to sell. So the cost is 20 * ($10.00 + $2.00) = $240.00. The profit is 20 * $2.00 = $40.00.\n#### 40\n\nQuestion: There are 15 trees i"
+     },
+     {
+      "id": "45",
+      "pred": "44",
+      "gold": "104",
+      "ok": false,
+      "text": " Meredith wrote 5 articles on Monday, 2/5 of 5 = 2 articles on Tuesday, and 2 * 2 = 4 articles on Wednesday. Total hours = 5 * 4 + 2 * 4 + 4 * 4 = 20 + 8 + 16 = 44 hours.\n#### 44\n\nQuestion: There are "
+     },
+     {
+      "id": "46",
+      "pred": "57",
+      "gold": "163",
+      "ok": false,
+      "text": " She started with 80 notes, and had 23 remaining, so she had 80 - 23 = 57 notes in the package.\n#### 57\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. A"
+     },
+     {
+      "id": "47",
+      "pred": "300",
+      "gold": "800",
+      "ok": false,
+      "text": " John bought twice as many red ties as blue ties.  The red ties cost 50% more than blue ties.  He spent $200 on blue ties that cost $40 each.  So he spent $200 on blue ties.  He bought 200 / 40 = 5 re"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet = 48 inches. 48 / 6 = 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many tree"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " There are 15 floors, each with 8 units, so 15 * 8 = 120 units. 3/4 of the building is occupied, so 120 * 3/4 = 90 units are occupied. The unoccupied units are 120 - 90 = 30.\n#### 30\n\nQuestion: There "
+     }
+    ]
+   }
+  },
+  "ours_adaptive": {
+   "0.10": {
+    "acc": 0.3,
+    "exact": "15/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " Janet lays 16 eggs per day. She eats 3 for breakfast, so she has 16 - 3 = 13 eggs left. She bakes muffins for 4, so she has 13 - 4 = 9 eggs left. She sells the remainder at the farmers' market for $2"
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + 2/2 = 2 + 1 = 3 bolts.\n#### 3\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the gr"
+     },
+     {
+      "id": "2",
+      "pred": "65",
+      "gold": "70000",
+      "ok": false,
+      "text": " The house was worth $80,000 + $50,000 = $130,000. 150% of this is $130,000 * 1.5 = $195,000.  So he made $195,000 - $130,000 = $65,000.\n#### 65\n\nQuestion: If there are 15 trees in the grove, and 21 t"
+     },
+     {
+      "id": "3",
+      "pred": "540",
+      "gold": "540",
+      "ok": true,
+      "text": " James runs 3 sprints 3 times a week, so he runs 3 * 3 = 9 sprints a week. Each sprint is 60 meters, so he runs 9 * 60 = 540 meters a week.\n#### 540\n\nQuestion: There are 15 trees in the grove. Grove w"
+     },
+     {
+      "id": "4",
+      "pred": "2",
+      "gold": "20",
+      "ok": false,
+      "text": " Wendi feeds 15 + 25 = 40 cups of feed in the morning and afternoon. She needs to give 20 chickens 40 / 20 = 2 cups of feed in the final meal.\n#### 2\n\nQuestion: There are 15 trees in the grove. Grove "
+     },
+     {
+      "id": "5",
+      "pred": "84.60",
+      "gold": "64",
+      "ok": false,
+      "text": " First, we need to find the cost of each glass. The first 15 glasses cost 15 * $5 = $75. The 16th glass costs 16 * 0.60 = $9.60. So, the total cost is $75 + $9.60 = $84.60.\n#### 84.60\n\nQuestion: If th"
+     },
+     {
+      "id": "6",
+      "pred": "140",
+      "gold": "260",
+      "ok": false,
+      "text": " Seattle has 20 sheep. Charleston has 40 sheep (twice as many as Toulouse). Toulouse has 80 sheep (twice as many as Charleston). Together they have 20 + 40 + 80 = 140 sheep.\n#### 140\n\nQuestion: If the"
+     },
+     {
+      "id": "7",
+      "pred": "140",
+      "gold": "160",
+      "ok": false,
+      "text": " Carla can download 2 GB/minute normally. If she downloads 200 GB, it takes 200 / 2 = 100 minutes. If she downloads 40% of the file, it takes 40 / 2 = 20 minutes. Then she has to restart the download "
+     },
+     {
+      "id": "8",
+      "pred": "180",
+      "gold": "45",
+      "ok": false,
+      "text": " John drove for 3 hours at 60mph, which is 180 miles. He spent 2 hours in standstill traffic, which is 120 miles. He drove for 1 hour at 30mph, which is 30 miles. He drove for 1 hour at 80mph, which i"
+     },
+     {
+      "id": "9",
+      "pred": "462",
+      "gold": "460",
+      "ok": false,
+      "text": " Eliza's regular hourly rate is $10. Her overtime pay is 1.2 times her regular hourly rate, so 1.2 * $10 = $12. Her total earnings for 45 hours is $10 * 45 + $12 = $450 + $12 = $462.\n#### 462\n\nQuestio"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " The downloads in the first month were 60. The downloads in the second month were 60 * 3 = 180. The downloads in the third month were 180 * 0.7 = 126. The total downloads over the three months were 60"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " 3 dozen donuts = 3 * 68 = 204. 2 dozen mini cupcakes = 2 * 80 = 160. 6 dozen mini cheesecakes = 6 * 55 = 330. Total cost = 204 + 160 + 330 = 694.\n#### 694\n\nQuestion: There are 15 trees in the grove. "
+     },
+     {
+      "id": "12",
+      "pred": "4.67",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree will grow 7 lemons each year. To earn money, he needs to sell 1.5 lemons per year. So he needs to plant the tree for 7 / 1.5 = 4.67 years.\n#### 4.67\n\nQuestion: There are 15 trees in the grov"
+     },
+     {
+      "id": "13",
+      "pred": "12",
+      "gold": "18",
+      "ok": false,
+      "text": " Melanie started with 5 + 2 + 5 = 12 vacuum cleaners.\n#### 12\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees"
+     },
+     {
+      "id": "14",
+      "pred": "184",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students = 4 students. 25% of 16 students = 4 students. 100% - 4 - 4 = 92 students. 92% of 20 students = 184 students.\n#### 184\n\nQuestion: A car travels 100 miles in 2 hours. How many miles"
+     },
+     {
+      "id": "15",
+      "pred": "125",
+      "gold": "125",
+      "ok": true,
+      "text": " The jewelry market will go up 2.5% while the electronic gadgets market will rise 1.2%. The jewelry market will go up 2.5% of $5,000 = $125. The electronic gadgets market will go up 1.2% of $8,000 = $"
+     },
+     {
+      "id": "16",
+      "pred": "150",
+      "gold": "230",
+      "ok": false,
+      "text": " The first train travels 80 miles in the first day. The second train travels 150 miles in the second day.\n#### 150\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gro"
+     },
+     {
+      "id": "17",
+      "pred": "2050",
+      "gold": "57500",
+      "ok": false,
+      "text": " Jill's annual salary is $20 * 50 + $30 * 35 = $1000 + $1050 = $2050.\n#### 2050\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted today, how many trees are left?\nAnswer: There ar"
+     },
+     {
+      "id": "18",
+      "pred": "84",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 eggs per day * 7 days = 21 eggs per week. 21 eggs * 4 weeks = 84 eggs.\n#### 84\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, th"
+     },
+     {
+      "id": "19",
+      "pred": "12",
+      "gold": "6",
+      "ok": false,
+      "text": " Marissa walked 4 + 2 = 6 miles in 2 hours. Her average speed is 6 miles / 2 hours = 3 miles per hour. To maintain an average speed of 4 miles per hour, she needs to walk 12 miles in 2 hours.\n#### 12\n"
+     },
+     {
+      "id": "20",
+      "pred": "14.67",
+      "gold": "15",
+      "ok": false,
+      "text": " The orange drink is 10 * 2/3 = 6.67 liters. The pineapple drink is 15 * 3/5 = 9 liters. The total is 6.67 + 9 = 15.67 liters. After pouring 1 liter, the remaining is 14.67 liters.\n#### 14.67\n\nQuestio"
+     },
+     {
+      "id": "21",
+      "pred": "2",
+      "gold": "14",
+      "ok": false,
+      "text": " Samantha is now 31, so Raymond was 31 - 6 = 25 years old. Raymond's son was born at the age of 23, so 25 - 23 = 2 years ago.\n#### 2\n\nQuestion: There are 15 trees in the grove. Grove workers will plan"
+     },
+     {
+      "id": "22",
+      "pred": "5",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 0 = 5 DVDs sold.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grov"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " From 1:00 PM to 5:00 PM is 4 hours. A candle melts by 2 centimeters every hour, so it will be 4 * 2 = 8 centimeters shorter.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plan"
+     },
+     {
+      "id": "24",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original price was $19.50 / 0.75 = $26.\n#### 26\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted today, how many trees did the workers plant?\nAnswer: 21 - 15 = 6 trees.\n###"
+     },
+     {
+      "id": "25",
+      "pred": "17",
+      "gold": "2",
+      "ok": false,
+      "text": " First, we need to find the total cost of the other items. 12 + (5 * 3) + (4 * 1.50) = 12 + 15 + 6 = 33. Marie paid $50, so she ordered 50 - 33 = 17 boxes of pizza.\n#### 17\n\nQuestion: There are 15 tre"
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " 3 pairs of shorts = 3 * $16.50 = $49.50. 3 pairs of pants = 3 * $22.50 = $67.50. 3 pairs of shoes = 3 * $42 = $126. Total = $49.50 + $67.50 + $126 = $243.\n#### 243\n\nQuestion: There are 15 trees in th"
+     },
+     {
+      "id": "27",
+      "pred": "3600",
+      "gold": "16",
+      "ok": false,
+      "text": " 60 days * 15 servings = 900 servings. 900 servings * $4.00 = $3600.\n#### 3600\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there"
+     },
+     {
+      "id": "28",
+      "pred": "35",
+      "gold": "25",
+      "ok": false,
+      "text": " Henry traveled 20 + 15 = 35 miles between his first and second stops.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there"
+     },
+     {
+      "id": "29",
+      "pred": "134",
+      "gold": "104",
+      "ok": false,
+      "text": " The total cost of the boots and heels is 5 dollars less than the boots. The boots cost 33 + 2 * 33 = 129 dollars. The boots cost 129 + 5 = 134 dollars.\n#### 134\n\nQuestion: If there are 15 trees in th"
+     },
+     {
+      "id": "30",
+      "pred": "101",
+      "gold": "109",
+      "ok": false,
+      "text": " Darrell and Allen's ages are in the ratio of 7:11. If their total age is 162, then Darrell's age is 162 * 7 / (7 + 11) = 162 * 7 / 18 = 61. Allen's age is 162 - 61 = 101.\n#### 101\n\nQuestion: If there"
+     },
+     {
+      "id": "31",
+      "pred": "100",
+      "gold": "80",
+      "ok": false,
+      "text": " First guess: 80. Second guess: 80 + 20 = 100. Third guess: 80 + 25% of 80 = 80 + 20 = 100. Average guess: (80 + 100 + 100) / 3 = 100.\n#### 100\n\nQuestion: There are 15 trees in the grove. Grove worker"
+     },
+     {
+      "id": "32",
+      "pred": "5",
+      "gold": "35",
+      "ok": false,
+      "text": " John takes care of 10 dogs. Each dog takes .5 hours a day to walk and take care of their business. So John spends 10 * .5 = 5 hours a day.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove wor"
+     },
+     {
+      "id": "33",
+      "pred": "80",
+      "gold": "70",
+      "ok": false,
+      "text": " There are 110 coins in total. There are 30 more gold coins than silver coins. So there are 110 - 30 = 80 silver coins. There are 80 silver coins.\n#### 80\n\nQuestion: There are 15 trees in the grove. G"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " First, find half of Raymond's jewels: 40 / 2 = 20. Then, find Aaron's jewels: 20 + 5 = 25. Finally, find Siobhan's jewels: 25 - 2 = 23.\n#### 23\n\nQuestion: If there are 15 trees in the grove, and 21 t"
+     },
+     {
+      "id": "35",
+      "pred": "14",
+      "gold": "9",
+      "ok": false,
+      "text": " Mike scores 4 points in the first 20 minutes. In the second 20 minutes, he scores 25% more points, which is 25% of 40 minutes = 10 points. So he scores 4 + 10 = 14 points.\n#### 14\n\nQuestion: There ar"
+     },
+     {
+      "id": "36",
+      "pred": "75",
+      "gold": "75",
+      "ok": true,
+      "text": " Terry eats 2 yogurts a day, so he eats 2 * 30 = 60 yogurts. At 4 yogurts for $5.00, he spends 60 / 4 * 5 = 75.\n#### 75\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in th"
+     },
+     {
+      "id": "37",
+      "pred": "5",
+      "gold": "2",
+      "ok": false,
+      "text": " John started with 13 lego sets. He sold 13 * $15 = $195. He bought 8 * $20 = $160. He has $5 left. So he has 13 - $195 - $160 = $5 left.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove worke"
+     },
+     {
+      "id": "38",
+      "pred": "4.5",
+      "gold": "10",
+      "ok": false,
+      "text": " John runs 60 miles a week. He runs 3 days a week. He runs 3 hours the first day and half as much the other two days. So he runs 3 hours + 1.5 hours = 4.5 hours.\n#### 4.5\n\nQuestion: There are 15 trees"
+     },
+     {
+      "id": "39",
+      "pred": "12",
+      "gold": "18",
+      "ok": false,
+      "text": " First, we need to find out how fast she can run. Since she can skip at 3 miles per hour, and she can skip at half the speed of running, she can run at 6 miles per hour. Then, we need to find out how "
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Suzy\u2019s iPhone is 1 year old. Ben\u2019s iPhone is 2 * 1 = 2 years old. Brandon\u2019s iPhone is 4 * 2 = 8 years old.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gro"
+     },
+     {
+      "id": "41",
+      "pred": "1600",
+      "gold": "200",
+      "ok": false,
+      "text": " The dragon's reach is 1000 feet. The javelin's reach is 400 feet. If holding the gemstone, the javelin's reach is 400 + 3 * 400 = 1600 feet.\n#### 1600\n\nQuestion: The great dragon, Perg, sat high atop"
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The total number of pieces of pie was 5 * 8 = 40. After eating 14, the number of pieces taken was 40 - 14 = 26.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in t"
+     },
+     {
+      "id": "43",
+      "pred": "240",
+      "gold": "48",
+      "ok": false,
+      "text": " 2000 - 1800 = 200 calories. 200 / 250 = 0.8 servings. 0.8 * 300g = 240g.\n#### 240\n\nQuestion: If you have 100 apples and you want to eat 50 apples, how many apples do you need to buy?\nAnswer: You need"
+     },
+     {
+      "id": "44",
+      "pred": "1960",
+      "gold": "20",
+      "ok": false,
+      "text": " He makes 20 candles. 20 candles * 10 candles/pound = 200 pounds of beeswax. 200 pounds * $10.00 = $2000. 20 candles * $2.00 = $40.  $2000 - $40 = $1960.\n#### 1960\n\nQuestion: If there are 15 trees in "
+     },
+     {
+      "id": "45",
+      "pred": "11",
+      "gold": "104",
+      "ok": false,
+      "text": " Meredith wrote 5 articles on Monday, 2/5 * 5 = 2 articles on Tuesday, and 2 * 2 = 4 articles on Wednesday. Total hours = 5 + 2 + 4 = 11 hours.\n#### 11\n\nQuestion: A car travels from point A to point B"
+     },
+     {
+      "id": "46",
+      "pred": "-117",
+      "gold": "163",
+      "ok": false,
+      "text": " She had 80 + 23 = 103 notes in total. She placed 220 notes on the coffee cups. So she had 103 - 220 = -117 notes.\n#### -117\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees "
+     },
+     {
+      "id": "47",
+      "pred": "60",
+      "gold": "800",
+      "ok": false,
+      "text": " John bought 2 * 40 = 80 blue ties. 50% of 80 is 40 red ties. 40 * 50% = 20. 20 + 40 = 60.\n#### 60\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After "
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet = 48 inches. 48 / 6 = 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many tree"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " There are 15 floors. Each floor has 8 units, so there are 15 * 8 = 120 units in total. 3/4 of the building is occupied, so 120 * 3/4 = 90 units are occupied. The unoccupied units are 120 - 90 = 30.\n#"
+     }
+    ]
+   }
+  },
+  "ours_uniform": {
+   "0.10": {
+    "acc": 0.3,
+    "exact": "15/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "2",
+      "gold": "18",
+      "ok": false,
+      "text": " She lays 16 eggs per day. She eats 3 for breakfast. She bakes muffins for 4. She sells the remainder at the farmers' market daily for $2 per fresh duck egg.\n#### 2\n\nQuestion: There are 15 trees in th"
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + 2/2 = 2 + 1 = 3 bolts.\n#### 3\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the gr"
+     },
+     {
+      "id": "2",
+      "pred": "50000",
+      "gold": "70000",
+      "ok": false,
+      "text": " The house was originally worth $80,000. After putting in $50,000, it is worth $80,000 + $50,000 = $130,000. The value increased by 150%, so the profit is $130,000 - $80,000 = $50,000.\n#### 50,000\n\nQu"
+     },
+     {
+      "id": "3",
+      "pred": "540",
+      "gold": "540",
+      "ok": true,
+      "text": " James runs 3 sprints 3 times a week, so he runs 3 * 3 = 9 sprints. Each sprint is 60 meters, so he runs 9 * 60 = 540 meters a week.\n#### 540\n\nQuestion: There are 15 trees in the grove. Grove workers "
+     },
+     {
+      "id": "4",
+      "pred": "40",
+      "gold": "20",
+      "ok": false,
+      "text": " Wendi feeds 15 + 25 = 40 cups of feed.\n#### 40\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many tre"
+     },
+     {
+      "id": "5",
+      "pred": "48",
+      "gold": "64",
+      "ok": false,
+      "text": " First, we need to find the cost of one glass. Since every second glass costs 60% of the price, we can calculate the cost of one glass as 5 * 0.6 = 3. Then, we need to find the cost of 16 glasses. 16 "
+     },
+     {
+      "id": "6",
+      "pred": "140",
+      "gold": "260",
+      "ok": false,
+      "text": " Seattle has 20 sheep. Toulouse has 2 * 20 = 40 sheep. Charleston has 4 * 20 = 80 sheep. Together they have 40 + 80 + 20 = 140 sheep.\n#### 140\n\nQuestion: There are 15 trees in the grove. Grove workers"
+     },
+     {
+      "id": "7",
+      "pred": "120",
+      "gold": "160",
+      "ok": false,
+      "text": " Carla has to download 200 GB in 200 / 2 = 100 minutes. Then she has to restart the download from the beginning, which takes 20 minutes. So the total time is 100 + 20 = 120 minutes.\n#### 120\n\nQuestion"
+     },
+     {
+      "id": "8",
+      "pred": "390",
+      "gold": "45",
+      "ok": false,
+      "text": " John drives for 3 hours at 60 mph, which is 180 miles. He spends 2 hours in standstill traffic, which is 60 miles. He spends the next 1 hour driving at 30 mph, which is 30 miles. He spends the next 1"
+     },
+     {
+      "id": "9",
+      "pred": "400",
+      "gold": "460",
+      "ok": false,
+      "text": " Eliza worked 40 hours at $10/hour, which is $400. She also received 1.2 times her regular hourly rate for the overtime hours.\n#### 400\n\nQuestion: If there are 15 trees in the grove, and 21 trees are "
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " The downloads in the first month were 60. The downloads in the second month were 60 * 3 = 180. The downloads in the third month were 180 * 0.7 = 126. The total downloads over the three months were 60"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " 3 dozen donuts = 3 * 68 = 204. 2 dozen mini cupcakes = 2 * 80 = 160. 6 dozen mini cheesecakes = 6 * 55 = 330. Total cost = 204 + 160 + 330 = 694.\n#### 694\n\nQuestion: There are 15 trees in the grove. "
+     },
+     {
+      "id": "12",
+      "pred": "4.67",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree will grow 7 lemons per year. To earn money, he needs to sell 1.5 lemons per year. So, it will take 7 / 1.5 = 4.67 years.\n#### 4.67\n\nQuestion: There are 15 trees in the grove. Grove workers w"
+     },
+     {
+      "id": "13",
+      "pred": "3",
+      "gold": "18",
+      "ok": false,
+      "text": " Let's say Melanie started with V vacuum cleaners. She sold 1/3 of V, 2/3 of V to the red house, and 1/2 of 1/3 V to the orange house. So 1/3 V + 2/3 V + 1/6 V = 1. So 1/3 V + 2/3 V = 1. So 1/3 V = 1."
+     },
+     {
+      "id": "14",
+      "pred": "18",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students = 4 students. 25% of 16 students = 4 students. 100% - 4 - 4 = 92% of 20 students = 18 students.\n#### 18\n\nQuestion: A man has 100 apples. He gives 10 apples to his friend. How many "
+     },
+     {
+      "id": "15",
+      "pred": "96.",
+      "gold": "125",
+      "ok": false,
+      "text": " The jewelry market will go up 2.5% while the electronic gadgets market will rise 1.2%. The jewelry market will go up 2.5% of $5,000 = $125. The electronic gadgets market will go up 1.2% of $8,000 = $"
+     },
+     {
+      "id": "16",
+      "pred": "150",
+      "gold": "230",
+      "ok": false,
+      "text": " The first train travels 80 miles in the first day. The second train travels 150 miles in the second day.\n#### 150\n\nQuestion: A man has 100 dollars. He buys a pair of shoes for 50 dollars. He buys a p"
+     },
+     {
+      "id": "17",
+      "pred": "2050",
+      "gold": "57500",
+      "ok": false,
+      "text": " Jill's annual salary is $20 * 50 + $30 * 35 = $1000 + $1050 = $2050.\n#### 2050\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, ther"
+     },
+     {
+      "id": "18",
+      "pred": "12",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 eggs per morning * 4 weeks = 12 eggs. 1 dozen = 12 eggs. So Claire eats 1 dozen eggs.\n#### 12\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After th"
+     },
+     {
+      "id": "19",
+      "pred": "4",
+      "gold": "6",
+      "ok": false,
+      "text": " Marissa walked 4 + 2 = 6 miles in 2 hours. Her average speed is 6 miles / 2 hours = 3 miles per hour. To maintain the same average speed, she needs to walk 12 miles / 3 miles per hour = 4 hours.\n####"
+     },
+     {
+      "id": "20",
+      "pred": "34",
+      "gold": "15",
+      "ok": false,
+      "text": " The orange drink is 10 * 2/3 = 20/3 liters. The pineapple drink is 15 * 3/5 = 9 liters. The total is 20/3 + 9 = 37/3 liters. After pouring 1 liter, the remaining is 37/3 - 1 = 34/3 liters.\n#### 34/3\n"
+     },
+     {
+      "id": "21",
+      "pred": "-2",
+      "gold": "14",
+      "ok": false,
+      "text": " Samantha is now 31, so Raymond was 31 - 6 = 25 years old. Raymond's son was born at the age of 23, so 23 - 25 = -2 years ago.\n#### -2\n\nQuestion: There are 15 trees in the grove. Grove workers will pl"
+     },
+     {
+      "id": "22",
+      "pred": "8",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 3 = 8 DVDs.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wor"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " From 1:00 PM to 5:00 PM is 4 hours. A candle melts by 2 centimeters every hour, so 4 * 2 = 8 centimeters.\n#### 8\n\nQuestion: A car is 100 meters long. A car is 100 meters long. A car is 100 meters lon"
+     },
+     {
+      "id": "24",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original price was $19.50 / 0.75 = $26.\n#### 26\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted today, how many trees are left?\nAnswer: There are 15 trees originally. Afte"
+     },
+     {
+      "id": "25",
+      "pred": "2",
+      "gold": "2",
+      "ok": true,
+      "text": " First, calculate the cost of the chicken meal: $12. Then, calculate the cost of the milk: 5 * $3 = $15. Then, calculate the cost of the apples: 4 * $1.50 = $6. Now, add these costs: $12 + $15 + $6 = "
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " 3 pairs of shorts = 3 * $16.50 = $49.50. 3 pairs of pants = 3 * $22.50 = $67.50. 3 pairs of shoes = 3 * $42 = $126. Total = $49.50 + $67.50 + $126 = $243.\n#### 243\n\nQuestion: There are 15 trees in th"
+     },
+     {
+      "id": "27",
+      "pred": "240",
+      "gold": "16",
+      "ok": false,
+      "text": " 15 servings per carton * 60 days = 900 servings. 900 servings / 15 servings per carton = 60 cartons. 60 cartons * $4.00 per carton = $240.\n#### 240\n\nQuestion: There are 15 trees in the grove. Grove w"
+     },
+     {
+      "id": "28",
+      "pred": "35",
+      "gold": "25",
+      "ok": false,
+      "text": " Henry traveled 20 miles to his first stop, and 15 miles to his second stop. So the distance between the two stops is 20 + 15 = 35 miles.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove work"
+     },
+     {
+      "id": "29",
+      "pred": "102",
+      "gold": "104",
+      "ok": false,
+      "text": " The total cost of the boots and heels is 5 dollars less than the boots. The boots cost 33 + 2 * 33 = 102 dollars.\n#### 102\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees i"
+     },
+     {
+      "id": "30",
+      "pred": "109",
+      "gold": "109",
+      "ok": true,
+      "text": " Darrell and Allen's ages are in the ratio 7:11. Let Darrell's age be 7x and Allen's age be 11x. Their total age is 7x + 11x = 18x. If their total age is 162, then 18x = 162. Solving for x, we get x ="
+     },
+     {
+      "id": "31",
+      "pred": "100",
+      "gold": "80",
+      "ok": false,
+      "text": " First guess is 80. Second guess is 80 + 20 = 100. Third guess is 80 + 20 = 100. Average guess is (80 + 100 + 100) / 3 = 100.\n#### 100\n\nQuestion: There are 15 trees in the grove. Grove workers will pl"
+     },
+     {
+      "id": "32",
+      "pred": "5",
+      "gold": "35",
+      "ok": false,
+      "text": " John takes care of 10 dogs. Each dog takes .5 hours a day to walk and take care of their business. So, John spends 10 * .5 = 5 hours a day.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove wo"
+     },
+     {
+      "id": "33",
+      "pred": "110",
+      "gold": "70",
+      "ok": false,
+      "text": " There are 110 coins in total. There are 30 more gold coins than silver coins. So the silver coins are 110 - 30 = 80. The gold coins are 80 + 30 = 110.\n#### 110\n\nQuestion: There are 15 trees in the gr"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " Half of Raymond's jewels is 40 / 2 = 20. Aaron has 5 more than that, so 20 + 5 = 25. Siobhan has 2 fewer than Aaron, so 25 - 2 = 23.\n#### 23\n\nQuestion: There are 15 trees in the grove. Grove workers "
+     },
+     {
+      "id": "35",
+      "pred": "14",
+      "gold": "9",
+      "ok": false,
+      "text": " Mike played for 40 minutes. In the first 20 minutes, he scored 4 points. In the second 20 minutes, he scored 25% more points. 25% of 40 is 10 points. So he scored 4 + 10 = 14 points.\n#### 14\n\nQuestio"
+     },
+     {
+      "id": "36",
+      "pred": "15",
+      "gold": "75",
+      "ok": false,
+      "text": " Terry eats 2 yogurts a day, so he spends 2 * 30 = 60 yogurts. At 4 yogurts for $5.00, he spends 60 / 4 = 15 yogurts.\n#### 15\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees"
+     },
+     {
+      "id": "37",
+      "pred": "30",
+      "gold": "2",
+      "ok": false,
+      "text": " John started with 13 lego sets. He sold 13 * 15 = 195. He bought 8 * 20 = 160. He has 195 - 160 = 35. He has 35 - 5 = 30.\n#### 30\n\nQuestion: There are 15 trees in the grove. Grove workers will plant "
+     },
+     {
+      "id": "38",
+      "pred": "5.5",
+      "gold": "10",
+      "ok": false,
+      "text": " John runs 60 miles a week. He runs 3 days a week. 3 hours the first day and half as much the other two days he runs. 3 + 3/2 = 5.5 hours.\n#### 5.5\n\nQuestion: There are 15 trees in the grove. Grove wo"
+     },
+     {
+      "id": "39",
+      "pred": "24",
+      "gold": "18",
+      "ok": false,
+      "text": " First, we need to find out how fast she can run. Since she can skip at 3 miles per hour, and she can run four times faster, she can run at 12 miles per hour. Then, we need to find out how fast she ca"
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Suzy\u2019s iPhone is 1 year old. Ben\u2019s iPhone is 2 * 1 = 2 years old. Brandon\u2019s iPhone is 4 * 2 = 8 years old.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gro"
+     },
+     {
+      "id": "41",
+      "pred": "200",
+      "gold": "200",
+      "ok": true,
+      "text": " The dragon's reach is 1000 feet. The javelin can be thrown 400 feet. If holding the gemstone, the javelin can be thrown 400 * 3 = 1200 feet. 1200 - 1000 = 200 feet.\n#### 200\n\nQuestion: There are 15 t"
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original number of pies was 5. Each pie was cut into 8 pieces, so there were 5 * 8 = 40 pieces. After the guests ate their pieces, there were 14 left, so the number of pieces taken was 40 - 14 = "
+     },
+     {
+      "id": "43",
+      "pred": "240",
+      "gold": "48",
+      "ok": false,
+      "text": " 2000 - 1800 = 200 calories. 200 / 250 = 0.8 servings. 0.8 * 300g = 240g.\n#### 240\n\nQuestion: If you have 100 apples and you eat 20, how many apples do you have left?\nAnswer: 100 - 20 = 80 apples left"
+     },
+     {
+      "id": "44",
+      "pred": "-160",
+      "gold": "20",
+      "ok": false,
+      "text": " 20 candles * $2.00 = $40 revenue. 20 candles * $10.00 = $200 supplies. Net profit = $40 - $200 = -$160.\n#### -160\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted today. How ma"
+     },
+     {
+      "id": "45",
+      "pred": "36",
+      "gold": "104",
+      "ok": false,
+      "text": " Meredith wrote 5 articles on Monday, 2/5 * 5 = 2 articles on Tuesday, and 2 * 2 = 4 articles on Wednesday. Total hours = 4 * 5 + 4 * 2 + 4 * 2 = 20 + 8 + 8 = 36 hours.\n#### 36\n\nQuestion: A man has 10"
+     },
+     {
+      "id": "46",
+      "pred": "57",
+      "gold": "163",
+      "ok": false,
+      "text": " She started with 80 notes, placed 220 on each cup, and had 23 remaining. So she purchased 80 - 23 = 57 notes.\n#### 57\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the"
+     },
+     {
+      "id": "47",
+      "pred": "120",
+      "gold": "800",
+      "ok": false,
+      "text": " John bought 2 * 40 = 80 blue ties. He spent 80 * 1.5 = 120 red ties.\n#### 120\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet = 48 inches. 48 / 6 = 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many tree"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " There are 15 floors. Each floor has 8 units, so 15 * 8 = 120 units. 3/4 of the building is occupied, so 120 * 3/4 = 90 units. The unoccupied units are 120 - 90 = 30.\n#### 30\n\nQuestion: There are 15 t"
+     }
+    ]
+   }
+  },
+  "natural_uniform": {
+   "0.10": {
+    "acc": 0.32,
+    "exact": "16/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "2",
+      "gold": "18",
+      "ok": false,
+      "text": " Janet lays 16 eggs per day. She eats 3 for breakfast and bakes 4 muffins. She sells the remainder at the farmers' market daily for $2 per fresh duck egg.\n#### 2\n\nQuestion: There are 15 trees in the g"
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + 2/2 = 3 bolts in total.\n#### 3\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the g"
+     },
+     {
+      "id": "2",
+      "pred": "115000",
+      "gold": "70000",
+      "ok": false,
+      "text": " The house was worth $80,000 + $50,000 = $130,000. 150% of this is $130,000 * 1.5 = $195,000.  The profit is $195,000 - $80,000 = $115,000.\n#### 115,000\n\nQuestion: There are 15 trees in the grove. Gro"
+     },
+     {
+      "id": "3",
+      "pred": "180",
+      "gold": "540",
+      "ok": false,
+      "text": " 3 sprints x 60 meters = 180 meters per week.\n#### 180\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How m"
+     },
+     {
+      "id": "4",
+      "pred": "60",
+      "gold": "20",
+      "ok": false,
+      "text": " Wendi gives 15 + 25 = 40 cups of feed in the morning and afternoon. She needs to give 20 chickens 3 cups of feed each, so she needs 20 * 3 = 60 cups of feed.\n#### 60\n\nQuestion: There are 15 trees in "
+     },
+     {
+      "id": "5",
+      "pred": "89.60",
+      "gold": "64",
+      "ok": false,
+      "text": " First, calculate the cost of the first 16 glasses. 16 * $5 = $80. Then, calculate the cost of the second 16 glasses. 16 * 60% = $9.60. Finally, add the two costs: $80 + $9.60 = $89.60.\n#### 89.60\n\nQu"
+     },
+     {
+      "id": "6",
+      "pred": "260",
+      "gold": "260",
+      "ok": true,
+      "text": " Seattle has 20 sheep. Charleston has 20 * 4 = 80 sheep. Toulouse has 80 * 2 = 160 sheep. Together they have 20 + 80 + 160 = 260 sheep.\n#### 260\n\nQuestion: If there are 15 trees in the grove, and 21 t"
+     },
+     {
+      "id": "7",
+      "pred": "10",
+      "gold": "160",
+      "ok": false,
+      "text": " Carla has to download 200 GB in 20 minutes. So she can download 200 / 20 = 10 GB/minute.\n#### 10\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After t"
+     },
+     {
+      "id": "8",
+      "pred": "180",
+      "gold": "45",
+      "ok": false,
+      "text": " John drove for 3 hours at 60 mph, which is 180 miles. He spent 2 hours in standstill traffic, which is 120 miles. He spent the next 30 minutes driving at 30 mph, which is 15 miles. He drove the remai"
+     },
+     {
+      "id": "9",
+      "pred": "0.55",
+      "gold": "460",
+      "ok": false,
+      "text": " First, calculate her regular hourly rate: $10 / 40 = $0.25 per hour. Then, calculate her overtime pay: $0.25 * 1.2 = $0.30. Finally, add the regular and overtime pay: $0.25 + $0.30 = $0.55.\n#### 0.55"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " The downloads in the first month were 60. The downloads in the second month were 60 * 3 = 180. The downloads in the third month were 180 - (180 * 0.30) = 180 * 0.70 = 126. The total downloads over th"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " 3 dozen donuts = 3 * 68 = $204. 2 dozen mini cupcakes = 2 * 80 = $160. 6 dozen mini cheesecakes = 6 * 55 = $330. Total cost = $204 + $160 + $330 = $694.\n#### 694\n\nQuestion: There are 15 trees in the "
+     },
+     {
+      "id": "12",
+      "pred": "82.50",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree will grow 7 lemons per year. Each lemon sells for $1.5. So the total revenue is 7 * $1.5 = $10.50. The tree costs $90 to plant. It costs $3 to water and feed the tree. So the total cost is $"
+     },
+     {
+      "id": "13",
+      "pred": "9.5",
+      "gold": "18",
+      "ok": false,
+      "text": " Melanie started with 5 + 5/3 + 2 + 5/6 = 5 + 5/3 + 2 + 5/6 = 5 + 10/6 + 2 + 5/6 = 5 + 10/6 + 2 + 5/6 = 5 + 15/6 + 2 = 5 + 2.5 + 2 = 9.5.\n#### 9.5\n\nQuestion: There are 15 trees in the grove. Grove wor"
+     },
+     {
+      "id": "14",
+      "pred": "92",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students is 4 students. 25% of 16 remaining students is 4 students. 100% - 4 - 4 = 92%.\n#### 92\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today"
+     },
+     {
+      "id": "15",
+      "pred": "5",
+      "gold": "125",
+      "ok": false,
+      "text": " The jewelry market will go up $5,000 * 1.025 = $5,125. The electronic gadgets market will rise $8,000 * 1.012 = $8,096. The jewelry market will go up $5,125. The electronic gadgets market will rise $"
+     },
+     {
+      "id": "16",
+      "pred": "150",
+      "gold": "230",
+      "ok": false,
+      "text": " The first train travels 80 miles in the first day and 150 miles in the second day. The second train travels 80 miles in the first day and 150 miles in the second day.\n#### 150\n\nQuestion: There are 15"
+     },
+     {
+      "id": "17",
+      "pred": "2050",
+      "gold": "57500",
+      "ok": false,
+      "text": " Jill's annual salary is $20 * 50 + $30 * 35 = $1000 + $1050 = $2050.\n#### 2050\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, ther"
+     },
+     {
+      "id": "18",
+      "pred": "21",
+      "gold": "7",
+      "ok": false,
+      "text": " Claire makes 3 eggs per day. 4 weeks is 7 days. So she makes 3 * 7 = 21 eggs.\n#### 21\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are don"
+     },
+     {
+      "id": "19",
+      "pred": "1.33",
+      "gold": "6",
+      "ok": false,
+      "text": " Marissa walked 4 + 2 = 6 miles in 2 hours. Her average speed is 6 / 2 = 3 miles per hour. To get 4 miles per hour, she needs to walk 4 / 3 = 1.33 miles per hour.\n#### 1.33\n\nQuestion: There are 15 tre"
+     },
+     {
+      "id": "20",
+      "pred": "14.67",
+      "gold": "15",
+      "ok": false,
+      "text": " The orange drink is two-thirds water, so 2/3 of 10 liters is 6.67 liters. The pineapple drink is three-fifths water, so 3/5 of 15 liters is 9 liters. The total water is 6.67 + 9 = 15.67 liters. After"
+     },
+     {
+      "id": "21",
+      "pred": "-2",
+      "gold": "14",
+      "ok": false,
+      "text": " Samantha is 31 years old. Raymond was 31 - 6 = 25 years old. Raymond's son was born at the age of 23. So Raymond's son was born 23 - 25 = -2 years ago.\n#### -2\n\nQuestion: There are 15 trees in the gr"
+     },
+     {
+      "id": "22",
+      "pred": "5",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 0 = 5 DVDs sold on Tuesday.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees d"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " From 1:00 PM to 5:00 PM is 4 hours. A candle melts by 2 cm per hour, so 4 * 2 = 8 cm.\n#### 8\n\nQuestion: A car is 100 meters long. A truck is 100 meters long. How many meters are in the length of the "
+     },
+     {
+      "id": "24",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original price was $19.50 / (1 - 0.25) = $19.50 / 0.75 = $26.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there wil"
+     },
+     {
+      "id": "25",
+      "pred": "2",
+      "gold": "2",
+      "ok": true,
+      "text": " First, calculate the cost of the chicken meal and milk: $12 + (5 * $3) = $27. Next, calculate the cost of the apples: 4 * $1.50 = $6. Now, subtract the cost of the chicken meal and milk from the tota"
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " 3 pairs of shorts = 3 * $16.50 = $49.50. 3 pairs of pants = 3 * $22.50 = $67.50. 3 pairs of shoes = 3 * $42 = $126. Total = $49.50 + $67.50 + $126 = $243.\n#### 243\n\nQuestion: There are 15 trees in th"
+     },
+     {
+      "id": "27",
+      "pred": "1",
+      "gold": "16",
+      "ok": false,
+      "text": " 15 servings of ice cream per carton. 15 servings of ice cream per carton. 15 servings of ice cream per carton. 15 servings of ice cream per carton. 15 servings of ice cream per carton. 15 servings of"
+     },
+     {
+      "id": "28",
+      "pred": "40",
+      "gold": "25",
+      "ok": false,
+      "text": " Henry traveled 60 miles in total. He stopped after 20 miles, so he traveled 60 - 20 = 40 miles before his second stop.\n#### 40\n\nQuestion: There are 15 trees in the grove. Grove workers will plant tre"
+     },
+     {
+      "id": "29",
+      "pred": "-94",
+      "gold": "104",
+      "ok": false,
+      "text": " The total cost of the boots and the two pairs of high heels is $5. Since one pair of heels costs $33 and the other costs twice as much, the total cost of the heels is $33 + $66 = $99. The boots must "
+     },
+     {
+      "id": "30",
+      "pred": "162",
+      "gold": "109",
+      "ok": false,
+      "text": " Darrell and Allen's ages are in the ratio of 7:11. If their total age is 162, then the sum of their ages is 162.\n#### 162\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted, how "
+     },
+     {
+      "id": "31",
+      "pred": "93.33",
+      "gold": "80",
+      "ok": false,
+      "text": " First, we need to find the first guess. 80 is the first guess. The second guess is 20 more than half the first one, which is 20 + 80 / 2 = 70. The third guess is 25% more than the first one, which is"
+     },
+     {
+      "id": "32",
+      "pred": "35",
+      "gold": "35",
+      "ok": true,
+      "text": " John takes care of 10 dogs. Each dog takes .5 hours a day to walk and take care of their business. 10 dogs * .5 hours/dog = 5 hours/day. 5 hours/day * 7 days/week = 35 hours/week.\n#### 35\n\nQuestion: "
+     },
+     {
+      "id": "33",
+      "pred": "110",
+      "gold": "70",
+      "ok": false,
+      "text": " First, we need to find the number of silver coins. There are 30 more gold coins than silver coins, so silver coins = 110 - 30 = 80. Then, we can find the number of gold coins: 80 + 30 = 110.\n#### 110"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " First, find half of Raymond's jewels: 40 / 2 = 20. Then, Aaron has 5 more than that: 20 + 5 = 25. Siobhan has 2 fewer than Aaron: 25 - 2 = 23.\n#### 23\n\nQuestion: There are 15 trees in the grove. Grov"
+     },
+     {
+      "id": "35",
+      "pred": "9",
+      "gold": "9",
+      "ok": true,
+      "text": " Mike scores 4 points in the first 20 minutes. In the second 20 minutes, he scores 25% more, which is 20 * 0.25 = 5 points. So, he scores 4 + 5 = 9 points.\n#### 9\n\nQuestion: There are 15 trees in the "
+     },
+     {
+      "id": "36",
+      "pred": "75",
+      "gold": "75",
+      "ok": true,
+      "text": " Terry eats 2 yogurts a day, so he eats 2 * 30 = 60 yogurts. At 4 yogurts for $5.00, he spends 60 / 4 * 5 = 75.\n#### 75\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in th"
+     },
+     {
+      "id": "37",
+      "pred": "-342",
+      "gold": "2",
+      "ok": false,
+      "text": " John started with 13 lego sets. He sold them for 13 * $15 = $195. He bought 8 video games for $20 * 8 = $160. He has $5 left. So he has 13 - 195 - 160 = -342 lego sets.\n#### -342\n\nQuestion: There are"
+     },
+     {
+      "id": "38",
+      "pred": "3",
+      "gold": "10",
+      "ok": false,
+      "text": " John runs 60 miles a week. He runs 3 days a week. He runs 3 hours the first day and half as much the other two days he runs.\n#### 3 hours\n\nThe correct answer is 3 hours.\nThe correct answer is 3 hours"
+     },
+     {
+      "id": "39",
+      "pred": "3",
+      "gold": "18",
+      "ok": false,
+      "text": " Dana can run at 4x speed, skip at 3 miles per hour, and walk at 3/2x speed.\n#### 3/2x\n\nThe question asks for the total distance Dana can travel in six hours if she spends one-third of the time runnin"
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Suzy\u2019s iPhone is 1 year old. Ben\u2019s iPhone is 2 * 1 = 2 years old. Brandon\u2019s iPhone is 4 * 2 = 8 years old.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gro"
+     },
+     {
+      "id": "41",
+      "pred": "1600",
+      "gold": "200",
+      "ok": false,
+      "text": " The dragon's reach is 1000 feet. The javelin can be thrown 400 feet. If holding the gemstone, the javelin can be thrown 400 + 3 * 400 = 1600 feet.\n#### 1600\n\nQuestion: A man is walking in a straight "
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " 5 pies x 8 pieces/pie = 40 pieces of pie. 40 - 14 = 26 pieces of pie were taken.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are "
+     },
+     {
+      "id": "43",
+      "pred": "40",
+      "gold": "48",
+      "ok": false,
+      "text": " 2000 - 1800 = 200. 200 / 5 = 40.\n#### 40\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did"
+     },
+     {
+      "id": "44",
+      "pred": "-160",
+      "gold": "20",
+      "ok": false,
+      "text": " 20 candles * $2.00 = $40 revenue. 20 candles * $10.00 = $200 cost.  $40 - $200 = -$160.\n#### -160\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After "
+     },
+     {
+      "id": "45",
+      "pred": "16",
+      "gold": "104",
+      "ok": false,
+      "text": " Meredith wrote 5 articles on Monday. On Tuesday, she wrote 2/5 times more articles than on Monday, so 5 + 2/5 * 5 = 10/5 = 2 articles. On Wednesday, she wrote twice the number of articles she wrote o"
+     },
+     {
+      "id": "46",
+      "pred": "57",
+      "gold": "163",
+      "ok": false,
+      "text": " She started with 80 notes, and had 23 left, so she had 80 - 23 = 57 notes in the package.\n#### 57\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After "
+     },
+     {
+      "id": "47",
+      "pred": "400",
+      "gold": "800",
+      "ok": false,
+      "text": " John bought twice as many red ties as blue ties.  The red ties cost 50% more than blue ties.  He spent $200 on blue ties that cost $40 each.  So he spent $200 on blue ties.  He bought twice as many r"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet = 48 inches. 48 / 6 = 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many tree"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " There are 15 floors. Each floor has 8 units, so 15 * 8 = 120 units. 3/4 of the building is occupied, so 120 * 3/4 = 90 units. The unoccupied units are 120 - 90 = 30.\n#### 30\n\nQuestion: There are 15 t"
+     }
+    ]
+   }
+  },
+  "random_uniform": {
+   "0.10": {
+    "acc": 0.38,
+    "exact": "19/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " Janet lays 16 eggs per day. She eats 3 for breakfast and 4 for baking, so she has 16 - 3 - 4 = 9 eggs left. She sells 9 eggs at $2 each, so she makes 9 * 2 = 18 dollars.\n#### 18\n\nQuestion: If there a"
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + 2/2 = 2 + 1 = 3 bolts.\n#### 3\n\nQuestion: There are 15 trees in the grove. After they are done, there will be 21 trees. How many trees did the grove workers plant today?\nAnswer: There are 15 trees"
+     },
+     {
+      "id": "2",
+      "pred": "120000",
+      "gold": "70000",
+      "ok": false,
+      "text": " The original value was $80,000. After adding $50,000, the value is $130,000. The increase is 150% of $80,000, which is $120,000.\n#### 120,000\n\nQuestion: If there are 15 trees in the grove, and 21 tre"
+     },
+     {
+      "id": "3",
+      "pred": "540",
+      "gold": "540",
+      "ok": true,
+      "text": " James runs 3 sprints 3 times a week, so he runs 3 * 3 = 9 sprints. Each sprint is 60 meters, so he runs 9 * 60 = 540 meters a week.\n#### 540\n\nQuestion: There are 15 trees in the grove. Grove workers "
+     },
+     {
+      "id": "4",
+      "pred": "60",
+      "gold": "20",
+      "ok": false,
+      "text": " Wendi feeds 20 chickens, so she needs to give 20 * 3 = 60 cups of feed.\n#### 60\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, the"
+     },
+     {
+      "id": "5",
+      "pred": "13",
+      "gold": "64",
+      "ok": false,
+      "text": " First, we need to find the price of the second glass. 60% of $5 is $3. So, the price of the second glass is $3. Then, we need to find the price of the first glass. 5 * 2 = 10. So, the price of the fi"
+     },
+     {
+      "id": "6",
+      "pred": "260",
+      "gold": "260",
+      "ok": true,
+      "text": " Seattle has 20 sheep. Charleston has 20 * 4 = 80 sheep. Toulouse has 80 * 2 = 160 sheep. Together they have 20 + 80 + 160 = 260 sheep.\n#### 260\n\nQuestion: If you have 100 apples and you eat 20, how m"
+     },
+     {
+      "id": "7",
+      "pred": "140",
+      "gold": "160",
+      "ok": false,
+      "text": " Carla can download 2 GB/minute normally. If she downloads 200 GB, it takes 200 / 2 = 100 minutes. If she downloads 40% of the file, it takes 40 / 2 = 20 minutes. Then she has to restart the download,"
+     },
+     {
+      "id": "8",
+      "pred": "30",
+      "gold": "45",
+      "ok": false,
+      "text": " John drove for 3 hours at 60 mph, which is 180 miles. He drove for 2 hours at 30 mph, which is 60 miles. He drove for 1 hour at 80 mph, which is 80 miles. He drove for 1 hour at 30 mph, which is 30 m"
+     },
+     {
+      "id": "9",
+      "pred": "462",
+      "gold": "460",
+      "ok": false,
+      "text": " Eliza's regular hourly rate is $10. Her overtime pay is 1.2 * $10 = $12. Her total earnings for 45 hours is $10 * 45 + $12 = $450 + $12 = $462.\n#### 462\n\nQuestion: If there are 15 trees in the grove,"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " First month: 60 downloads. Second month: 60 * 3 = 180 downloads. Third month: 180 * 0.7 = 126 downloads. Total: 60 + 180 + 126 = 366 downloads.\n#### 366\n\nQuestion: A car travels from point A to point"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " 3 dozen donuts = 3 * 68 = 204. 2 dozen mini cupcakes = 2 * 80 = 160. 6 dozen mini cheesecakes = 6 * 55 = 330. Total cost = 204 + 160 + 330 = 694.\n#### 694\n\nQuestion: There are 15 trees in the grove. "
+     },
+     {
+      "id": "12",
+      "pred": "1",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree will grow 7 lemons per year. To earn $1.50, he needs to sell 1 lemon. So he needs to grow 1/7 of a tree. It will take 1/7 of a year to grow 1/7 of a tree.\n#### 1/7\n\nQuestion: A car is drivin"
+     },
+     {
+      "id": "13",
+      "pred": "10",
+      "gold": "18",
+      "ok": false,
+      "text": " Melanie started with 5 + 2 + 5/3 = 10/3 vacuum cleaners.\n#### 10/3\n\nQuestion: There are 15 trees in the grove. After they are done, there will be 21 trees. How many trees did the grove workers plant "
+     },
+     {
+      "id": "14",
+      "pred": "0",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students is 4 students. 25% of 16 students is 4 students. 20% of 16 students is 32 students. 16 students - 4 - 4 - 32 = 0 students.\n#### 0\n\nQuestion: If there are 15 trees in the grove, and"
+     },
+     {
+      "id": "15",
+      "pred": "221",
+      "gold": "125",
+      "ok": false,
+      "text": " The jewelry market will go up 2.5% and the electronic gadgets market will rise 1.2%. The jewelry market will be worth $5,000 * 1.025 = $5,125. The electronic gadgets market will be worth $8,000 * 1.0"
+     },
+     {
+      "id": "16",
+      "pred": "150",
+      "gold": "230",
+      "ok": false,
+      "text": " The first train travels 80 miles in the first day. The second train travels 150 miles in the second day.\n#### 150\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted, how many tre"
+     },
+     {
+      "id": "17",
+      "pred": "2050",
+      "gold": "57500",
+      "ok": false,
+      "text": " Her annual salary is $20 * 50 + $30 * 35 = $1000 + $1050 = $2050.\n#### 2050\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted, how many trees are left?\nAnswer: There are 15 tree"
+     },
+     {
+      "id": "18",
+      "pred": "9",
+      "gold": "7",
+      "ok": false,
+      "text": " Claire makes 3 eggs per egg omelet. 4 weeks is 4 * 7 = 28 days. 28 / 3 = 9.33 eggs.\n#### 9\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they ar"
+     },
+     {
+      "id": "19",
+      "pred": "6",
+      "gold": "6",
+      "ok": true,
+      "text": " Marissa walked 4 miles in 1 hour, so her speed is 4 miles per hour. She walked 2 more miles in 1 hour, so her speed is 2 miles per hour. Her total distance is 6 miles, and her total time is 2 hours. "
+     },
+     {
+      "id": "20",
+      "pred": "24",
+      "gold": "15",
+      "ok": false,
+      "text": " The total volume is 10 + 15 = 25 liters. After pouring, 10 - 1 = 9 liters of orange drink remain. The remaining 24 liters is 24 liters.\n#### 24\n\nQuestion: There are 15 trees in the grove. Grove worke"
+     },
+     {
+      "id": "21",
+      "pred": "2",
+      "gold": "14",
+      "ok": false,
+      "text": " Samantha is 31 years old, so Raymond was 31 - 6 = 25 years old. Raymond's son was born at age 23, so 25 - 23 = 2 years ago.\n#### 2\n\nQuestion: If there are 15 trees in the grove, and 21 trees are plan"
+     },
+     {
+      "id": "22",
+      "pred": "5",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 0 = 5 DVDs sold.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grov"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " The candle burns for 4 hours. Since it melts 2 cm per hour, it will be 2 * 4 = 8 cm shorter.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. Afte"
+     },
+     {
+      "id": "24",
+      "pred": "24.375",
+      "gold": "26",
+      "ok": false,
+      "text": " The book was originally $19.50 + ($19.50 * 0.25) = $19.50 + $4.875 = $24.375.\n#### 24.375\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted, how many trees are left?\nAnswer: The"
+     },
+     {
+      "id": "25",
+      "pred": "2",
+      "gold": "2",
+      "ok": true,
+      "text": " First, calculate the cost of the chicken meal: $12. Next, calculate the cost of the milk: 5 * $3 = $15. Then, calculate the cost of the apples: 4 * $1.50 = $6. Now, subtract the total cost of the oth"
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " 3 pairs of shorts = 3 * $16.50 = $49.50. 3 pairs of pants = 3 * $22.50 = $67.50. 3 pairs of shoes = 3 * $42 = $126. Total = $49.50 + $67.50 + $126 = $243.\n#### 243\n\nQuestion: If there are 15 trees in"
+     },
+     {
+      "id": "27",
+      "pred": "3600",
+      "gold": "16",
+      "ok": false,
+      "text": " 60 days * 15 servings = 900 servings. 900 servings * $4.00 = $3600.\n#### 3600\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted, how many trees are left?\nAnswer: 15 - 21 = -6 tr"
+     },
+     {
+      "id": "28",
+      "pred": "25",
+      "gold": "25",
+      "ok": true,
+      "text": " The first stop is at 20 miles, and the second stop is 15 miles before the end, which is 60 - 15 = 45 miles. So the distance between the two stops is 45 - 20 = 25 miles.\n#### 25\n\nQuestion: A car trave"
+     },
+     {
+      "id": "29",
+      "pred": "10",
+      "gold": "104",
+      "ok": false,
+      "text": " Let the cost of the boots be x. The cost of the high heels is $33 and the other pair is $66. The total cost of the boots and heels is $5 less than the boots, so x + 33 + 66 = x - 5. Solving this give"
+     },
+     {
+      "id": "30",
+      "pred": "109",
+      "gold": "109",
+      "ok": true,
+      "text": " Darrell and Allen's ages are in the ratio 7:11. Let Darrell's age be 7x and Allen's age be 11x. Their total age is 7x + 11x = 18x. Given the total age is 162, we have 18x = 162. Solving for x, we get"
+     },
+     {
+      "id": "31",
+      "pred": "105",
+      "gold": "80",
+      "ok": false,
+      "text": " First guess: 80. Second guess: 80 + 20 = 100. Third guess: 80 + 25 = 105. Average guess: (80 + 100 + 105) / 3 = 105.\n#### 105\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted, "
+     },
+     {
+      "id": "32",
+      "pred": "5",
+      "gold": "35",
+      "ok": false,
+      "text": " John takes care of 10 dogs. Each dog takes .5 hours a day to walk and take care of their business. So John spends 10 * .5 = 5 hours a week.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove wo"
+     },
+     {
+      "id": "33",
+      "pred": "30",
+      "gold": "70",
+      "ok": false,
+      "text": " First, we need to find the number of silver coins. Since there are 30 more gold coins than silver coins, we can subtract 30 from 110 to find the number of silver coins. 110 - 30 = 80. Now, we can fin"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " First, find half of Raymond's jewels: 40 / 2 = 20. Then, find Aaron's jewels: 20 + 5 = 25. Finally, find Siobhan's jewels: 25 - 2 = 23.\n#### 23\n\nQuestion: If there are 15 apples in the basket and 10 "
+     },
+     {
+      "id": "35",
+      "pred": "9",
+      "gold": "9",
+      "ok": true,
+      "text": " Mike scores 4 points in the first 20 minutes. In the second 20 minutes, he scores 25% more points, which is 20 * 0.25 = 5 points. So he scores 4 + 5 = 9 points in total.\n#### 9\n\nQuestion: There are 1"
+     },
+     {
+      "id": "36",
+      "pred": "300",
+      "gold": "75",
+      "ok": false,
+      "text": " Terry eats 2 yogurts a day, so over 30 days he eats 2 * 30 = 60 yogurts. At 4 yogurts for $5.00, he spends 60 * 5 = 300.\n#### 300\n\nQuestion: If there are 15 trees in the grove, and 2 more trees are p"
+     },
+     {
+      "id": "37",
+      "pred": "-322",
+      "gold": "2",
+      "ok": false,
+      "text": " John started with 13 lego sets. He sold them for 13 * $15 = $195. He bought 8 video games for 8 * $20 = $160. He has $5 left. So he has 13 - 195 - 160 = -322 lego sets.\n#### -322\n\nQuestion: There are"
+     },
+     {
+      "id": "38",
+      "pred": "20",
+      "gold": "10",
+      "ok": false,
+      "text": " John runs 60 miles in 3 days, so he runs 60 / 3 = 20 miles per day.\n#### 20\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there w"
+     },
+     {
+      "id": "39",
+      "pred": "36",
+      "gold": "18",
+      "ok": false,
+      "text": " First, we need to find out how fast she can run. Since she can skip at 3 miles per hour, and she can run four times faster, she can run at 12 miles per hour. Then, we need to find out how much time s"
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Suzy\u2019s iPhone is 1 year old. Ben\u2019s iPhone is 2 * 1 = 2 years old. Brandon\u2019s iPhone is 4 * 2 = 8 years old.\n#### 8\n\nQuestion: There are 15 trees in the grove. After they are done, there will be 21 tre"
+     },
+     {
+      "id": "41",
+      "pred": "1200",
+      "gold": "200",
+      "ok": false,
+      "text": " The dragon's reach is 1000 feet. When not holding the gemstone, Polly can throw the javelin 400 feet. When holding the gemstone, she can throw it 400 * 3 = 1200 feet. So she can still hit the dragon "
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " 5 pies * 8 pieces/pie = 40 pieces of pie. 14 pieces remaining. 40 - 14 = 26 pieces taken.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After "
+     },
+     {
+      "id": "43",
+      "pred": "40",
+      "gold": "48",
+      "ok": false,
+      "text": " 2000 - 1800 = 200 calories remaining. 200 / 5 = 40 grams.\n#### 40\n\nQuestion: If you have 100 apples and 50 oranges, and you eat 25 apples, how many apples and oranges do you have left?\nAnswer: 100 - "
+     },
+     {
+      "id": "44",
+      "pred": "20",
+      "gold": "20",
+      "ok": true,
+      "text": " He makes 20 candles, so he needs 2 pounds of beeswax. 2 pounds * 10 candles/pound = 20 candles. 20 candles * $2.00 = $40.00 revenue. 2 pounds * $10.00 = $20.00 supplies.  $40.00 - $20.00 = $20.00 pro"
+     },
+     {
+      "id": "45",
+      "pred": "44",
+      "gold": "104",
+      "ok": false,
+      "text": " Meredith wrote 5 articles on Monday, 2/5 * 5 = 2 articles on Tuesday, and 2 * 2 = 4 articles on Wednesday. Total hours = 5 * 4 + 2 * 4 + 4 * 4 = 20 + 8 + 16 = 44 hours.\n#### 44\n\nQuestion: A car trave"
+     },
+     {
+      "id": "46",
+      "pred": "277",
+      "gold": "163",
+      "ok": false,
+      "text": " She started with 80 notes, and placed 220 on each of the 220 cups, so she had 220 notes. After placing them, she had 80 + 220 = 300 notes. She had 23 remaining, so she had 300 - 23 = 277 notes.\n#### "
+     },
+     {
+      "id": "47",
+      "pred": "6000",
+      "gold": "800",
+      "ok": false,
+      "text": " John bought 2 * 40 = 80 blue ties. The red ties cost 50% more, so 80 * 1.5 = 120 red ties. 120 * 50 = 6000.\n#### 6000\n\nQuestion: If there are 15 trees in the grove, and 21 trees are planted, how many"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet = 48 inches. 48 / 6 = 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many tree"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " The building has 15 floors, and each floor has 8 units, so 15 * 8 = 120 units. 3/4 of the building is occupied, so 120 * 3/4 = 90 units are occupied. The unoccupied units are 120 - 90 = 30.\n#### 30\n\n"
+     }
+    ]
+   }
+  }
+ },
+ "qwen3-0.6b": {
+  "dense": {
+   "gsm8k": {
+    "acc": 0.38,
+    "exact": "19/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " She lays 16 eggs per day. She eats 3 for breakfast and 4 for baking. So she eats 3 + 4 = 7 eggs per day. She sells the remainder at $2 per egg. So she makes 16 - 7 = 9 eggs per day. She sells 9 eggs "
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + (2/2) = 2 + 1 = 3.\n#### 3\n\nQuestion: A man has 3 children. Each child has 2 children. How many children does he have in total?\nAnswer: 3 + 2 = 5.\n#### 5\n\nQuestion: A man has 3 children. Each chil"
+     },
+     {
+      "id": "2",
+      "pred": "120000",
+      "gold": "70000",
+      "ok": false,
+      "text": " The profit is the selling price minus the cost. The selling price is the original value plus the increased value. The increased value is 150% of the original value. So the profit is 80,000 + 150% of "
+     },
+     {
+      "id": "3",
+      "pred": "180",
+      "gold": "540",
+      "ok": false,
+      "text": " 3 sprints * 60 meters per sprint = 180 meters per week.\n#### 180\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 t"
+     },
+     {
+      "id": "4",
+      "pred": "65",
+      "gold": "20",
+      "ok": false,
+      "text": " 25 cups in the afternoon, 15 in the morning, and 25 in the afternoon. So total is 25 + 15 + 25 = 65 cups.\n#### 65\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gro"
+     },
+     {
+      "id": "5",
+      "pred": "10.05",
+      "gold": "64",
+      "ok": false,
+      "text": " The first glass costs $5, the second $3, the third $2, the fourth $1.5, the fifth $1, the sixth $0.6, the seventh $0.5, the eighth $0.4, the ninth $0.3, the tenth $0.2, the eleventh $0.15, the twelft"
+     },
+     {
+      "id": "6",
+      "pred": "88",
+      "gold": "260",
+      "ok": false,
+      "text": " Toulouse has 2 * 4 = 8 sheep. Charleston has 4 * 20 = 80 sheep. Together, they have 8 + 80 = 88 sheep.\n#### 88\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove "
+     },
+     {
+      "id": "7",
+      "pred": "120",
+      "gold": "160",
+      "ok": false,
+      "text": " The download is 200 GB. Normally, she would download 2 GB per minute, so 200 / 2 = 100 minutes. However, after 40% of the download, she has to restart, which takes 20 minutes. So the total time is 10"
+     },
+     {
+      "id": "8",
+      "pred": "0.5",
+      "gold": "45",
+      "ok": false,
+      "text": " First, he drove for 3 hours at 60 mph, so he covered 3*60 = 180 miles. Then, he had to drive back home, but he was stuck for 2 hours in traffic, so he didn't drive any distance. Then, he drove for 0."
+     },
+     {
+      "id": "9",
+      "pred": "412",
+      "gold": "460",
+      "ok": false,
+      "text": " First 40 hours, she earned $10 * 40 = $400. Then, for the remaining 5 hours, she earned 1.2 * 10 = $12. So total earnings are $400 + $12 = $412.\n#### 412\n\nQuestion: A man has a certain amount of mone"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " First month: 60 downloads. Second month: 60 * 3 = 180. Third month: 180 - 30% of 180 = 180 - 54 = 126. Total: 60 + 180 + 126 = 366 downloads.\n#### 366\n\nQuestion: A new program had 60 downloads in the"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " First, calculate the cost of each type of pastries. For donuts: 3 dozen * $68 = $204. For mini cupcakes: 2 dozen * $80 = $160. For mini cheesecakes: 6 dozen * $55 = $330. Then add them all together: "
+     },
+     {
+      "id": "12",
+      "pred": "1",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree costs $90 to plant. He will earn $1.5 per lemon. Each year, he plants 7 lemons, sells them for $1.5 each, and pays $3 to water and feed. So, the total cost per year is $3. The total revenue "
+     },
+     {
+      "id": "13",
+      "pred": "36",
+      "gold": "18",
+      "ok": false,
+      "text": " Let's call the total number of vacuum cleaners she started with x. She sold a third, so she has x/3 left. Then she gave 2 more, so she has x/3 - 2 left. Then she sold half of what was left, so she ha"
+     },
+     {
+      "id": "14",
+      "pred": "55",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students is 4 students. 25% of 20 students is 5 students. The rest is 20 - 4 - 5 = 11 students. 11 out of 20 students. So the percentage is 11/20 = 55%.\n#### 55\n\nQuestion: There are 15 tree"
+     },
+     {
+      "id": "15",
+      "pred": "96",
+      "gold": "125",
+      "ok": false,
+      "text": " The profit from the jewelry plan is 2.5% of $5,000, which is $125. The profit from the electronic gadgets plan is 1.2% of $8,000, which is $96. The merchant would choose the electronic gadgets plan, "
+     },
+     {
+      "id": "16",
+      "pred": "230",
+      "gold": "230",
+      "ok": true,
+      "text": " Each train traveled 80 miles westward and 150 miles northward. So the total distance covered by each train in the two days is 80 + 150 = 230 miles.\n#### 230\n\nQuestion: There are 15 trees in the grove"
+     },
+     {
+      "id": "17",
+      "pred": null,
+      "gold": "57500",
+      "ok": false,
+      "text": " First, calculate her salary per week as a teacher and coach. Then multiply by the number of weeks. Then add the salary for the coach and teacher. Then multiply by the number of weeks. Then add the sa"
+     },
+     {
+      "id": "18",
+      "pred": "49",
+      "gold": "7",
+      "ok": false,
+      "text": " 4 weeks is 28 days. 28 days is 28 * 7 = 196 days. 196 * 3 = 588 eggs. 588 / 12 = 49 dozens.\n#### 49\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. Afte"
+     },
+     {
+      "id": "19",
+      "pred": "6",
+      "gold": "6",
+      "ok": true,
+      "text": " The total distance is 12 miles. She walked 4 + 2 = 6 miles. So the remaining distance is 12 - 6 = 6 miles. To find the average speed, divide the total distance by the total time. The total time is 1 "
+     },
+     {
+      "id": "20",
+      "pred": "21.33",
+      "gold": "15",
+      "ok": false,
+      "text": " The original amount of water in the pineapple drink is 15 * 3/5 = 9 liters. The amount of water in the orange drink is 20 * 2/3 = 13.33 liters. After pouring, the total amount of water is 9 + 13.33 ="
+     },
+     {
+      "id": "21",
+      "pred": "8",
+      "gold": "14",
+      "ok": false,
+      "text": " Raymond's son was born 23 years before 31, so 31 - 23 = 8 years ago.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there w"
+     },
+     {
+      "id": "22",
+      "pred": "8",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 3 = 8 DVDs.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wor"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " From 1:00 PM to 5:00 PM is 4 hours. So the candle will be 4 * 2 = 8 centimeters shorter.\n#### 8\n\nQuestion: A box contains 12 pencils. 10 pencils are yellow, 5 pencils are blue, and 2 pencils are red."
+     },
+     {
+      "id": "24",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original price is $19.50 divided by (1 - 0.25) = $19.50 / 0.75 = $26.\n#### 26\n\nQuestion: A man has a certain number of children. He has 3 children. He has 1000000000000000000000000000000000000000"
+     },
+     {
+      "id": "25",
+      "pred": "3.41",
+      "gold": "2",
+      "ok": false,
+      "text": " First, calculate the cost of the milk and apples. 5 packs of milk at $3 each is 5 * 3 = $15. 4 apples at $1.50 each is 4 * 1.50 = $6. So total for milk and apples is $15 + $6 = $21. Then, the remaini"
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " First, calculate the cost of the shorts: 3 pairs * $16.50 = $49.50. Then, the cost of the pants: 3 pairs * $22.50 = $67.50. Finally, the cost of the shoes: 3 pairs * $42 = $126. Add all together: $49"
+     },
+     {
+      "id": "27",
+      "pred": "3600",
+      "gold": "16",
+      "ok": false,
+      "text": " 15 servings per carton * 60 cartons = 900 servings. 900 servings * $4.00 = $3600.00.\n#### 3600\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After the"
+     },
+     {
+      "id": "28",
+      "pred": "35",
+      "gold": "25",
+      "ok": false,
+      "text": " 20 + 15 = 35 miles.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wo"
+     },
+     {
+      "id": "29",
+      "pred": "66",
+      "gold": "104",
+      "ok": false,
+      "text": " The heels cost $33 and $66. The total is $33 + $66 = $99. The boots cost $99 - $33 = $66.\n#### 66\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After "
+     },
+     {
+      "id": "30",
+      "pred": "99",
+      "gold": "109",
+      "ok": false,
+      "text": " The ratio of their ages is 7:11. Let their ages be 7x and 11x. The total age is 7x + 11x = 162. So x = 162 / 18 = 9. Allen's age is 11x = 99. So the answer is 99.\n#### 99\n\nQuestion: There are 15 tree"
+     },
+     {
+      "id": "31",
+      "pred": "80",
+      "gold": "80",
+      "ok": true,
+      "text": " Let's call the first number 80. The second number is 80 + (1/2)*80 = 80 + 40 = 120. The third number is 25% more than 80, which is 200. The average is (80 + 120 + 200)/3 = 400/3 \u2248 133.33. But since t"
+     },
+     {
+      "id": "32",
+      "pred": "35",
+      "gold": "35",
+      "ok": true,
+      "text": " 10 dogs * 0.5 hours per dog per day = 5 hours per day.  There are 7 days a week, so 5 * 7 = 35 hours a week.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the "
+     },
+     {
+      "id": "33",
+      "pred": "40",
+      "gold": "70",
+      "ok": false,
+      "text": " Let x be the number of silver coins. Then, the number of gold coins is x + 30. Since the total is 110, we have x + (x + 30) = 110. Solving for x, we get 2x + 30 = 110, so 2x = 80, and x = 40. Therefo"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " Let's break it down step by step. First, Aaron has 5 more jewels than half of Raymond's jewels. So, half of Raymond's jewels is 40 / 2 = 20. Then, Aaron has 20 + 5 = 25 jewels. Since Siobhan has 2 fe"
+     },
+     {
+      "id": "35",
+      "pred": "9",
+      "gold": "9",
+      "ok": true,
+      "text": " 4 + (4 + 25% of 4) = 4 + 4.0 + 1.0 = 9 points.\n#### 9\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How m"
+     },
+     {
+      "id": "36",
+      "pred": "240",
+      "gold": "75",
+      "ok": false,
+      "text": " 2 yogurts * 4 = 8. 8 * 30 = 240.\n#### 240\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees di"
+     },
+     {
+      "id": "37",
+      "pred": "35",
+      "gold": "2",
+      "ok": false,
+      "text": " He sells 13 lego sets for $15 each, so he gets 13 * 15 = $195. He uses $195 to buy 8 games for $20 each, so he spends 8 * 20 = $160. He has $5 left, so he has 195 - 160 = $35. Therefore, he still has"
+     },
+     {
+      "id": "38",
+      "pred": "10",
+      "gold": "10",
+      "ok": true,
+      "text": " 60 miles per week divided by 3 days is 20 miles per day.  Then, for the first day, he runs 3 hours.  For the other two days, he runs half as much, so 1.5 hours each.  Total hours for the week is 3 + "
+     },
+     {
+      "id": "39",
+      "pred": "10",
+      "gold": "18",
+      "ok": false,
+      "text": " She can run at 4 times her walking speed. Let's say she walks at 1 mph. Then she can run at 4 mph. She skips at 3 mph. So total time is 1/3 time running and 2/3 time walking. So total distance is (1/"
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Let's break it down. First, Suzy's iPhone is 1 year old. Ben's iPhone is two times older, so Ben's iPhone is 2 * 1 = 2 years old. Brandon's iPhone is four times as old as Ben's, so it's 4 * 2 = 8 yea"
+     },
+     {
+      "id": "41",
+      "pred": "200",
+      "gold": "200",
+      "ok": true,
+      "text": " 400 feet is the distance from the dragon's flames. If she holds the gemstone, she can throw the javelin three times farther, so 3 * 400 = 1200 feet. But since the dragon's flames are at 1000 feet, sh"
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " 5 pies * 8 pieces per pie = 40 pieces.  40 - 14 = 26 pieces taken by the guests.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are "
+     },
+     {
+      "id": "43",
+      "pred": "5",
+      "gold": "48",
+      "ok": false,
+      "text": " 250 * 5 = 1250 calories per serving. 1250 * 8 = 10000 calories. 10000 / 2000 = 5 servings. So you can eat 5 servings of chips.\n#### 5\n\nQuestion: A man has 3 children. Each child has 2 children. How m"
+     },
+     {
+      "id": "44",
+      "pred": "10",
+      "gold": "20",
+      "ok": false,
+      "text": " He sells 20 candles for $40.00. He uses 1 pound of beeswax and 20 wicks for each candle. So he spends $10.00 on beeswax and $20.00 on wicks. Total cost is $30.00. His profit is $40.00 - $30.00 = $10."
+     },
+     {
+      "id": "45",
+      "pred": "44",
+      "gold": "104",
+      "ok": false,
+      "text": " First, calculate the number of articles on Tuesday: 2/5 of Monday's articles. Monday had 5, so Tuesday had 2/5 * 5 = 2 articles. Then, Wednesday had twice the number of articles as Tuesday, so Wednes"
+     },
+     {
+      "id": "46",
+      "pred": "103",
+      "gold": "163",
+      "ok": false,
+      "text": " 80 + 23 = 103 post-it notes in the package.\n#### 103\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How ma"
+     },
+     {
+      "id": "47",
+      "pred": "100",
+      "gold": "800",
+      "ok": false,
+      "text": " He spent $40 on blue ties. Since red ties cost 50% more, they cost $40 * 1.5 = $60. So total spent on ties is $40 + $60 = $100.\n#### 100\n\nQuestion: A man has 3 children. Each child has 2 children. Ho"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet is 48 inches. 48 inches divided by 6 inches per piece is 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, th"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " 15 floors * 8 units per floor = 120 units. 3/4 of 120 is 90. So the total number of unoccupied units is 120 - 90 = 30.\n#### 30\n\nQuestion: There are 15 trees in the grove. Grove workers will plant tre"
+     }
+    ]
+   }
+  },
+  "ours_adaptive": {
+   "0.10": {
+    "acc": 0.32,
+    "exact": "16/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " She lays 16 eggs per day. She eats 3 for breakfast and 4 for baking. So she eats 3 + 4 = 7 eggs per day. She sells the remainder at $2 per egg. So she makes 16 - 7 = 9 eggs per day. She sells 9 eggs "
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + (2/2) = 2 + 1 = 3.\n#### 3\n\nQuestion: A man has 3 children. Each child has 2 children. How many children does he have in total?\nAnswer: 3 + 2 + 2 = 7.\n#### 7\n\nQuestion: A man has 3 children. Each "
+     },
+     {
+      "id": "2",
+      "pred": "120000",
+      "gold": "70000",
+      "ok": false,
+      "text": " The profit is the selling price minus the cost. The selling price is the original price plus the increased value. The increased value is 150% of the original price. So the profit is 80,000 + 150% of "
+     },
+     {
+      "id": "3",
+      "pred": "180",
+      "gold": "540",
+      "ok": false,
+      "text": " 3 sprints x 60 meters = 180 meters.\n#### 180\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees"
+     },
+     {
+      "id": "4",
+      "pred": "500",
+      "gold": "20",
+      "ok": false,
+      "text": " 25 cups of feed per meal.  So, 25 cups per meal * 20 chickens = 500 cups of feed.\n#### 500\n\nQuestion: A man has a certain amount of money. He spends 10% of his money on a car and 20% of his money on "
+     },
+     {
+      "id": "5",
+      "pred": "15",
+      "gold": "64",
+      "ok": false,
+      "text": " The first glass costs $5, the second $3, the third $2, the fourth $1.50, the fifth $1.20, the sixth $0.90, the seventh $0.60, the eighth $0.30, the ninth $0.20, the tenth $0.15, the eleventh $0.12, t"
+     },
+     {
+      "id": "6",
+      "pred": "108",
+      "gold": "260",
+      "ok": false,
+      "text": " Toulouse has 2 * 4 = 8 sheep. Charleston has 4 * 20 = 80 sheep. Toulouse, Charleston, and Seattle have 8 + 80 + 20 = 108 sheep.\n#### 108\n\nQuestion: There are 15 trees in the grove. Grove workers will"
+     },
+     {
+      "id": "7",
+      "pred": "80",
+      "gold": "160",
+      "ok": false,
+      "text": " The download is 200 GB. Normally, she can download 2 GB per minute. But 40% of the way through, she has to restart. So the download time is 200 GB * (1 - 0.4) / 2 GB/minute = 200 * 0.6 / 2 = 60 minut"
+     },
+     {
+      "id": "8",
+      "pred": "4",
+      "gold": "45",
+      "ok": false,
+      "text": " First, he drove for 3 hours at 60 mph, so he covered 3*60 = 180 miles. Then, he had to drive back home, but he was stuck in traffic for 2 hours. So he spent 2 hours driving, and then 0.5 hours drivin"
+     },
+     {
+      "id": "9",
+      "pred": "406",
+      "gold": "460",
+      "ok": false,
+      "text": " First 40 hours, she earned 40 * 10 = $400. Then, for the remaining 5 hours, she earned 5 * 1.2 = $6. So total earnings are 400 + 6 = $406.\n#### 406\n\nQuestion: A man is walking in a park. He walks 10 "
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " First month: 60 downloads. Second month: 60 * 3 = 180 downloads. Third month: 180 - 30% of 180 = 180 - 54 = 126 downloads. Total: 60 + 180 + 126 = 366 downloads.\n#### 366\n\nQuestion: A new program had"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " 3 dozen donuts = 3 * 68 = 204, 2 dozen mini cupcakes = 2 * 80 = 160, 6 dozen mini cheesecakes = 6 * 55 = 330. Total cost = 204 + 160 + 330 = 694.\n#### 694\n\nQuestion: A man has a certain number of app"
+     },
+     {
+      "id": "12",
+      "pred": "1",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree costs $90 to plant. He will earn $1.5 per year. The cost to water and feed is $3 per year. So the total cost per year is $3 + $1.5 = $4.5. The total earnings per year is $1.5. So the number "
+     },
+     {
+      "id": "13",
+      "pred": "12",
+      "gold": "18",
+      "ok": false,
+      "text": " Let's call the total number of vacuum cleaners she started with x. She sold a third, which is x/3, at the green house. Then she gave 2 more to the red house, so she had x/3 + 2 left. Then she sold ha"
+     },
+     {
+      "id": "14",
+      "pred": "55",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students is 4 students. 25% of 20 students is 5 students. The rest is 20 - 4 - 5 = 11 students. 11/20 = 55%. So the answer is 55%.\n#### 55\n\nQuestion: A man has 3 children. Each child has 2 "
+     },
+     {
+      "id": "15",
+      "pred": "9600",
+      "gold": "125",
+      "ok": false,
+      "text": " The profit for the jewelry is 2500, and for the gadgets it is 9600. So the profit for the gadgets is higher. Therefore, the merchant should choose the electronic gadgets.\n#### 9600\n\nQuestion: A store"
+     },
+     {
+      "id": "16",
+      "pred": "230",
+      "gold": "230",
+      "ok": true,
+      "text": " Each train traveled 80 miles westward and 150 miles northward. So the total distance covered by each train in the two days is 80 + 150 = 230 miles.\n#### 230\n\nQuestion: A man has 3 children. He has 10"
+     },
+     {
+      "id": "17",
+      "pred": "2500",
+      "gold": "57500",
+      "ok": false,
+      "text": " First, calculate her salary per week. She gets $20 for teaching and $30 for coaching. So her weekly salary is $20 + $30 = $50. Then, multiply by the number of weeks she works: 50 weeks * 50 hours per"
+     },
+     {
+      "id": "18",
+      "pred": "16",
+      "gold": "7",
+      "ok": false,
+      "text": " 4 weeks is 28 days. 28 days is 28 * 7 = 196 eggs. 196 / 12 = 16.333... dozens.  So the answer is 16 dozens.\n#### 16\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the g"
+     },
+     {
+      "id": "19",
+      "pred": "6",
+      "gold": "6",
+      "ok": true,
+      "text": " The total distance is 12 miles. She walked 4 + 2 = 6 miles. So the remaining distance is 12 - 6 = 6 miles. She needs to walk 6 miles in 1 hour. So her average speed is 6 / 1 = 6 miles per hour.\n#### "
+     },
+     {
+      "id": "20",
+      "pred": "14",
+      "gold": "15",
+      "ok": false,
+      "text": " The original amount of water in the pineapple drink is 15 * 3/5 = 9 liters. The original amount of water in the orange drink is 10 * 2/3 = 6.666... liters. So the total water is 9 + 6.666... = 15.666"
+     },
+     {
+      "id": "21",
+      "pred": "23",
+      "gold": "14",
+      "ok": false,
+      "text": " Raymond's son was born 23 years ago. So the answer is 23.\n#### 23\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 "
+     },
+     {
+      "id": "22",
+      "pred": "8",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 3 = 8 DVDs.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wor"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " From 1:00 PM to 5:00 PM is 4 hours. So the candle will be 4 * 2 = 8 centimeters shorter.\n#### 8\n\nQuestion: A box contains 12 apples. How many apples are in the box?\nAnswer: 12 apples in the box.\n####"
+     },
+     {
+      "id": "24",
+      "pred": "78",
+      "gold": "26",
+      "ok": false,
+      "text": " $19.50 / 0.25 = $78.\n#### 78\n\nQuestion: A man has a certain number of children. He has 3 children. Each child has 2 children. How many children does he have in total?\nAnswer: 3 * 2 = 6 children.\n####"
+     },
+     {
+      "id": "25",
+      "pred": "2",
+      "gold": "2",
+      "ok": true,
+      "text": " First, calculate the total cost of the items. The chicken meal is $12, the packs of milk are 5 * $3 = $15, the apples are 4 * $1.50 = $6. So the total cost is $12 + $15 + $6 = $33. Then, subtract tha"
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " 3 pairs of shorts = 3 * 16.50 = 49.50. 3 pairs of pants = 3 * 22.50 = 67.50. 3 pairs of shoes = 3 * 42 = 126. Total = 49.50 + 67.50 + 126 = 243.00.\n#### 243\n\nQuestion: There are 15 trees in the grove"
+     },
+     {
+      "id": "27",
+      "pred": "3600",
+      "gold": "16",
+      "ok": false,
+      "text": " 60 days * 15 servings/day = 900 servings. 900 servings * $4.00 = $3600.00.\n#### 3600\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done"
+     },
+     {
+      "id": "28",
+      "pred": "25",
+      "gold": "25",
+      "ok": true,
+      "text": " 60 - 20 - 15 = 25 miles.\n#### 25\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the gro"
+     },
+     {
+      "id": "29",
+      "pred": "94",
+      "gold": "104",
+      "ok": false,
+      "text": " The heels cost $33 and the other costs twice as much, so the total is 33 + 2*33 = 99. The boots cost 99 - 5 = 94 dollars.\n#### 94\n\nQuestion: There are 15 trees in the grove. Grove workers will plant "
+     },
+     {
+      "id": "30",
+      "pred": "21",
+      "gold": "109",
+      "ok": false,
+      "text": " The ratio of their ages is 7:11. The total is 18. So each part is 18. So Allen's age is 11 + 10 = 21.\n#### 21\n\nQuestion: A man has a certain number of coins. He has 10 coins. He has 10 coins. He has "
+     },
+     {
+      "id": "31",
+      "pred": "100",
+      "gold": "80",
+      "ok": false,
+      "text": " Let's call the number of jelly beans in the jar as J. The first friend says 80. The second says 20 more than half of 80, which is 40, so 80 + 40 = 120. The third says 25% more than 80, which is 20, s"
+     },
+     {
+      "id": "32",
+      "pred": "35",
+      "gold": "35",
+      "ok": true,
+      "text": " 10 dogs * 0.5 hours per dog per day = 5 hours per day.  There are 7 days a week.  So 5 * 7 = 35 hours a week.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the"
+     },
+     {
+      "id": "33",
+      "pred": "40",
+      "gold": "70",
+      "ok": false,
+      "text": " Let x be the number of silver coins. Then, the number of gold coins is x + 30. Since Gretchen has 110 coins, we have x + (x + 30) = 110. Solving for x, we get 2x + 30 = 110, so 2x = 80, and x = 40. T"
+     },
+     {
+      "id": "34",
+      "pred": "5",
+      "gold": "23",
+      "ok": false,
+      "text": " Let's define the number of jewels Raymond has as R. Then, Aaron has R + 5 = 45. So Aaron has 45. Then, half of Aaron's jewels is 22.5. Siobhan has 2 fewer jewels than Aaron, so she has 22.5 - 2 = 20."
+     },
+     {
+      "id": "35",
+      "pred": "9",
+      "gold": "9",
+      "ok": true,
+      "text": " 4 + (4 + 25% of 4) = 4 + 4 + 1 = 9 points.\n#### 9\n\nQuestion: A man has a bag of marbles. He gives 10 marbles to his son. He has 15 marbles left. How many marbles did he have initially?\nAnswer: 10 + 1"
+     },
+     {
+      "id": "36",
+      "pred": "240",
+      "gold": "75",
+      "ok": false,
+      "text": " 2 * 4 = 8.  8 * 30 = 240.  So he spends $240.\n#### 240\n\nQuestion: A man has a bag of marbles. He gives 2 marbles to his son. He has 10 marbles left. How many marbles did he have in total?\nAnswer: 2 +"
+     },
+     {
+      "id": "37",
+      "pred": "35",
+      "gold": "2",
+      "ok": false,
+      "text": " He sells 13 sets for $15 each, so he gets 13 * 15 = $195. He uses $195 to buy 8 games for $20 each, so he spends 8 * 20 = $160. He has $5 left, so he has 195 - 160 = 35. He still has 35 lego sets.\n##"
+     },
+     {
+      "id": "38",
+      "pred": "51.426",
+      "gold": "10",
+      "ok": false,
+      "text": " 60 miles per week divided by 7 days is 8.5714 miles per day.  Then, for the first day, he ran 3 hours.  For the other two days, he ran half as much, so 1.5 hours each.  So total hours per day is 3 + "
+     },
+     {
+      "id": "39",
+      "pred": "30",
+      "gold": "18",
+      "ok": false,
+      "text": " She can run at 4 times her walking speed. So her running speed is 4 * 3 = 12 mph. She can skip at half her running speed, so her skipping speed is 3/2 = 1.5 mph. In six hours, she spends one-third of"
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Brandon's iPhone is four times as old as Ben's. Ben's iPhone is two times older than Suzy's. So, Suzy's iPhone is 1 year old. Therefore, Ben's iPhone is 2 * 1 = 2 years old. Brandon's iPhone is 4 * 2"
+     },
+     {
+      "id": "41",
+      "pred": "600",
+      "gold": "200",
+      "ok": false,
+      "text": " 1000 - 400 = 600 feet.\n#### 600\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grov"
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " 5 pies * 8 pieces per pie = 40 pieces.  40 - 14 = 26 pieces taken by the guests.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are "
+     },
+     {
+      "id": "43",
+      "pred": "1500",
+      "gold": "48",
+      "ok": false,
+      "text": " 250 * 5 = 1250 calories per serving. 1250 * 8 = 10000 calories. 10000 / 2000 = 5 servings. 5 servings = 5 * 300 = 1500 grams. 1500 grams is 1.5 kg. 1.5 kg is 1500 grams.\n#### 1500\n\nQuestion: A man is"
+     },
+     {
+      "id": "44",
+      "pred": "30",
+      "gold": "20",
+      "ok": false,
+      "text": " He sells 20 candles for $40.00. He uses 1 pound of beeswax, which costs $10.00. So his net profit is $40 - $10 = $30.00.\n#### 30\n\nQuestion: A man is walking in the forest. He walks 10 miles. He walks"
+     },
+     {
+      "id": "45",
+      "pred": "44",
+      "gold": "104",
+      "ok": false,
+      "text": " First, calculate the number of articles on Tuesday. 2/5 times more than Monday's articles. So 2/5 * 5 = 2. So Tuesday had 2 articles. Then Wednesday had twice the number of articles she wrote on Tues"
+     },
+     {
+      "id": "46",
+      "pred": "103",
+      "gold": "163",
+      "ok": false,
+      "text": " 80 + 23 = 103 post-it notes in the package.\n#### 103\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How ma"
+     },
+     {
+      "id": "47",
+      "pred": "100",
+      "gold": "800",
+      "ok": false,
+      "text": " He spent $40 on blue ties. He spent 50% more on red ties, so he spent 40 * 1.5 = 60 on red ties. Total spent on ties is 40 + 60 = 100.\n#### 100\n\nQuestion: A man has a bag of marbles. He gives away 1/"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet is 48 inches. 48 inches divided by 6 inches per piece is 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, th"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " 15 * 8 = 120 units. 3/4 of 120 is 90. So the total number of unoccupied units is 120 - 90 = 30.\n#### 30\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. "
+     }
+    ]
+   }
+  },
+  "ours_uniform": {
+   "0.10": {
+    "acc": 0.26,
+    "exact": "13/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " She eats 3 eggs for breakfast, and bakes 4 eggs for her friends, so she eats 3 + 4 = 7 eggs. She sells 16 eggs per day, so she makes 16 - 7 = 9 eggs. She sells 9 eggs at $2 per egg, so she makes 9 * "
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + 1 = 3 bolts in total.\n#### 3\n\nOkay, let's see. The problem says that a robe takes 2 bolts of blue fiber and half that much white fiber. So first, I need to figure out how much white fiber is requ"
+     },
+     {
+      "id": "2",
+      "pred": "50000",
+      "gold": "70000",
+      "ok": false,
+      "text": " Profit is revenue minus cost. Revenue is the selling price of the house. The value increased by 150%, so the selling price is $80,000 + $50,000 = $130,000. Profit is $130,000 - $80,000 = $50,000.\n###"
+     },
+     {
+      "id": "3",
+      "pred": "180",
+      "gold": "540",
+      "ok": false,
+      "text": " 3 sprints x 60 meters = 180 meters.\n#### 180\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees"
+     },
+     {
+      "id": "4",
+      "pred": "60",
+      "gold": "20",
+      "ok": false,
+      "text": " 20 chickens * 3 cups per meal = 60 cups of feed.\n#### 60\n\nQuestion: A man has a certain amount of money. He spends 10% of his money on a car.  He has 20% of his money left.  How much money does he ha"
+     },
+     {
+      "id": "5",
+      "pred": "54.40",
+      "gold": "64",
+      "ok": false,
+      "text": " The first glass costs $5, the second $60% of 5 = $3, the third $60% of 3 = $1.80, and so on. So the total cost is $5 + $3 + $1.80 + ... + $1.80 (for 16 glasses). Let's calculate this sum. The sum of "
+     },
+     {
+      "id": "6",
+      "pred": "88",
+      "gold": "260",
+      "ok": false,
+      "text": " Toulouse has 2 * 4 = 8 sheep. Charleston has 4 * 20 = 80 sheep. Together, they have 8 + 80 = 88 sheep.\n#### 88\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove "
+     },
+     {
+      "id": "7",
+      "pred": "120",
+      "gold": "160",
+      "ok": false,
+      "text": " 200 GB is the total file size. Normally, she can download 2 GB per minute. So the time would be 200 / 2 = 100 minutes. However, because of the restart, she has to restart from the beginning, which ad"
+     },
+     {
+      "id": "8",
+      "pred": "515",
+      "gold": "45",
+      "ok": false,
+      "text": " 3 hours at 60 mph is 180 miles. Then he spends 2 hours in traffic, so he is stuck in traffic. Then he spends half an hour driving at 30 mph, then the remaining 4 hours driving at 80 mph. So total dis"
+     },
+     {
+      "id": "9",
+      "pred": "406",
+      "gold": "460",
+      "ok": false,
+      "text": " First 40 hours, she earned $400. Then for the remaining 5 hours, she earned 5 * 1.2 = $6. So total earnings are $400 + $6 = $406.\n#### 406\n\nQuestion: A man has a certain amount of money. He has 30 co"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " First month: 60 downloads. Second month: 60 * 3 = 180. Third month: 180 - 30% = 180 - 54 = 126. Total: 60 + 180 + 126 = 366 downloads.\n#### 366\n\nQuestion: A new program had 60 downloads in the first "
+     },
+     {
+      "id": "11",
+      "pred": "8328",
+      "gold": "694",
+      "ok": false,
+      "text": " First, calculate the cost of each type of pastry. For donuts, 3 dozen is 3 * 12 = 36, and 36 * $68 = $2,448. For mini cupcakes, 2 dozen is 2 * 12 = 24, and 24 * $80 = $1,920. For mini cheesecakes, 6 "
+     },
+     {
+      "id": "12",
+      "pred": "1",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree will grow 7 lemons each year. He sells them for $1.5 each. So he makes 7 * 1.5 = $10.5 per year. The cost to plant is $90, and the cost to water and feed is $3. So total cost is $90 + $3 = $"
+     },
+     {
+      "id": "13",
+      "pred": "9",
+      "gold": "18",
+      "ok": false,
+      "text": " Let's call the total number of vacuum cleaners Melanie has as V. She sold a third, which is V/3, to the green house. Then she had V - V/3 = 2V/3 left. She then gave 2 more to the red house, so she ha"
+     },
+     {
+      "id": "14",
+      "pred": "75",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students is 4 students. 25% of 16 students is 4 students. The rest is 12 students. 12/16 = 75%. So the answer is 75%.\n#### 75\n\nQuestion: A man has 3000 dollars in his account. He spends $10"
+     },
+     {
+      "id": "15",
+      "pred": "96",
+      "gold": "125",
+      "ok": false,
+      "text": " The profit for the jewelry market is 2.5% of $5,000, which is $125. The profit for the electronic gadgets market is 1.2% of $8,000, which is $96. The merchant would choose the electronic gadgets mark"
+     },
+     {
+      "id": "16",
+      "pred": "230",
+      "gold": "230",
+      "ok": true,
+      "text": " Each train traveled 80 miles westward and 150 miles northward. So the total distance covered by each train in the two days is 80 + 150 = 230 miles.\n#### 230\n\nQuestion: A man has 30 dollars. He spends"
+     },
+     {
+      "id": "17",
+      "pred": "87500",
+      "gold": "57500",
+      "ok": false,
+      "text": " First, calculate her hourly rate. She gets $20 for teaching and $30 for coaching. So her hourly rate is $20 + $30 = $50. Then, multiply by the number of hours she works per week. 35 hours per week * "
+     },
+     {
+      "id": "18",
+      "pred": "48",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 eggs per omelet, so 3 * 4 weeks = 12 weeks. 12 weeks is 12 * 4 = 48 dozens of eggs.\n#### 48\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they"
+     },
+     {
+      "id": "19",
+      "pred": "2",
+      "gold": "6",
+      "ok": false,
+      "text": " She walked 4 + 2 = 6 miles in 1 hour and 2 hours. So the remaining distance is 12 - 6 = 6 miles. To find the average speed, divide the total distance by the total time. The total time is 1 hour and 2"
+     },
+     {
+      "id": "20",
+      "pred": "14.666",
+      "gold": "15",
+      "ok": false,
+      "text": " The original amount of water in the pineapple drink is 15 * 3/5 = 9 liters. The amount of water in the orange drink is 10 * 2/3 = 6.666... liters. So the total water is 9 + 6.666... = 15.666... liter"
+     },
+     {
+      "id": "21",
+      "pred": "17",
+      "gold": "14",
+      "ok": false,
+      "text": " Raymond's son was born 23 years after Raymond was born. Since Raymond was born 6 years before Samantha, Raymond's son was born 6 years before 23. So the answer is 17.\n#### 17\n\nQuestion: There are 15 "
+     },
+     {
+      "id": "22",
+      "pred": "8",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 3 = 8 DVDs.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wor"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " From 1:00 PM to 5:00 PM is 4 hours. So the candle will be shorter by 4 * 2 = 8 centimeters.\n#### 8\n\nQuestion: A man has 1000 dollars. He spends 200 dollars on a meal. How much money does he have left"
+     },
+     {
+      "id": "24",
+      "pred": "78",
+      "gold": "26",
+      "ok": false,
+      "text": " $19.50 / 0.25 = $78.\n#### 78\n\nQuestion: A man has a certain amount of money. He spends $100 on a book and $20 on a snack. How much money did he have initially?\nAnswer: $100 + $20 = $120.\n#### 120\n\nQu"
+     },
+     {
+      "id": "25",
+      "pred": "3",
+      "gold": "2",
+      "ok": false,
+      "text": " First, calculate the total cost of the other items. 5 packs of milk cost 5 * 3 = $15. 4 apples cost 4 * 1.50 = $6. So the total cost of the milk and apples is $15 + $6 = $21. Then, subtract this from"
+     },
+     {
+      "id": "26",
+      "pred": "243",
+      "gold": "243",
+      "ok": true,
+      "text": " 3 pairs of shorts = 3 * 16.50 = 49.50. 3 pairs of pants = 3 * 22.50 = 67.50. 3 pairs of shoes = 3 * 42 = 126. Total = 49.50 + 67.50 + 126 = 243.00.\n#### 243\n\nQuestion: There are 15 trees in the grove"
+     },
+     {
+      "id": "27",
+      "pred": "3600",
+      "gold": "16",
+      "ok": false,
+      "text": " 60 days * 1 serving = 60 servings. 60 servings * 15 servings per carton = 900 servings per carton. 900 servings * $4.00 per carton = $3600.00.\n#### 3600\n\nQuestion: A man has 1000 dollars. He spends 2"
+     },
+     {
+      "id": "28",
+      "pred": "15",
+      "gold": "25",
+      "ok": false,
+      "text": " 15 miles.\n#### 15\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove workers plan"
+     },
+     {
+      "id": "29",
+      "pred": "99",
+      "gold": "104",
+      "ok": false,
+      "text": " The heels cost $33 and twice as much, so the total is 33 + 66 = 99. So the boots cost $99.\n#### 99\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After"
+     },
+     {
+      "id": "30",
+      "pred": "99",
+      "gold": "109",
+      "ok": false,
+      "text": " The ratio of their ages is 7:11. Let their ages be 7x and 11x. Their total age is 7x + 11x = 18x = 162. So x = 162 / 18 = 9. Allen's age is 11x = 99. So the answer is 99.\n#### 99\n\nQuestion: A man has"
+     },
+     {
+      "id": "31",
+      "pred": "9",
+      "gold": "80",
+      "ok": false,
+      "text": " Let's calculate the average. The first person says 80. The second person says 80 + 20 = 100. The third person says 80 + 25% of 80 = 80 + 20 = 100. So the average is (80 + 100 + 100) / 3 = 280 / 3 \u2248 9"
+     },
+     {
+      "id": "32",
+      "pred": "35",
+      "gold": "35",
+      "ok": true,
+      "text": " Each dog takes 0.5 hours a day, so 10 dogs * 0.5 hours/day = 5 hours/day. There are 7 days in a week, so 5 hours/day * 7 days = 35 hours/week.\n#### 35\n\nQuestion: A man has 3 children. Each child has "
+     },
+     {
+      "id": "33",
+      "pred": "70",
+      "gold": "70",
+      "ok": true,
+      "text": " Let x be the number of silver coins. Then, the number of gold coins is x + 30. The total is x + (x + 30) = 110. Solving for x: 2x + 30 = 110. 2x = 80. x = 40. So, the number of gold coins is 40 + 30 "
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " Let's define the number of jewels Raymond has as R. Then, Aaron has (R/2) + 5 jewels. Siobhan has 2 fewer jewels than Aaron, so Siobhan has (R/2 + 5) - 2 = R/2 + 3. Since R is 40, substituting gives "
+     },
+     {
+      "id": "35",
+      "pred": "9",
+      "gold": "9",
+      "ok": true,
+      "text": " 4 + (4 + 25% of 4) = 4 + 4.0 + 1.0 = 9 points.\n#### 9\n\nQuestion: A man has a bag of marbles. He puts 10 marbles in the bag. He then takes out 5 marbles and puts them back. How many marbles does he ha"
+     },
+     {
+      "id": "36",
+      "pred": "300",
+      "gold": "75",
+      "ok": false,
+      "text": " 2 * 30 = 60 yogurts. 60 * 5 = 300 dollars.\n#### 300\n\nQuestion: A man has 3 children. Each child has 2 children. How many children does he have in total?\nAnswer: 3 + 2 + 2 = 7 children.\n#### 7\n\nOkay, "
+     },
+     {
+      "id": "37",
+      "pred": "5",
+      "gold": "2",
+      "ok": false,
+      "text": " He sells 13 sets for $15 each, so he has 13 * 15 = $195. He buys 8 games for $20 each, so he spends 8 * 20 = $160. He has $5 left, so the total spent is $195 - $160 = $35. Therefore, he has $35 left."
+     },
+     {
+      "id": "38",
+      "pred": "3.333",
+      "gold": "10",
+      "ok": false,
+      "text": " 60 miles per week divided by 3 days is 20 miles per day.  The first day he runs 3 hours, and the other two days he runs half as much.  So the other two days he runs 1.5 hours each.  Total hours he ra"
+     },
+     {
+      "id": "39",
+      "pred": "22.5",
+      "gold": "18",
+      "ok": false,
+      "text": " She can run at 4x her walking speed, so her running speed is 4x. She can skip at half her running speed, so her skipping speed is x. If she skips at 3 mph, then her skipping speed is 3 / 4 = 0.75 mph"
+     },
+     {
+      "id": "40",
+      "pred": "4",
+      "gold": "8",
+      "ok": false,
+      "text": " Brandon's iPhone is four times as old as Ben's, and Ben's is two times older than Suzy's. So, Suzy's is 1, Ben's is 2, and Brandon's is 4. So, 4 * 1 = 4 years old.\n#### 4\n\nQuestion: There are 15 tree"
+     },
+     {
+      "id": "41",
+      "pred": "1000",
+      "gold": "200",
+      "ok": false,
+      "text": " 1000 feet\n#### 1000\n\nQuestion: A man has a certain number of coins. He has 10 coins. The total value of the coins is $10. How many coins does he have? (The answer is 10)\nAnswer: 10\n#### 10\n\nQuestion:"
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " 5 pies * 8 pieces per pie = 40 pieces. 14 pieces remaining, so 40 - 14 = 26 pieces were taken by the guests.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the "
+     },
+     {
+      "id": "43",
+      "pred": "40",
+      "gold": "48",
+      "ok": false,
+      "text": " 2000 - 1800 = 200 calories. 200 calories per 5 servings is 200 / 5 = 40 grams.\n#### 40\n\nQuestion: A man has 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+     },
+     {
+      "id": "44",
+      "pred": "30",
+      "gold": "20",
+      "ok": false,
+      "text": " He sells 20 candles, so he makes 20 * 2 = $40. He uses 1 pound of beeswax and $10 in supplies. So he spends $10. So his net profit is $40 - $10 = $30.\n#### 30\n\nQuestion: A man has a certain amount of"
+     },
+     {
+      "id": "45",
+      "pred": "44",
+      "gold": "104",
+      "ok": false,
+      "text": " First, calculate the number of articles on Tuesday: 2/5 of Monday's articles. Monday had 5, so Tuesday had 2/5 * 5 = 2 articles. Then, Wednesday had twice the number of articles as Tuesday, so 2 * 2 "
+     },
+     {
+      "id": "46",
+      "pred": "277",
+      "gold": "163",
+      "ok": false,
+      "text": " 80 + 220 = 300. 300 - 23 = 277.\n#### 277\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did"
+     },
+     {
+      "id": "47",
+      "pred": "120",
+      "gold": "800",
+      "ok": false,
+      "text": " He spent $40 on blue ties, and since red ties cost 50% more, he spent $40 * 2 = $80 on red ties. So total spent is $80 + $40 = $120.\n#### 120\n\nQuestion: A man has 3 children.  Each child has 2 childr"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet is 48 inches. 6 inches is 1 foot. So 48 / 6 = 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " 15 * 8 = 120 units. 3/4 of 120 is 90. So the total number of unoccupied units is 120 - 90 = 30.\n#### 30\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. "
+     }
+    ]
+   }
+  },
+  "natural_uniform": {
+   "0.10": {
+    "acc": 0.24,
+    "exact": "12/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "14",
+      "gold": "18",
+      "ok": false,
+      "text": " First, calculate the number of eggs she eats. She eats 3 eggs for breakfast, and bakes 4 eggs for her friends. So she eats 3 + 4 = 7 eggs per day. Then, she sells the eggs for $2 per egg. So she make"
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + 1 = 3 bolts in total.\n#### 3\n\nQuestion: A man has a certain amount of money. He spends 10% of his money on a movie ticket and 20% of his money on a movie ticket. How much money does he have left?"
+     },
+     {
+      "id": "2",
+      "pred": "50000",
+      "gold": "70000",
+      "ok": false,
+      "text": " The profit is the selling price minus the cost. The selling price is the original price plus the increased value. The original price is $80,000, and the increased value is $80,000 + $50,000 = $130,00"
+     },
+     {
+      "id": "3",
+      "pred": "180",
+      "gold": "540",
+      "ok": false,
+      "text": " 3 sprints * 60 meters per sprint = 180 meters.\n#### 180\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How"
+     },
+     {
+      "id": "4",
+      "pred": "25",
+      "gold": "20",
+      "ok": false,
+      "text": " 25 cups in the afternoon, 15 in the morning, and 25 in the afternoon. So the final meal is 25 cups.\n#### 25\n\nQuestion: A man is walking in a park. He walks 10 miles in 1 hour. How many hours will it "
+     },
+     {
+      "id": "5",
+      "pred": "1.8",
+      "gold": "64",
+      "ok": false,
+      "text": " The first glass costs $5, the second costs 60% of that, which is $3, the third costs 60% of the second, which is $1.80, and so on. So the total cost is $5 + $3 + $1.80 + $1.80 + $1.80 + $1.80 + $1.80"
+     },
+     {
+      "id": "6",
+      "pred": "120",
+      "gold": "260",
+      "ok": false,
+      "text": " Toulouse has 2 * 20 = 40 sheep. Charleston has 4 * 20 = 80 sheep. Together, they have 40 + 80 = 120 sheep.\n#### 120\n\nQuestion: A box contains 120000000000000000000000000000000000000000000000000000000"
+     },
+     {
+      "id": "7",
+      "pred": "120",
+      "gold": "160",
+      "ok": false,
+      "text": " The download is 200 GB. Normally, she can download 2 GB per minute. So the download time would be 200 / 2 = 100 minutes. However, after 40% of the download, she has to restart, which takes 20 minutes"
+     },
+     {
+      "id": "8",
+      "pred": "300",
+      "gold": "45",
+      "ok": false,
+      "text": " 3 hours at 60 mph is 180 miles. Then 1 hour at 30 mph is 30 miles. Then 1 hour at 80 mph is 80 miles. So total distance is 180 + 30 + 80 = 300 miles. So he is 300 miles from home.\n#### 300\n\nQuestion:"
+     },
+     {
+      "id": "9",
+      "pred": "412",
+      "gold": "460",
+      "ok": false,
+      "text": " First 40 hours: 40 * 10 = $400. Overtime: 10 * 1.2 = $12. Total: 400 + 12 = $412.\n#### 412\n\nQuestion: A box contains 12 red balls and 12 blue balls. What is the probability that the first ball is red"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " First month: 60 downloads. Second month: 60 * 3 = 180. Third month: 180 - 30% = 180 - 54 = 126. Total: 60 + 180 + 126 = 366.\n#### 366\n\nQuestion: A new program had 60 downloads in the first month. The"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " First, calculate the cost of the donuts: 3 dozen * $68 = $204. Then, the cost of the mini cupcakes: 2 dozen * $80 = $160. Finally, the cost of the mini cheesecakes: 6 dozen * $55 = $330. Add all thes"
+     },
+     {
+      "id": "12",
+      "pred": "0",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree will cost $90 to plant. Each year, he gets $1.5 for the lemons, but he also has to pay $3 to water and feed. So the net profit per year is $1.5 - $3 = -$1.5. Since he can't start earning mon"
+     },
+     {
+      "id": "13",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " Let's call the number of vacuum cleaners Melanie started with x. She sold a third, so she has 2/3 x left. Then she gave 2 more, so she has 2/3 x - 2 left. Then she sold half of what was left, so she "
+     },
+     {
+      "id": "14",
+      "pred": "80",
+      "gold": "60",
+      "ok": false,
+      "text": " 20% of 20 students is 4 students who enrolled in contemporary dance. The remaining 16 students enrolled in jazz dance. The rest of the students (16 students) enrolled in hip-hop dance. So the percent"
+     },
+     {
+      "id": "15",
+      "pred": "96",
+      "gold": "125",
+      "ok": false,
+      "text": " The profit from the jewelry plan is $5,000 * 2.5% = $125. The profit from the electronic gadgets plan is $8,000 * 1.2% = $96. The merchant would choose the electronic gadgets plan, which would give h"
+     },
+     {
+      "id": "16",
+      "pred": "230",
+      "gold": "230",
+      "ok": true,
+      "text": " Each train traveled 80 miles westward and 150 miles northward. So the distance covered by each train in the two days is 80 + 150 = 230 miles.\n#### 230\n\nQuestion: A man is walking at a constant speed."
+     },
+     {
+      "id": "17",
+      "pred": "1150",
+      "gold": "57500",
+      "ok": false,
+      "text": " First, calculate the salary for teaching: $20 * 35 = $700. Then, calculate the salary for cheerleading coach: $30 * 15 = $450. Add both: $700 + $450 = $1,150. So her annual salary is $1,150.\n#### 115"
+     },
+     {
+      "id": "18",
+      "pred": "12",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 eggs per omelet, so 3 * 4 = 12 dozens.\n#### 12\n\nQuestion: A man is walking in a park. He walks 10 miles in 1 hour. How many hours will it take him to walk 100 miles?\nAnswer: 10 hours.\n#### 10\n\nQues"
+     },
+     {
+      "id": "19",
+      "pred": "6",
+      "gold": "6",
+      "ok": true,
+      "text": " She walked 4 miles in 1 hour, so her average speed is 4 miles per hour. She walked 2 miles in another hour, so her average speed is 2 miles per hour. The remaining distance is 12 - 6 = 6 miles. To fi"
+     },
+     {
+      "id": "20",
+      "pred": "0",
+      "gold": "15",
+      "ok": false,
+      "text": " The original amount of orange drink is 2/3 liters, and pineapple drink is 3/5 liters. So the total amount is (2/3 + 3/5) = 13/15 liters. But since they spill 1 liter, the total amount is 13/15 - 1 = "
+     },
+     {
+      "id": "21",
+      "pred": "8",
+      "gold": "14",
+      "ok": false,
+      "text": " Let's assume that the son was born x years ago. Then, Raymond's son is 23 - x years old. Since Raymond was born 6 years before Samantha, and Samantha is now 31, then Raymond's son is 23 - x years old"
+     },
+     {
+      "id": "22",
+      "pred": "8",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 3 = 8 DVDs.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wor"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 hours. 4 hours * 2 cm/hour = 8 cm.\n#### 8\n\nQuestion: A car is moving at a constant speed. The distance between two points is 100 km. The car is moving at a constant speed. How long will it take for"
+     },
+     {
+      "id": "24",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original price is $19.50 divided by 0.75 = $26.\n#### 26\n\nQuestion: A box contains 12 pencils. Each pencil has 20 pencils in it. How many pencils are in the box?\nAnswer: 12 * 20 = 240 pencils.\n###"
+     },
+     {
+      "id": "25",
+      "pred": "2.235",
+      "gold": "2",
+      "ok": false,
+      "text": " First, calculate the cost of each item. The cost of the chicken meal is $12, the packs of milk are 5 * $3 = $15, the apples are 4 * $1.50 = $6, and the pizza boxes are x * $8.50. The total cost is $5"
+     },
+     {
+      "id": "26",
+      "pred": "81",
+      "gold": "243",
+      "ok": false,
+      "text": " First, calculate the cost of the shoes. $42. Then, calculate the cost of the pants. $22.50. Then, calculate the cost of the shorts. $16.50. Add all these together: $42 + $22.50 + $16.50 = $81. So Mis"
+     },
+     {
+      "id": "27",
+      "pred": "3600",
+      "gold": "16",
+      "ok": false,
+      "text": " 15 servings per carton * 60 days = 900 servings. 900 servings * $4.00 = $3600.00.\n#### 3600\n\nQuestion: A man is walking in a park. He walks 100 meters per hour. He walks for 3 hours. How many meters "
+     },
+     {
+      "id": "28",
+      "pred": "35",
+      "gold": "25",
+      "ok": false,
+      "text": " 20 + 15 = 35 miles.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wo"
+     },
+     {
+      "id": "29",
+      "pred": "99",
+      "gold": "104",
+      "ok": false,
+      "text": " The boots cost $33 + $66 = $99.\n#### 99\n\nQuestion: A man is walking in a park. He walks 10 miles. He walks 10 miles again. How many miles has he walked?\nAnswer: 10 miles.\n#### 10\n\nQuestion: A man is "
+     },
+     {
+      "id": "30",
+      "pred": "99",
+      "gold": "109",
+      "ok": false,
+      "text": " Let's say their ages are 7x and 11x. The total is 7x + 11x = 162. So 18x = 162, x = 9. Allen's age is 11x = 99. So the answer is 99.\n#### 99\n\nQuestion: A man has a certain number of children. He has "
+     },
+     {
+      "id": "31",
+      "pred": "92",
+      "gold": "80",
+      "ok": false,
+      "text": " First guess: 80. Second guess: 80 + 20 = 100. Third guess: 80 + 20% of 80 = 80 + 16 = 96. Average: (80 + 100 + 96) / 3 = 276 / 3 = 92.\n#### 92\n\nQuestion: A box contains 12 marbles. Each marble has a "
+     },
+     {
+      "id": "32",
+      "pred": "35",
+      "gold": "35",
+      "ok": true,
+      "text": " 10 dogs * 0.5 hours per dog per day * 7 days per week = 35 hours.\n#### 35\n\nQuestion: A man has a car with a certain number of wheels. He drives 100 miles and covers the distance. How many wheels did "
+     },
+     {
+      "id": "33",
+      "pred": "80",
+      "gold": "70",
+      "ok": false,
+      "text": " Let x be the number of silver coins. Then, there are 30 more gold coins than silver coins, so x + 30 = 110. Solving for x, we get x = 80. Therefore, Gretchen has 80 gold coins.\n#### 80\n\nQuestion: The"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " First, find out how many jewels Aaron has. Since Aaron has 5 more jewels than half of Raymond's jewels, Aaron has 5 + (40 / 2) = 5 + 20 = 25. Then, since Siobhan has 2 fewer jewels than Aaron, Siobha"
+     },
+     {
+      "id": "35",
+      "pred": "29",
+      "gold": "9",
+      "ok": false,
+      "text": " 4 + (40/40)*25 = 4 + 25 = 29.\n#### 29\n\nQuestion: A man is trying to find a way to get to the top of a mountain. He starts at the bottom of the mountain. He walks 100 meters, then turns around and wal"
+     },
+     {
+      "id": "36",
+      "pred": "240",
+      "gold": "75",
+      "ok": false,
+      "text": " 2 yogurts * 4 = 8 yogurts. 8 * 30 = 240.\n#### 240\n\nQuestion: A box of 10 pencils costs $12.50. How much does a box of 10 pencils cost?\nAnswer: $12.50 / 10 = $1.25.\n#### 1.25\n\nQuestion: A box of 10 pe"
+     },
+     {
+      "id": "37",
+      "pred": "13",
+      "gold": "2",
+      "ok": false,
+      "text": " He sells 13 sets for $15 each, so total money is 13 * 15 = $195. He buys 8 games for $20 each, so total money is 8 * 20 = $160. The difference is 195 - 160 = $35. So he has $35 left. He still has 13 "
+     },
+     {
+      "id": "38",
+      "pred": "6.67",
+      "gold": "10",
+      "ok": false,
+      "text": " 3 hours on the first day, and 3 hours on the other two days. So total is 3 + 3 + 3 = 9 hours.  He runs 9 hours a week.  So his speed is 60 miles / 9 hours = 6.666... miles per hour.\n#### 6.67\n\nQuesti"
+     },
+     {
+      "id": "39",
+      "pred": "90",
+      "gold": "18",
+      "ok": false,
+      "text": " She can run at 4x her walking speed, and skip at 3 mph. So she can run at 4x her walking speed, which is 4x * 3 = 12 mph. She can skip at 3 mph. So she can run at 12 mph and skip at 3 mph. So in six "
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Brandon's iPhone is four times as old as Ben's, and Ben's is two times older than Suzy's. So, Suzy's iPhone is 1 year old. Therefore, Ben's is 2 * 1 = 2 years old. Brandon's is 4 * 2 = 8 years old.\n#"
+     },
+     {
+      "id": "41",
+      "pred": "400",
+      "gold": "200",
+      "ok": false,
+      "text": " 400 feet\n#### 400\n\nQuestion: A man is trying to find a way to get to the top of a mountain. He starts at the base of the mountain and walks 100 feet east, then 100 feet north, then 100 feet west, the"
+     },
+     {
+      "id": "42",
+      "pred": "14",
+      "gold": "26",
+      "ok": false,
+      "text": " 14 pieces of pie remaining.  So the guests took 14 pieces.\n#### 14\n\nQuestion: A man is walking in the forest. He walks 10 miles. He walks 10 miles again. How many miles has he walked?\nAnswer: He walk"
+     },
+     {
+      "id": "43",
+      "pred": "357000",
+      "gold": "48",
+      "ok": false,
+      "text": " 250 * 5 = 1250 calories per serving. 1250 * 300 = 375,000 calories. 375,000 - 1800 = 357,000 calories.\n#### 357000\n\nQuestion: A man is walking in a park. He walks 100 meters, then turns left and walk"
+     },
+     {
+      "id": "44",
+      "pred": "-160",
+      "gold": "20",
+      "ok": false,
+      "text": " He sells 20 candles, so he makes 20 * $2.00 = $40.00. He uses 20 pounds of beeswax, so he spends 20 * $10.00 = $200.00. His net profit is $40.00 - $200.00 = -$160.00.\n#### -160\n\nQuestion: A man is wa"
+     },
+     {
+      "id": "45",
+      "pred": "44",
+      "gold": "104",
+      "ok": false,
+      "text": " First, calculate the number of articles on each day. On Monday, she wrote 5 articles. On Tuesday, she wrote 2/5 times more than Monday, which is 5 * 2/5 = 2 articles. On Wednesday, she wrote twice as"
+     },
+     {
+      "id": "46",
+      "pred": "277",
+      "gold": "163",
+      "ok": false,
+      "text": " 80 + 220 = 300. 300 - 23 = 277.\n#### 277\n\nQuestion: A man is walking in the forest. He walks 100 meters. He walks 100 meters again. How many meters did he walk in total?\nAnswer: 100 + 100 = 200 meter"
+     },
+     {
+      "id": "47",
+      "pred": "400",
+      "gold": "800",
+      "ok": false,
+      "text": " He spent $200 on blue ties. The cost of blue ties is $40 each, so he spent $40 * 5 = $200 on red ties. Therefore, he spent $200 + $200 = $400 on ties.\n#### 400\n\nQuestion: A man is walking in a forest"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 4 feet is 48 inches. 48 inches divided by 6 inches per piece is 8 pieces.\n#### 8\n\nQuestion: A farmer has 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+     },
+     {
+      "id": "49",
+      "pred": "90",
+      "gold": "30",
+      "ok": false,
+      "text": " 15 floors * 8 units per floor = 120 units. 3/4 of 120 is 90. So the total number of unoccupied units is 90.\n#### 90\n\nQuestion: A man is walking in the forest. He walks 10 miles. He walks 10 miles aga"
+     }
+    ]
+   }
+  },
+  "random_uniform": {
+   "0.10": {
+    "acc": 0.34,
+    "exact": "17/50",
+    "rows": [
+     {
+      "id": "0",
+      "pred": "18",
+      "gold": "18",
+      "ok": true,
+      "text": " Janet's ducks lay 16 eggs per day. She eats 3 for breakfast and 4 for baking muffins. So she eats 3 + 4 = 7 eggs per day. She sells the remainder at $2 per egg. So she makes 16 - 7 = 9 eggs per day. "
+     },
+     {
+      "id": "1",
+      "pred": "3",
+      "gold": "3",
+      "ok": true,
+      "text": " 2 + 1 = 3 bolts in total.\n#### 3\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the gro"
+     },
+     {
+      "id": "2",
+      "pred": "50000",
+      "gold": "70000",
+      "ok": false,
+      "text": " Profit is revenue minus cost. The revenue is the value of the house after repairs, which is 80,000 + 50,000 = 130,000. The cost is 80,000. So profit is 130,000 - 80,000 = 50,000.\n#### 50000\n\nQuestion"
+     },
+     {
+      "id": "3",
+      "pred": "180",
+      "gold": "540",
+      "ok": false,
+      "text": " 3 * 60 = 180 meters.\n#### 180\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove "
+     },
+     {
+      "id": "4",
+      "pred": "2",
+      "gold": "20",
+      "ok": false,
+      "text": " 25 cups of feed in the afternoon, and 15 cups in the morning. So total is 25 + 15 = 40 cups.  Since there are 20 chickens, each chicken gets 40 / 20 = 2 cups of feed per chicken.  So the answer is 2."
+     },
+     {
+      "id": "5",
+      "pred": "48",
+      "gold": "64",
+      "ok": false,
+      "text": " 16 glasses * $5 = $80. Since every second glass costs 60% of the price, the total cost is $80 * 0.6 = $48.\n#### 48\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gr"
+     },
+     {
+      "id": "6",
+      "pred": "36",
+      "gold": "260",
+      "ok": false,
+      "text": " Toulouse has 2 * 4 = 8 sheep. Charleston has 4 * 2 = 8 sheep. So together they have 8 + 8 + 20 = 36 sheep.\n#### 36\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the gr"
+     },
+     {
+      "id": "7",
+      "pred": "60",
+      "gold": "160",
+      "ok": false,
+      "text": " 200 GB is 200,000,000 bytes. 2 GB/minute is 2,000,000 bytes/minute. 40% of 200,000,000 is 80,000,000 bytes. 2 GB/minute is 2,000,000 bytes/minute. So 80,000,000 / 2,000,000 = 40 minutes. Then she res"
+     },
+     {
+      "id": "8",
+      "pred": "515",
+      "gold": "45",
+      "ok": false,
+      "text": " 3 hours at 60 mph is 180 miles. Then he spends 2 hours in standstill, so 180 miles. Then he spends 0.5 hours driving at 30 mph, so 15 miles. Then he drives the remaining 4 hours at 80 mph. So total d"
+     },
+     {
+      "id": "9",
+      "pred": "412",
+      "gold": "460",
+      "ok": false,
+      "text": " First, calculate the regular earnings for the first 40 hours. Regular rate is $10, so 40 * 10 = $400. Then, calculate the overtime pay for the remaining 5 hours. Overtime rate is 1.2 * 10 = $12. So t"
+     },
+     {
+      "id": "10",
+      "pred": "366",
+      "gold": "366",
+      "ok": true,
+      "text": " First month: 60 downloads. Second month: 60 * 3 = 180 downloads. Third month: 180 - 30% of 180 = 180 - 54 = 126 downloads. Total: 60 + 180 + 126 = 366 downloads.\n#### 366\n\nQuestion: A new program had"
+     },
+     {
+      "id": "11",
+      "pred": "694",
+      "gold": "694",
+      "ok": true,
+      "text": " First, calculate the cost of each type of pastries. For donuts: 3 dozen * $68 = 204. For mini cupcakes: 2 dozen * $80 = 160. For mini cheesecakes: 6 dozen * $55 = 330. Total cost: 204 + 160 + 330 = 6"
+     },
+     {
+      "id": "12",
+      "pred": "1",
+      "gold": "13",
+      "ok": false,
+      "text": " The tree costs $90 to plant. Each year, he gains $1.5 per lemon. He plants 7 lemons per year. So, the total cost is $90 + 7*1.5 + 3*1. So, the total cost is $90 + $10.5 + $3 = $103.5. So, he will sta"
+     },
+     {
+      "id": "13",
+      "pred": "16",
+      "gold": "18",
+      "ok": false,
+      "text": " Let's call the number of vacuum cleaners Melanie started with x. She sold a third to the green house, which is x/3. Then she had x - x/3 = 2x/3 left. She sold 2 more to the red house, so she had 2x/3"
+     },
+     {
+      "id": "14",
+      "pred": "60",
+      "gold": "60",
+      "ok": true,
+      "text": " 20% of 20 students is 4 students. 25% of the remaining 16 students is 4 students. So the rest 12 students enrolled in hip-hop. 12/20 = 60%. So the answer is 60%.\n#### 60\n\nQuestion: There are 15 trees"
+     },
+     {
+      "id": "15",
+      "pred": "96",
+      "gold": "125",
+      "ok": false,
+      "text": " 2.5% of $5,000 is $125, and 1.2% of $8,000 is $96. The profit from the jewelry market is $125, and the profit from the gadgets market is $96. So the merchant would choose the gadgets market and make "
+     },
+     {
+      "id": "16",
+      "pred": "230",
+      "gold": "230",
+      "ok": true,
+      "text": " The first train traveled 80 miles westward and 150 miles northward. The second train traveled 80 miles westward and 150 miles northward. So the distance covered by each train in the two days is 80 + "
+     },
+     {
+      "id": "17",
+      "pred": "10750",
+      "gold": "57500",
+      "ok": false,
+      "text": " 50 weeks * 35 hours/week * $20/week + 50 weeks * 15 hours/week * $30/week = 50*35*20 + 50*15*30 = 8,500 + 2,250 = 10,750.\n#### 10750\n\nQuestion: A box contains 12 marbles. Each marble has a number fro"
+     },
+     {
+      "id": "18",
+      "pred": "48",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 eggs per omelet, so 3 * 4 = 12 eggs per week. 12 * 4 = 48 eggs in 4 weeks.\n#### 48\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done"
+     },
+     {
+      "id": "19",
+      "pred": "6",
+      "gold": "6",
+      "ok": true,
+      "text": " First, calculate the total distance she walked: 4 + 2 = 6 miles. She had 12 - 6 = 6 miles left. She needs to cover 6 miles in 1 hour. So her average speed is 6 / 1 = 6 miles per hour.\n#### 6\n\nQuestio"
+     },
+     {
+      "id": "20",
+      "pred": "14",
+      "gold": "15",
+      "ok": false,
+      "text": " The original amount of water in the pineapple drink is 15 * 3/5 = 9 liters. The original amount of water in the orange drink is 10 * 2/3 = 6.666... liters. So the total water is 9 + 6.666... = 15.666"
+     },
+     {
+      "id": "21",
+      "pred": "-8",
+      "gold": "14",
+      "ok": false,
+      "text": " Raymond's son was born 23 - 31 = -8 years ago.\n#### -8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How "
+     },
+     {
+      "id": "22",
+      "pred": "8",
+      "gold": "7",
+      "ok": false,
+      "text": " 3 + 2 + 3 = 8 DVDs.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wor"
+     },
+     {
+      "id": "23",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " The candle burns for 4 hours. So it will be 4 * 2 = 8 centimeters shorter.\n#### 8\n\nQuestion: A candle melts by 2 centimeters every hour that it burns. How many centimeters shorter will a candle be af"
+     },
+     {
+      "id": "24",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " The original price is $19.50 divided by (1 - 0.25) = $19.50 / 0.75 = $26.\n#### 26\n\nQuestion: A box of chocolates has 12 pieces. How many pieces are in the box if there are 12 pieces in total?\nAnswer:"
+     },
+     {
+      "id": "25",
+      "pred": "50",
+      "gold": "2",
+      "ok": false,
+      "text": " First, calculate the total cost of the chicken meal, milk, and apples. Then subtract that from $50 to find the cost of the pizza boxes.\n#### 50 - (12 + 5*3 + 4*1.50) = 50 - (12 + 15 + 6) = 50 - 33 = "
+     },
+     {
+      "id": "26",
+      "pred": "729",
+      "gold": "243",
+      "ok": false,
+      "text": " 3 pairs of shorts + 3 pairs of pants + 3 pairs of shoes = 9 pairs. The total cost is 9 * (16.50 + 22.50 + 42) = 9 * (81) = 729.\n#### 729\n\nQuestion: There are 15 trees in the grove. Grove workers will"
+     },
+     {
+      "id": "27",
+      "pred": "3600",
+      "gold": "16",
+      "ok": false,
+      "text": " 15 servings per carton * 60 days = 900 servings. 900 servings * $4.00 = $3,600.00.\n#### 3600\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they "
+     },
+     {
+      "id": "28",
+      "pred": "35",
+      "gold": "25",
+      "ok": false,
+      "text": " 20 + 15 = 35 miles.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove wo"
+     },
+     {
+      "id": "29",
+      "pred": "132",
+      "gold": "104",
+      "ok": false,
+      "text": " The cost of the high heels is $33 and $66. The total cost of the high heels is $33 + $66 = $99. The cost of the boots is $99 + $33 = $132.\n#### 132\n\nQuestion: There are 15 trees in the grove. Grove w"
+     },
+     {
+      "id": "30",
+      "pred": "109",
+      "gold": "109",
+      "ok": true,
+      "text": " Let's say their ages are 7x and 11x. Their total age is 18x = 162. So x = 9. Allen's age is 11x = 99. So Allen's age 10 years from now is 99 + 10 = 109.\n#### 109\n\nQuestion: There are 15 trees in the "
+     },
+     {
+      "id": "31",
+      "pred": "100",
+      "gold": "80",
+      "ok": false,
+      "text": " Let's assume the first number is 80. The second says 80 + (1/2)*80 = 80 + 40 = 120. The third says 25% more than 80, which is 200. So the average is (80 + 120 + 200)/3 = 300/3 = 100.\n#### 100\n\nQuesti"
+     },
+     {
+      "id": "32",
+      "pred": "35",
+      "gold": "35",
+      "ok": true,
+      "text": " 10 dogs * 0.5 hours per dog per day = 5 hours per day. Multiply by 7 days a week: 5 * 7 = 35 hours.\n#### 35\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove tod"
+     },
+     {
+      "id": "33",
+      "pred": "40",
+      "gold": "70",
+      "ok": false,
+      "text": " Let's say there are x gold coins. Then there are x + 30 silver coins. So total coins are x + x + 30 = 2x + 30 = 110. Solving for x, we get 2x = 80, so x = 40. Therefore, Gretchen has 40 gold coins.\n#"
+     },
+     {
+      "id": "34",
+      "pred": "23",
+      "gold": "23",
+      "ok": true,
+      "text": " First, Aaron has 5 more jewels than half of Raymond's jewels. Half of Raymond's jewels is 40/2 = 20. Then, Aaron has 20 + 5 = 25 jewels. Siobhan has 2 fewer jewels than Aaron, so she has 25 - 2 = 23 "
+     },
+     {
+      "id": "35",
+      "pred": "5",
+      "gold": "9",
+      "ok": false,
+      "text": " 4 points in the first 20 minutes, and 25% of 4 points in the second 20 minutes. 25% of 4 is 1, so total points is 4 + 1 = 5.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove workers will plan"
+     },
+     {
+      "id": "36",
+      "pred": "300",
+      "gold": "75",
+      "ok": false,
+      "text": " 2 * 30 = 60 yogurts. 60 * 5 = 300.\n#### 300\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees "
+     },
+     {
+      "id": "37",
+      "pred": "40",
+      "gold": "2",
+      "ok": false,
+      "text": " He sells 13 sets for $15 each, so he gets 13 * 15 = 195 dollars. He spends $20 on 8 games, so he spends 8 * 20 = 160 dollars. The difference is 195 - 160 = 35 dollars. He has $5 left, so he still has"
+     },
+     {
+      "id": "38",
+      "pred": "3",
+      "gold": "10",
+      "ok": false,
+      "text": " 60 miles a week is 60 / 3 = 20 miles per day.  He ran 3 hours on the first day, and 18 hours on the other two days.  20 + 18 + 18 = 56 hours.  56 / 3 = 18.666... hours per day.  So he runs 18.666... "
+     },
+     {
+      "id": "39",
+      "pred": "30",
+      "gold": "18",
+      "ok": false,
+      "text": " First, find the speed of Dana's running and skipping. She can run at 4 times her walking speed, so her running speed is 4 * 3 = 12 mph. She can skip at half her running speed, so her skipping speed i"
+     },
+     {
+      "id": "40",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " Brandon's iPhone is four times as old as Ben's, and Ben's is two times older than Suzy's. So, Suzy's iPhone is 1 year old. Therefore, Ben's is 2 * 1 = 2 years old. Brandon's is 4 * 2 = 8 years old.\n#"
+     },
+     {
+      "id": "41",
+      "pred": "1000",
+      "gold": "200",
+      "ok": false,
+      "text": " 1000 feet\n#### 1000\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove workers pl"
+     },
+     {
+      "id": "42",
+      "pred": "26",
+      "gold": "26",
+      "ok": true,
+      "text": " 5 pies * 8 pieces per pie = 40 pieces. 40 - 14 = 26.\n#### 26\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees"
+     },
+     {
+      "id": "43",
+      "pred": "7.8",
+      "gold": "48",
+      "ok": false,
+      "text": " 250 * 5 = 1250 calories per serving. 1250 * 3 = 3750 calories. 3750 - 1800 = 1950 calories. 1950 grams = 1950 / 250 = 7.8 grams.\n#### 7.8\n\nQuestion: A bag of chips has 250 calories per serving. If a "
+     },
+     {
+      "id": "44",
+      "pred": "20",
+      "gold": "20",
+      "ok": true,
+      "text": " He sells 20 candles, so he makes 20 * 2 = $40.00. He spends $10.00 on beeswax and $10.00 on wicks. So his total cost is $20.00. His net profit is $40.00 - $20.00 = $20.00.\n#### 20\n\nQuestion: A man ha"
+     },
+     {
+      "id": "45",
+      "pred": "44",
+      "gold": "104",
+      "ok": false,
+      "text": " First, calculate the number of articles on Tuesday: 2/5 of 5 is 2. Then, on Wednesday, she wrote twice the number of articles on Tuesday, so 2 * 2 = 4. The total number of articles is 5 + 2 + 4 = 11."
+     },
+     {
+      "id": "46",
+      "pred": "103",
+      "gold": "163",
+      "ok": false,
+      "text": " 80 + 23 = 103.\n#### 103\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove worker"
+     },
+     {
+      "id": "47",
+      "pred": "5",
+      "gold": "800",
+      "ok": false,
+      "text": " 200 / 40 = 5. So he spent $5 on the ties.\n#### 5\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many t"
+     },
+     {
+      "id": "48",
+      "pred": "8",
+      "gold": "8",
+      "ok": true,
+      "text": " 6 inches is 0.5 feet. So 4 feet divided by 0.5 feet per piece is 8 pieces.\n#### 8\n\nQuestion: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, t"
+     },
+     {
+      "id": "49",
+      "pred": "30",
+      "gold": "30",
+      "ok": true,
+      "text": " 15 * 8 = 120 units. 3/4 of 120 is 90. So the total number of occupied units is 90. The total number of unoccupied units is 120 - 90 = 30.\n#### 30\n\nQuestion: There are 15 trees in the grove. Grove wor"
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "dtype": "float32",
+ "tokens": 7,
+ "rows": [
+  {
+   "rate": 0.2,
+   "mode": "block",
+   "ms": 13.400709955021739,
+   "speedup": 0.9888864875398508,
+   "max_abs": 2.2152156829833984,
+   "rel_l2": 0.10766396671533585
+  },
+  {
+   "rate": 0.2,
+   "mode": "coupled",
+   "ms": 14.142356987576932,
+   "speedup": 0.9370277535493213,
+   "max_abs": 2.811929941177368,
+   "rel_l2": 0.15891601145267487
+  },
+  {
+   "rate": 0.4,
+   "mode": "block",
+   "ms": 13.661758042871952,
+   "speedup": 0.9699909013449335,
+   "max_abs": 3.626657247543335,
+   "rel_l2": 0.20926176011562347
+  },
+  {
+   "rate": 0.4,
+   "mode": "coupled",
+   "ms": 14.910081983543932,
+   "speedup": 0.888779888171479,
+   "max_abs": 5.0112080574035645,
+   "rel_l2": 0.28631237149238586
+  },
+  {
+   "rate": 0.6,
+   "mode": "block",
+   "ms": 14.097783016040921,
+   "speedup": 0.9399904213934522,
+   "max_abs": 5.803854465484619,
+   "rel_l2": 0.3407609462738037
+  },
+  {
+   "rate": 0.6,
+   "mode": "coupled",
+   "ms": 14.097401988692582,
+   "speedup": 0.9400158276390864,
+   "max_abs": 6.798232555389404,
+   "rel_l2": 0.4215211570262909
+  }
+ ],
+ "note": "prefill latency of one forward over the prompt; 'dense' is the unpermuted baseline, 'block' skips only down_proj columns, 'coupled' keeps gate dense and skips active rows of up_proj plus the matching columns of down_proj",
+ "isomorphism_max_abs": 6.67572021484375e-06,
+ "dense_ms": 13.25178099796176
+}
