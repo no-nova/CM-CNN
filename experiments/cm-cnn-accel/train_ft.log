@@ -1,0 +1,33 @@
+init from experiments/cm-cnn-accel/pretrained_vgg4_long.bin
+epoch 0 loss 0.7263 val 0.0000
+epoch 1 loss 0.5918 val 0.0000
+epoch 2 loss 0.6457 val 0.0000
+epoch 3 loss 0.6207 val 0.0000
+epoch 4 loss 0.6161 val 0.0000
+epoch 5 loss 0.6368 val 0.0000
+epoch 6 loss 0.6091 val 0.0000
+epoch 7 loss 0.5914 val 0.0000
+epoch 8 loss 0.6011 val 0.0000
+epoch 9 loss 0.5309 val 0.0000
+epoch 10 loss 0.5508 val 0.0000
+epoch 11 loss 0.5560 val 0.0000
+epoch 12 loss 0.5659 val 0.0000
+epoch 13 loss 0.5666 val 0.0000
+epoch 14 loss 0.5361 val 0.0000
+epoch 15 loss 0.5414 val 0.0000
+epoch 16 loss 0.5271 val 0.0000
+epoch 17 loss 0.5127 val 0.0000
+epoch 18 loss 0.5100 val 0.0000
+epoch 19 loss 0.5140 val 0.0000
+epoch 20 loss 0.5193 val 0.0000
+epoch 21 loss 0.5135 val 0.0000
+epoch 22 loss 0.4927 val 0.0000
+epoch 23 loss 0.4996 val 0.0000
+epoch 24 loss 0.4844 val 0.0000
+epoch 25 loss 0.4877 val 0.0000
+epoch 26 loss 0.4917 val 0.0000
+epoch 27 loss 0.4837 val 0.0000
+epoch 28 loss 0.4896 val 0.0000
+epoch 29 loss 0.4802 val 0.0000
+dense test acc 0.9389 dead 0.6724 0.4444 0.9239 0.7552
+saved experiments/cm-cnn-accel/pretrained_vgg4_ft.bin
