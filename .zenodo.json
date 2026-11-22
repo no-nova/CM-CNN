@@ -1,0 +1,58 @@
+{
+  "title": "CM-CNN-Accel: Microarchitecture-Aware Spatial and Temporal Computation Skipping for CNN Inference on AVX-512 CPUs",
+  "upload_type": "software",
+  "publication_type": "other",
+  "publication_date": "2026-11-22",
+  "description": "<p>Reference implementations, AVX-512 kernels, benchmark drivers and result files for the technical report <em>CM-CNN-Accel: Microarchitecture-Aware Spatial and Temporal Computation Skipping for CNN Inference on AVX-512 CPUs</em> (version 2.0, November 2026).</p><p>The report asks which kinds of computation redundancy turn into wall-clock time on a general-purpose core, and identifies three coupled constraints: SIMD execution granularity, load-port throughput per FMA, and the convolution topology that fixes how much arithmetic one skipping decision controls.</p><p>Measured results on a single AMD Ryzen 9 9955HX core (Zen 5, AVX-512F/BW/DQ/VL/VNNI, <code>OMP_NUM_THREADS=1</code>, g++ 16.2.1): the <code>conv_tile</code> dense microkernel reaches 0.5 load micro-ops per FMA and 81 GMAC/s, where scalar-gather sparse kernels need about 2.0 and lose time despite fewer MACs; 16-lane-aligned structured pruning over a union-find channel permutation gives 2.70x on ResNet-18 (+0.56pp accuracy) and 1.66-1.70x on MobileNetV2 (+1.39pp); VGG-4 on 78%-zero input with 8-lane co-activation clustering removes 84.14% of MACs at 4.33x and 95.00% accuracy; the P2 temporal scheme, with a dense in-place fallback above a 0.50 MAC-weighted dirty ratio, eliminates 51.3-75.4% of MACs on fixed-camera streams and 33.7-37.4% on hard cuts, and reproduces scene-cut frames bit-exactly. Numerically, max|dlogit| against PyTorch is 8.66e-4 on static images and 1.44e-3 over 216 real-video frames, with Top-1 agreement 0.995-1.000. The Tile Arithmetic Density Model alpha_l = MACs_l / (Tiles_l * C_in,l) ~= 4*C_out,l*K_l^2/g_l explains why the same video stream yields 1.80x for ResNet-50 while ShuffleNetV2-x0.5 loses 12% to scheduling overhead.</p><p>Contents: <code>paper1_bundle/</code> (manuscript PDFs, Markdown source, figures, 14 result files), <code>native/</code> (AVX-512 kernels), <code>experiments/cm-cnn-*/</code> (drivers, datasets, per-phase results), <code>src/lib/vision/</code> and <code>src/__tests__/cm-cnn-*.test.ts</code> (models, dataset generators, acceptance tests), <code>scripts/</code> (dataset generation and PyTorch cross-checks), <code>docs/CM_CNN_ACCELERATION.md</code>, <code>file/cm_cnn_accel_paper/</code>. Files larger than 5 MB (exported weights, dataset streams) are not redistributed; <code>paper1_bundle/08_PhaseE_Model_Export_SHA256.json</code> and the per-phase <code>weights.sha256</code> files pin their digests.</p><p>Reproduction: <code>g++ -O3 -march=native -mavx512f -mavx512bw -mfma -std=c++20 native/cm_production_avx512.cpp -o experiments/cm-cnn-production/cm_production_avx512</code>; acceptance tests run with <code>node --test src/__tests__/cm-cnn-accel.test.ts</code> on Node 22 or newer.</p>",
+  "creators": [
+    {
+      "name": "no-nova",
+      "affiliation": "Independent"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "no-nova",
+      "type": "ContactPerson"
+    }
+  ],
+  "access_right": "open",
+  "license": "MPL-2.0",
+  "version": "1.0.0",
+  "language": "eng",
+  "keywords": [
+    "CNN inference acceleration",
+    "AVX-512",
+    "structured sparsity",
+    "channel permutation",
+    "co-activation clustering",
+    "temporal reuse",
+    "video inference",
+    "microarchitecture-aware optimization",
+    "roofline analysis",
+    "load-port throughput",
+    "Zen 5",
+    "MobileNetV2",
+    "ResNet-18",
+    "ShuffleNetV2",
+    "computation skipping"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "https://github.com/no-nova/CM-CNN/releases/latest/download/CM_CNN_Accel_Paper1_Final.pdf",
+      "resource_type": "publication-technicalnote"
+    },
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "https://github.com/no-nova/CM-Transformer",
+      "resource_type": "software"
+    },
+    {
+      "relation": "references",
+      "identifier": "10.48550/arXiv.2411.02886",
+      "resource_type": "publication-preprint"
+    }
+  ],
+  "notes": "Dataset and corpus licences: none of the evaluation corpora are redistributed here. Model weights (torchvision and exported .bin files) are not redistributed; digests are recorded in paper1_bundle/08_PhaseE_Model_Export_SHA256.json and the per-phase weights.sha256 files. Real-video frames are not redistributed either; data/real_videos/ holds manifests only. Code is released under MPL-2.0."
+}
