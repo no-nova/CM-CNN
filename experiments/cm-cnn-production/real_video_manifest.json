@@ -1,0 +1,184 @@
+{
+  "generated": "2026-11-20",
+  "collection": "Xiph.org DERF (Digital Video Quality / derf) CIF test sequences, http://media.xiph.org/video/derf/",
+  "license": "public test material distributed by Xiph.org for video-quality research",
+  "normalisation": "pixels stored as float32 RGB in [0,1]; ImageNet mean/std applied inside the engine and in the torch reference",
+  "derived_streams": {
+    "sha256": "5070acdd3171fdfbccffa172ddd3d0a145a4aceeb597a0770e397122c2cd011c",
+    "per_regime_sha256": {
+      "V1_static_surveillance": "76809ac54291857f878a5d834f220bbd11585a42bb4572920a547bb1afc42562",
+      "V2_local_motion": "63a43e855598e2d34295cbd08733e9be2da70c19749087fa6175ff19c95a6c9e",
+      "V3_fast_natural_object": "d3c6929f1089a5fc35d2852f938718e7034c155aa7d74e08bbf8d56accd5af4d",
+      "V4_camera_pan": "2d7950757a321924efda59a8b734885d85707f7f67f961c001f7117afbdeef3b",
+      "V5_illumination_change": "2182f63e7aa78b524a0f8f0a1711a15eb12c0483df30f92b7584e93c20082753",
+      "V6_multi_shot_cuts": "8aa917fd6a204f9707753157483601f3bd5211a1885c3952d6fbeb34924c27ae"
+    }
+  },
+  "derived_streams_320": {
+    "sha256": "e3ad8bb526afa7c1869e87341aff88225e2b96e2f4cabd1636c29224148f7d18",
+    "per_regime_sha256": {
+      "V1_static_surveillance": "d94e54ae661ac767ff33ebb27cef0be93b99a4af10773349092a221bb8b1d381",
+      "V2_local_motion": "ec5a4e6bb5429aa10897e38b69bb0529fae18429ae0256d2a02479fdbfe5f4b7",
+      "V3_fast_natural_object": "aced5b651ecddb1712a763da8c145a7cc0276ac43743ddf41b09f623be5b35a5",
+      "V4_camera_pan": "e91aa9e542eeeafd87e597c21f4a858b12fbb4ad24f949e18066f2c3e08fa7a5",
+      "V5_illumination_change": "20b50dff7b052d1c08befbe2ccca25954829db88cb6c4f18ed89903bc8c2b032",
+      "V6_multi_shot_cuts": "584cbc048e6a2496611d112fcafd5b39e0523213603654f2d330533a3a34c5b8"
+    }
+  },
+  "resize": "centre crop to the largest square, then bicubic resize (anti-aliased) to 224x224 / 320x320",
+  "sequences": [
+    {
+      "sequence": "V1_static_surveillance",
+      "file": "data/real_videos/raw/hall_monitor_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/hall_monitor_cif.y4m",
+      "source": "Xiph.org DERF (CIF) — originally from the COST 263 / MPEG test set",
+      "sha256": "d0d4d6ebd137378bb5a7448c04d0cb73c20458a91d41d0f00cb090bd84bedd93",
+      "bytes": 45621044,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 300,
+      "frames_used": "100..135",
+      "frame_count": 36,
+      "content": "fixed-camera indoor corridor surveillance; minimal foreground motion, real sensor and MPEG-2-era compression noise"
+    },
+    {
+      "sequence": "V2_local_motion",
+      "file": "data/real_videos/raw/highway_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/highway_cif.y4m",
+      "source": "Xiph.org DERF (CIF)",
+      "sha256": "a2a96ed29fc21e352353a042aea945f610772db8a69fab9ccf97d70e29e16d0a",
+      "bytes": 304140044,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 2000,
+      "frames_used": "200..235",
+      "frame_count": 36,
+      "content": "fixed-camera highway traffic; localized foreground vehicles against a mostly static background"
+    },
+    {
+      "sequence": "V3_fast_natural_object",
+      "file": "data/real_videos/raw/silent_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/silent_cif.y4m",
+      "source": "Xiph.org DERF (CIF)",
+      "sha256": "69f28af5b3700f87078137967fb414d681c7fb587822af4d839dbe3ada2473dc",
+      "bytes": 45621044,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 300,
+      "frames_used": "0..35",
+      "frame_count": 36,
+      "content": "fixed studio camera, sign-language speaker; fast articulated hand/arm motion over a static background (ImageNet-1K semantics are weak: hands are not an object class)",
+      "why_this_clip": "replaces husky_cif.y4m, which is a handheld (shaking-camera) close-up and therefore belongs to the global-motion regime V4, not to fixed-camera local motion"
+    },
+    {
+      "sequence": "V4_camera_pan",
+      "file": "data/real_videos/raw/coastguard_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/coastguard_cif.y4m",
+      "source": "Xiph.org DERF (CIF) — coastguard",
+      "sha256": "ae4052051ee9d77236ced5b231239dec97831c66faea3d7b70694e222ce00c43",
+      "bytes": 45621044,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 300,
+      "frames_used": "0..35",
+      "frame_count": 36,
+      "content": "camera pans to track a moving cutter; the whole background shifts every frame"
+    },
+    {
+      "sequence": "V5_illumination_change",
+      "file": "data/real_videos/raw/container_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/container_cif.y4m",
+      "source": "Xiph.org DERF (CIF)",
+      "sha256": "45abe3a99a0e2914742b3eecf474335362e31921bc0b30eef1dd45bb42df82be",
+      "bytes": 45621044,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 300,
+      "frames_used": "50..85",
+      "frame_count": 36,
+      "content": "harbour container ship; frames 0-11 unmodified, then a camera-realistic auto-exposure gain/gamma step is applied from frame 12 (source footage contains no natural exposure step)"
+    },
+    {
+      "sequence": "V6_multi_shot_cuts#A",
+      "file": "data/real_videos/raw/flower_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/flower_cif.y4m",
+      "source": "Xiph.org DERF (CIF)",
+      "sha256": "26c7934b77186836a39db113e8011e841bd593e37295efb98a38915b24aa2b8e",
+      "bytes": 38017544,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 250,
+      "frames_used": "100..108",
+      "frame_count": 9,
+      "content": "shot A of the 4-shot concatenation (rapeseed/flowers)"
+    },
+    {
+      "sequence": "V6_multi_shot_cuts#B",
+      "file": "data/real_videos/raw/news_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/news_cif.y4m",
+      "source": "Xiph.org DERF (CIF)",
+      "sha256": "ff65a92e5fca985b56f1dad3680da5fd44b3255de0befbcbe3d1402ce3fb8834",
+      "bytes": 45621044,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 300,
+      "frames_used": "0..8",
+      "frame_count": 9,
+      "content": "shot B (news studio / television)"
+    },
+    {
+      "sequence": "V6_multi_shot_cuts#C",
+      "file": "data/real_videos/raw/silent_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/silent_cif.y4m",
+      "source": "Xiph.org DERF (CIF)",
+      "sha256": "69f28af5b3700f87078137967fb414d681c7fb587822af4d839dbe3ada2473dc",
+      "bytes": 45621044,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 300,
+      "frames_used": "0..8",
+      "frame_count": 9,
+      "content": "shot C (sign-language speaker, book jacket)"
+    },
+    {
+      "sequence": "V6_multi_shot_cuts#D",
+      "file": "data/real_videos/raw/tempete_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/tempete_cif.y4m",
+      "source": "Xiph.org DERF (CIF)",
+      "sha256": "6bfa101c68f34f5f593889f3974dbca89117aff784f251f444cbace572557878",
+      "bytes": 39538244,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "source_frames": 260,
+      "frames_used": "0..8",
+      "frame_count": 9,
+      "content": "shot D (storm / tempete)"
+    },
+    {
+      "sequence": "V6_multi_shot_cuts",
+      "construction": "shots A-D hard-concatenated: frames 0-8 = A, 9-17 = B, 18-26 = C, 27-35 = D",
+      "cut_frames": [
+        9,
+        18,
+        27
+      ],
+      "frame_count": 36,
+      "note": "genuine hard cuts between four distinct real scenes"
+    }
+  ],
+  "V5_note": "container_cif has no natural exposure step; frames 0-11 are unmodified and from frame 12 a camera-realistic auto-exposure step is applied (ffmpeg eq=brightness=0.10:gamma=1.25:enable='gte(n,12)'). This is disclosed rather than presented as an organic lighting change.",
+  "additional_stress_clips": [
+    {
+      "sequence": "V3alt_handheld_husky",
+      "file": "data/real_videos/raw/husky_cif.y4m",
+      "source_url": "https://media.xiph.org/video/derf/y4m/husky_cif.y4m",
+      "sha256": "a1c0b9518cf80586a34029d00897fac3305ddc882d13da83eaa8ae2c1684090e",
+      "bytes": 38017544,
+      "resolution": "352x288",
+      "fps": 29.97,
+      "frames_used": "0..35",
+      "frame_count": 36,
+      "role": "handheld shaking-camera stress test kept for reference; it is a global-motion clip like V4 and therefore triggers the same s_hat > 0.50 bail-out (measured: 0% MAC reduction on all six backbones)"
+    }
+  ]
+}

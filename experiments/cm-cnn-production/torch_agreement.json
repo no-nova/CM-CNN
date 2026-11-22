@@ -1,0 +1,50 @@
+{
+ "mbv3_large_320": {
+  "images": 32,
+  "max_abs_diff": 0.0004928112030029297,
+  "mean_abs_diff": 3.698476970066622e-05,
+  "top1_agreement": 1.0,
+  "source": "dataset/test_320.bin[0:32]",
+  "engine": "cm_production_avx512 M0 (dense), AVX-512, 1 thread"
+ },
+ "mobilenet_v2": {
+  "images": 32,
+  "max_abs_diff": 0.0004076957702636719,
+  "mean_abs_diff": 4.394699621991549e-05,
+  "top1_agreement": 1.0,
+  "source": "dataset/test_224.bin[0:32]",
+  "engine": "cm_production_avx512 M0 (dense), AVX-512, 1 thread"
+ },
+ "mobilenetv3_small": {
+  "images": 32,
+  "max_abs_diff": 0.0007941722869873047,
+  "mean_abs_diff": 0.00010738262969312018,
+  "top1_agreement": 1.0,
+  "source": "dataset/test_224.bin[0:32]",
+  "engine": "cm_production_avx512 M0 (dense), AVX-512, 1 thread"
+ },
+ "resnet18": {
+  "images": 32,
+  "max_abs_diff": 0.000682830810546875,
+  "mean_abs_diff": 7.679301334246702e-05,
+  "top1_agreement": 1.0,
+  "source": "dataset/test_224.bin[0:32]",
+  "engine": "cm_production_avx512 M0 (dense), AVX-512, 1 thread"
+ },
+ "resnet50": {
+  "images": 32,
+  "max_abs_diff": 0.00084686279296875,
+  "mean_abs_diff": 4.1121302581814234e-05,
+  "top1_agreement": 1.0,
+  "source": "dataset/test_224.bin[0:32]",
+  "engine": "cm_production_avx512 M0 (dense), AVX-512, 1 thread"
+ },
+ "shufflenetv2_x0_5": {
+  "images": 32,
+  "max_abs_diff": 0.0008661746978759766,
+  "mean_abs_diff": 0.00012453925146678558,
+  "top1_agreement": 1.0,
+  "source": "dataset/test_224.bin[0:32]",
+  "engine": "cm_production_avx512 M0 (dense), AVX-512, 1 thread"
+ }
+}

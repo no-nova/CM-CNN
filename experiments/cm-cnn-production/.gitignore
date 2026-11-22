@@ -1,0 +1,4 @@
+# Real-video benchmark artifacts (reproducible from the committed generators + public
+# Xiph DERF sources; see real_video_manifest.json for URLs and SHA-256).
+real_stress_stream_*.bin
+real_video_torch_logits_*.npy

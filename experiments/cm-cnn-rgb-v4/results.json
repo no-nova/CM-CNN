@@ -1,0 +1,8 @@
+{
+  "status": "part2_blocked",
+  "reason": "pretrained VGG-4 features do not transfer to coloured textured full-canvas RGB digits; CPU training from scratch not viable",
+  "transfer_dense_accuracy": 0.1056,
+  "rgb_dataset": {"train": 1437, "test": 360, "dev": 360, "stream_sequences": 360, "frames_per_sequence": 6},
+  "part1_cosine_static": {"block8_dead": [0.3022, 0.7157, 0.4509], "macs": 12020336, "mac_elimination": 0.8414, "ms": 0.7994, "speedup": 4.329, "accuracy": 0.95},
+  "frozen_vgg4_sha256": "f074cbc21b22c4a23fe2198642e9feab893f9e30feeca868bccf9362a070b5e4"
+}

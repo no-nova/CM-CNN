@@ -1,0 +1,80 @@
+{
+ "resnet18": {
+  "path": "experiments/cm-cnn-production/resnet18_224.bin",
+  "sha256": "362a523cb4f92fc0dee7cccec9a4b6b75988ac82ec5c2dae8d2e06beb139cda9",
+  "bytes": 46740916,
+  "nodes": 32,
+  "macs": 1814073344,
+  "max_diff": 3.3170933035897576e-06,
+  "argmax_agree": 1.0,
+  "size": 224,
+  "official_weights": true
+ },
+ "mobilenetv3_small": {
+  "path": "experiments/cm-cnn-production/mobilenetv3_small_224.bin",
+  "sha256": "d1f8b492289b2a937dd802b5e83e7152f807d5fb1e34604b14c4ebbe6260ff55",
+  "bytes": 10152404,
+  "nodes": 81,
+  "macs": 49049856,
+  "max_diff": 6.145622648112692e-06,
+  "argmax_agree": 1.0,
+  "size": 224,
+  "official_weights": true
+ },
+ "shufflenetv2_x0_5": {
+  "path": "experiments/cm-cnn-production/shufflenetv2_x0_5_224.bin",
+  "sha256": "553df3ff49683fa651e5ee4a147bacef73a0df940812073601e15b840b535efb",
+  "bytes": 5458836,
+  "nodes": 118,
+  "macs": 38656000,
+  "max_diff": 1.925941203761994e-05,
+  "argmax_agree": 1.0,
+  "size": 224,
+  "official_weights": true,
+  "validation": {
+   "source": "dev_224.bin[0:16]",
+   "note": "independent NumPy re-execution vs torchvision"
+  }
+ },
+ "mbv3_large_320": {
+  "path": "experiments/cm-cnn-production/mbv3_large_320_320.bin",
+  "sha256": "0d17da02aea125a4fed7e4b03dbe3c370ed63462905cb83df51d8f3b63d8a2b7",
+  "bytes": 21889300,
+  "nodes": 93,
+  "macs": 400304000,
+  "max_diff": 1.3031200376545371e-05,
+  "argmax_agree": 1.0,
+  "size": 320,
+  "official_weights": true
+ },
+ "resnet50": {
+  "path": "experiments/cm-cnn-production/resnet50_224.bin",
+  "sha256": "2e1c9d6f01ed2f1dffa151dd870de2e55a53121f8ed7c07d49ed8ae4ca34a23b",
+  "bytes": 102126580,
+  "nodes": 73,
+  "macs": 4089184256,
+  "max_diff": 1.248755641780619e-05,
+  "argmax_agree": 1.0,
+  "size": 224,
+  "official_weights": true,
+  "validation": {
+   "source": "dev_224.bin[0:16]",
+   "note": "independent NumPy re-execution vs torchvision"
+  }
+ },
+ "mobilenet_v2": {
+  "path": "experiments/cm-cnn-production/mobilenet_v2_224.bin",
+  "sha256": "2909cb2117d260e457603f6e3bc2b55b5c5888250d396944091843e8593bc246",
+  "bytes": 13955444,
+  "nodes": 65,
+  "macs": 280057856,
+  "max_diff": 1.7369011968249026e-05,
+  "argmax_agree": 1.0,
+  "size": 224,
+  "official_weights": true,
+  "validation": {
+   "source": "dev_224.bin[0:16]",
+   "note": "independent NumPy re-execution vs torchvision"
+  }
+ }
+}
