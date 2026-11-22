@@ -1,265 +1,89 @@
-# UCZ（v0.1.0-beta.1）
+# CM-CNN-Accel
 
-**Universal Context-Mixing（Zero-Prior，零先验通用上下文混合）** —— 一个用 TypeScript 写的
-实验性零先验压缩引擎与残差熵显微镜。
+面向 AVX-512 CPU 的卷积神经网络推理加速：微架构感知的空间与时间计算跳过。论文 1，v2.0，2026 年 11 月。
 
-这里的"零先验"有确切含义：**零外部字典、零预训练语料权重、零文件名/魔数嗅探、零格式专用
-预解压器**（不内置 zlib/PNG 解码器，不解析 tar/zip）。UCZ 只依赖一族有限的、手工设计的通用
-结构变换与上下文混合预测器，并在运行时从输入字节流里在线选择。它被告知的唯一一件事是：
-输入是一串字节。
+核心论点是：在通用 CPU 上，理论 MAC 削减很少等比转化为墙钟加速；本文用三个相互耦合的因素解释
+原因——SIMD 执行粒度（跳过是否破坏连续向量访存）、加载端口吞吐（每次 FMA 的加载 µop 数）、
+以及卷积拓扑（一次跳过决策能控制多少算术量），并给出在这些约束下确实能跑快的方案。
 
-[English](README.md) | [简体中文](README.zh-CN.md) | [完整基准](BENCHMARKS.md) | [九点宪法](CONSTITUTION.md)
+**手稿：** [`paper1_bundle/CM_CNN_Accel_Paper1_Final.pdf`](paper1_bundle/CM_CNN_Accel_Paper1_Final.pdf)
+（31 页英文）· 中文版 `CM_CNN_Accel_Paper1_ZH.pdf`
 
----
+**Release：** [paper1-v1.0.0](https://github.com/no-nova/CM-CNN/releases/tag/paper1-v1.0.0)，PDF 作为独立附件。
 
-## 这个思想实验
+## 主要结果
 
-大多数强压缩器都是一座知识库。`xz` 内置 LZ77 与区间编码；`paq8px` 内置英语词典、JPEG 模型、
-x86 过滤器以及几十个手工设计的上下文；`zstd` 在见到你的文件之前先在语料上训练过。这些都有效
-——正因如此，所有人都在用。
+测试平台：单核 AMD Ryzen 9 9955HX（Zen 5，AVX-512F/BW/DQ/VL/VNNI），`OMP_NUM_THREADS=1`，
+g++ 16.2.1，`-O3 -march=native -mavx512f -mfma -std=c++20`。
 
-UCZ 问的是一个更窄、更学院气的问题：
+| 内容 | 结果 |
+|---|---|
+| `conv_tile` 稠密微内核（2×2 像素 × 4 输出组常驻 16 个 ZMM 寄存器） | 每次 FMA 仅 0.5 次加载 µop，81 GMAC/s；标量 gather 稀疏内核约需 2.0 |
+| `S1` 基于并查集通道置换的 16-lane 对齐结构化剪枝 | ResNet-18 2.70×（精度 +0.56 pp），MobileNetV2 1.66–1.70×（+1.39 pp） |
+| VGG-4 + 8-lane 共激活聚类（输入 78% 为精确零像素） | 消除 84.14% MAC，4.33×，精度 95.00% |
+| `P2` 时间跳过 + 脏比 >0.50 时原地稠密回退 | 固定机位 V1/V2/V3/V5 消除 51.3–75.4% MAC（0.81–2.47×），硬切 V6 33.7–37.4%，切镜帧逐位精确 |
+| Tile Arithmetic Density Model `α_l = MACs_l / (Tiles_l · C_in,l) ≈ 4·C_out,l·K_l² / g_l` | 解释为何同一视频流 ResNet-50 得 1.80×，而 ShuffleNetV2-x0.5 因调度开销反而慢 12% |
 
-> 如果一个压缩器被**严格禁止**使用内置词典、预训练权重、文件头魔数识别、格式专用的预解压器，
-> 而是必须**在线地、从零开始、只凭眼前的字节**去学习每一种数据流形（表格文本、多通道遥测、
-> 二维周期栅格、机器码、基因组序列），会发生什么？
+与 PyTorch 的数值对齐：静态图像 `max|Δlogit| ≤ 8.66e-4`，216 帧真实视频 `≤ 1.44e-3`，Top-1 一致率 0.995–1.000。
 
-目的并不是打败这些工具，而是度量：它们的优势中，有多少来自*关于世界的先验知识*，又有多少来自
-*通用在线学习*——并让这个差距可以被检查，而不是被隐藏。让这个问题成立的那套规则写在
-[九点宪法](CONSTITUTION.md) 里，实测数字写在 [BENCHMARKS.md](BENCHMARKS.md) 里。
+两个负面结果同样是论证的一部分：细粒度动态标量跳过**打不过**稠密微内核（0.61–0.97×），因为瓶颈是
+gather 吞吐而非 MAC 数；帧间变化在空间上散乱时会触发 halo percolation，使时间复用退化，因此需要
+膨胀前的 3×3 多数投票滤波与全局变化回退。
 
-### 用一段话说完九点宪法
+## 目录
 
-不得内置词典或训练语料；不得用文件类型嗅探来决定控制流——分析器只能看它自己算出来的字节统计；
-不得使用格式专用的预解压器（PNG 里不调 `zlib`，PDF 里不跑 `FlateDecode`）；不得针对已知文件做
-参数调优或写魔法常量；每个候选规则都必须真正试编码、按真实字节数比较；每个容器必须逐字节可逆，
-否则该方案作废；解码器不得需要编码器没有写进容器的任何信息；代价估计必须来自真实编码；并且必须
-对不可压缩数据保持诚实——最多只允许几个字节的框架开销。
+| 路径 | 内容 |
+|---|---|
+| `paper1_bundle/` | 手稿（中英文 Markdown + PDF）、图、以及支撑各表格的 14 份结果 JSON |
+| `native/` | AVX-512 内核源码：`conv_tile`、结构化剪枝、production 与 RGB 流水线 |
+| `experiments/cm-cnn-{accel,enterprise,production,rgb-v4,universal}/` | 已编译驱动、数据集、分阶段结果 JSON、训练日志 |
+| `src/lib/vision/` | 基准驱动使用的 TypeScript 模型与数据集生成器 |
+| `src/__tests__/cm-cnn-*.test.ts` | 锁定论文数字的验收测试 |
+| `scripts/` | 数据集生成、视频流构建、PyTorch 交叉校验 |
+| `docs/CM_CNN_ACCELERATION.md` | 方法学、阶段记录与复现步骤 |
+| `file/cm_cnn_accel_paper/` | 论文工作目录：Markdown 源、绘图脚本、PDF 构建 |
+| `data/real_videos/` | 真实视频帧清单（帧本身需另行获取） |
 
----
-
-## 它如何工作：五种流形，一个学习器
-
-一次 UCZ 编码是：**分析 → 为每个区域提出候选规则 → 试编码 → 留下最小的 ↦ 合并 → 封装**。
-下面的一切都是运行时测出来的，而不是靠扩展名猜的。
-
-### 1.1 表格与符号文本
-
-主力是 `text-vertcol`：一个 22 个上下文的模型，它在读的同时持续维护*表格结构*的心智图像——当前行、
-当前字段序号与列偏移、上一行同一字段同一位置的字节、当前词与上一词、6 格字符形状掩码、前缀词干与
-词尾后缀，以及 5/6-gram。分隔符是学出来的而不是假设的（`\t`、`,`、`:`，以及当分号在流中占多数时
-把 `;` 也算进来）。高熵冻结闸门（`emaErr`）会阻止嵌入的噪声污染列表。
-
-### 1.2 多通道信号
-
-记录步长检测（`s = 2…64`，三个独立窗口，幂律归一化）把交织通道拆开；`TRANSPOSE` /
-`TRANSPOSE_GROUP` / `SUB_TRANSPOSE` 重排，`DELTA` 去掉通道自身的滞后，残差再交给 12–13 上下文的
-二元模型与两代匹配模型。
-
-### 1.3 准周期信号与二维栅格
-
-`BITPLANE` 把平稳周期信号分解到比特平面（`5.L`：4.37%）。对二值栅格，模型会在运行时**因果地**
-找出扫描行周期——在 `pos = 1024` 与 2 的幂处设检查点，做非平凡匹配普查，加平坦字节闸门与
-`bestP ≥ 32` 下限——然后用 JBIG 风格的上下文按每个像素的五个因果邻居编码。`ptt5`（一张 216 字节
-行宽、没有任何可读头部的传真栅格）因此达到 5.25%。
-
-### 1.4 机器码
-
-`BCJ_V3` 是带符号字节保护的因果相对跳转变换，之后接 25 个上下文的模型，多出来的槽位桥接 `disp32`
-立即数与 `ModRM` 字段（`9.H`：1 MiB ELF 上 29.13%）。代码里没有任何地方知道 x86 是什么：变换与
-上下文被选中，只是因为它们编出来更小。
-
-### 1.5 高熵冻结闸门
-
-当运行中的预测误差表明"这一片是噪声"时，上下文表停止训练、列模型冻结、规划器退化为 `STORE`。
-在 24 张 Kodak PNG 上，结果是 15,394,305 → 15,273,560 B（整体 99.22%；在 15 张完全不可压缩的
-图像上，`STORE` 只增加 8–18 字节，约 0.002% 的封装开销，且永不失控膨胀）。一个不能重新展开 DEFLATE
-的零先验压缩器，应该把这件事大声而廉价地说出来。
-
----
-
-## 基准摘要
-
-`--max` 档，每一行都经过逐字节 SHA-256 往返校验。逐文件数字与机制分析见
-**[BENCHMARKS.md](BENCHMARKS.md)**。
-
-**上下文混合类压缩器的压缩率若不含成本就是广告。** 因此下面每一行都同时给出编码耗时、解码耗时与
-峰值内存，全部按同一协议在同一台机器上测得：AMD Ryzen 9 9955HX（16 核 / 32 线程）、14 GiB 内存、
-Linux、Node 26.13、`UCZ_THREADS=6`、逐文件压缩（从不做固实归档）、峰值 RSS 取自 `VmHWM`；
-基线版本 `gzip 1.15`、`bzip2 1.0.8`、`zstd 1.5.7`、`xz 5.8.4`。
-
-### 压缩率（占原始字节的百分比，越低越好）
-
-| 语料 | 原始（B） | `gzip -9` | `bzip2 -9` | `zstd -19` | `zstd --ultra -22` | `xz -9e` | **UCZ `--max`** |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Canterbury（11 文件） | 2,810,784 | 26.00% | 19.31% | 18.37% | 18.37% | 17.54% | **13.14%** |
-| UCI 表格（6 文件） | 6,545,162 | 11.76% | 7.30% | 9.18% | 9.18% | 8.80% | **5.73%** |
-| AITDCC（16 轨，跨流形） | 38,289,319 | 66.43% | 62.56% | 63.45% | 63.45% | 61.74% | **44.54%** |
-| Amino Acids Corpus（氨基酸语料，9 物种） | 22,918,902 | 57.14% | 53.37% | 45.46% | 44.93% | 44.98% | **42.18%** |
-| 大肠杆菌 K-12 基因组 | 4,734,499 | 31.39% | 29.54% | 28.53% | 28.53% | 28.27% | **24.39%** |
-| 24 张 Kodak PNG（诚实性测试） | 15,394,305 | 99.97% | 100.19% | 99.99% | 99.99% | 99.84% | **99.22%** |
-| `enwik8` 前 8 MiB | 8,388,608 | 36.84% | 29.18% | 28.20% | 28.20% | 27.46% | **22.45%** |
-| `enwik8` 前 16 MiB | 16,777,216 | 36.87% | 29.27% | 27.58% | 27.37% | 26.71% | **22.04%** |
-
-### 这份压缩率的成本（同机、同文件）
-
-| 语料 | UCZ 编码 | UCZ 解码 | UCZ 峰值 RSS | `xz -9e` 编码 | `zstd -22` 编码 | `zstd -22` 峰值 RSS |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Canterbury | 105.4 s | 15.6 s | 1,916 MiB | 0.97 s | 0.85 s | 25 MiB |
-| UCI 表格 | 116.6 s | 52.9 s | 355 MiB | 1.49 s | 1.51 s | 76 MiB |
-| AITDCC | 719.8 s | 168.9 s | 2,642 MiB | 7.88 s | 5.08 s | 78 MiB |
-| Amino Acids Corpus | 383.9 s | 85.5 s | 2,138 MiB | 9.35 s | 11.29 s | 282 MiB |
-| 大肠杆菌 K-12 | 97.7 s | 13.9 s | 1,586 MiB | 1.92 s | 1.60 s | 142 MiB |
-| 24 张 Kodak PNG | 119.2 s | 15.5 s | 1,114 MiB | 3.16 s | 0.76 s | 25 MiB |
-| `enwik8` 8 MiB | 103.1 s | 20.8 s | 2,549 MiB | 2.33 s | 2.69 s | 146 MiB |
-| `enwik8` 16 MiB | 184.9 s | 40.2 s | 2,679 MiB | 5.54 s | 4.96 s | 284 MiB |
-
-两张表要一起读。Canterbury 上 UCZ 是 13.14%、**编码 105 秒**；`xz -9e` 是 17.54%、**0.97 秒**——
-xz 快约 108 倍，UCZ 小 25%。这个交换就是产品本身。按字节计（`enwik8`），UCZ 比 `paq8px -12L`
-快约 27 倍、比 `cmix v21` 快约 59 倍，同时压缩率分别落后 6.2 与 7.4 个百分点——这就是本项目占据的
-速度/压缩率前沿。完整 `enwik8`（100 MB）为 21,095,797 B（21.10%）；它的耗时这里**不作断言**：
-上面 8/16 MiB 切片实测约 11 µs/byte，线性外推约 18 分钟，但我们在有竞争负载的机器上跑完整文件时
-超过了 2 小时。切片是实测值，外推值已明确标注为外推。
-
-### 在上下文混合家族中的位置（公开数据，非本机实测）
-
-| 压缩器 | 版本 / 参数 | 语料 | 体积（B） | 压缩率 | 编码耗时 | 峰值内存 | 来源 |
-| --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| **UCZ** | `0.1.0-beta.1`，`--max`，6 线程 | Canterbury（11 文件，逐文件） | 369,447 | **13.14%** | 105 s | 1.9 GiB | 本仓库，上表实测 |
-| **UCZ** | 同上 | `enwik8` 前 16 MiB | 3,698,245 | **22.04%** | 185 s | 2.6 GiB | 本仓库，上表实测 |
-| `paq8px` | v206fix1 `-12L` | `enwik8`（100 MB） | 15,849,084 | 15.85% | 29,916 s（8.3 h） | 28,151 MB | LTCB 榜单 / encode.su |
-| `paq8px` | v208 `-8` | `ptt5`（513,216 B） | 21,233 | 4.14% | 5.05 s | 1,434 MB | encode.su（v208-teaser） |
-| `paq8px` | v206 `-8lrta`（固实归档） | Canterbury，11 文件 | 285,365 | 10.15% | 未公布 | 未公布 | encode.su |
-| `cmix` | v21 `-t` | `enwik8`（100 MB） | 14,623,723 | 14.62% | 65,155 s（18.1 h） | ~20 GiB | byronknoll.com/cmix.html |
-| `cmix` | v21 `-t` | `calgary.tar`（3,152,896 B） | 534,512 | 16.95% | 2,757 s | ~18.5 GiB | byronknoll.com/cmix.html |
-
-必须说明的前提：`paq8px` 与 `cmix` 那几行是别人在别的硬件上跑出来的；`paq8px -8lrta` 是**固实
-归档**（一个模型连续看完全部文件），不能与本表的逐文件总量直接比较；两者都带有本宪法禁止的先验
-（英语词典、格式模型、手写图像/x86 检测器）。它们在英文文本上拉开的差距（enwik8 上 15.8% 对
-22.0%）正是"一本词典 + 28 GB 表"买来的东西，代价是时间上 2–3 个数量级、内存上约 10 倍。
-
-在专家工具胜出的地方，它们胜在携带先验：`paq8px` 靠英语词典在英文文本上做到 15–18%，`AC2` 靠
-替换矩阵在蛋白质/氨基酸语料上超过我们，`GeCo3` 靠反向互补专家在 DNA 上超过我们，`FLAC` 在密集
-音乐上超过我们。这正是本项目想要产出的度量，而不是需要被辩解掉的尴尬。
-
----
-
-## 科学仪器
-
-UCZ 附带两件仪器，它们用同一套零先验机制去*描述*数据。`inspect` 的曲线是**前序预测码代价**
-（每个字节只依赖它之前的字节），`ncd` 则是**有界的、对称化的条件复杂度差异度**：两个方向各算
-"给定一方时另一方的前序代价 / 单独代价"，扣掉自我更新下限后再截断到 `[0, 1]`。
-
-### `ucz inspect` —— 残差熵显微镜
-
-```
-$ ucz inspect ptt5
-
-=== UCZ Residual Information Microscope ===
-bytes                 513216
-H0 entropy            1.210 bit/byte
-printable ASCII       1.75 %
-flat bytes 00/FF      89.21 %
-record stride s       -
-lag candidates        216
-scanline period P     216
-manifold class        2d-periodic-raster
-evidence              scanPeriod 来自滞后普查 | flat=89.2% printable=1.8% | scanPeriod=216 | lagCandidates=216
-
-residual H(x|x<)     min 0.003 / mean 0.548 / max 3.151 bpb  (block 512 B)
-sparkline             ▁▁▁▁▁▁▄▃▃▂▁▁▂▂▂▂▂▂▂▂▂▂▃▃▃▃▃▃▂▁▁▁   (0 bpb ▁ -> 8 bpb █)
-anomalies             47 bin(s)
-  @    53760  len  512  1.774 bpb  regime-shift
-  @    54272  len  512  2.483 bpb  entropy-spike
-  @    55808  len  512  2.899 bpb  entropy-spike
-  ... 39 more
-```
-
-sparkline 画的是模型自己测出的*局部条件*复杂度 `H(x_t | x_{<t})`，而不是直方图。它像一把诚实的
-尺子：周期性的扫描行又平又便宜，而那段被标注出来的标题块很贵——仪器会指出贵在哪里。
-
-### `ucz ncd` —— 零先验信息距离
-
-```
-$ ucz ncd alice29.txt asyoulik.txt kennedy.xls
-
-=== UCZ Zero-Prior NCD Distance Matrix ===
-                    0       1       2
-alice29.txt         ·  0.9197  0.9943
-asyoulik.txt   0.9197  0.0000  0.9943
-kennedy.xls    0.9943  0.9943  0.0000
-
-Nearest neighbour:
-  alice29.txt  → asyoulik.txt  (NCD=0.9197)
-  kennedy.xls  → asyoulik.txt  (NCD=0.9943)
-```
-
-用*条件代价*做归一化压缩距离，让模型在拼接点保持"热"状态。在一个 8 项的混合集合上，它把同族与
-异族的间隔拉到 0.100，而基于 `gzip` 的 NCD 只有 0.073；最近邻准确率 8/8。
-
----
-
-## 快速上手
+## 复现
 
 ```bash
-npm install
-npm run build          # worker 包 + dist/cli.js + dist/index.js
+g++ -O3 -march=native -mavx512f -mavx512bw -mfma -std=c++20 \
+    native/cm_production_avx512.cpp -o experiments/cm-cnn-production/cm_production_avx512
 
-# 命令行
-node dist/cli.js compress notes.txt          # -> notes.txt.ucz
-node dist/cli.js decompress notes.txt.ucz    # -> notes.txt
-node dist/cli.js inspect notes.txt           # 残差显微镜
-node dist/cli.js ncd a.csv b.csv c.csv       # 距离矩阵
+OMP_NUM_THREADS=1 experiments/cm-cnn-accel/cm_cnn_avx512 \
+    --model experiments/cm-cnn-accel/pretrained_vgg4.bin --reps 10
 
-# 网页工作台（本地）
-npm run build:web && npx vite preview --outDir dist/web
-
-# 发布产物：单个自包含 HTML 文件（无需服务器、无同级文件依赖）
-npm run release:html   # -> dist/ucz-v0.1.0-beta.1.html + .sha256
-
-# 作为库调用
-node --input-type=module -e "
-  import { compressAdaptive, decompress } from './dist/index.js'
-  const bytes = new Uint8Array([/* ... */])
-  const { container } = await compressAdaptive(bytes)
-  const back = decompress(container)   // 永远逐字节一致
-"
+node --test src/__tests__/cm-cnn-accel.test.ts
+node --test src/__tests__/cm-cnn-production.test.ts
 ```
 
-规划档位：`--fast`（单一跨度、一种行模式、不做锦标赛）、`--balanced`（推荐默认；多数文件与
-`--max` 字节完全相同，规划快约 4 倍）、`--max`（完整候选锦标赛）。档位从不改变模型参数，因此任何
-容器都能被任何构建解码。
+超过 5 MB 的权重与数据集（导出的 `.bin`、`dataset/*.bin`）不入库：摘要记录在
+`paper1_bundle/08_PhaseE_Model_Export_SHA256.json` 与各阶段的 `weights.sha256` 中，派生数据由
+`scripts/` 重建。
 
-```bash
-npm run bench:quick    # 6 条自校验数据流，约 7 秒
-node tests/run.mjs     # 完整测试：方案账本、往返、边界、CLI、盲测流形套件
+## 本仓库中的其他项目
+
+同一个工作树里还开发了两个无关项目，这也是根目录 `README.md` 之前写成压缩引擎文档的原因：
+
+| 项目 | 位置 | 内容 |
+|---|---|---|
+| **UCZ**（Universal Context-Mixing, Zero-Prior） | `src/`（React 应用 + `src/lib/*.ts` 编解码器）、`tests/*.test.ts`、`docs/UCZ_V*.md`、`BENCHMARKS.md`、`CONSTITUTION.md`、`PRIOR_REGISTRY.md`、`index.html`、`vite.config.ts`、`benchmark/` | TypeScript 零先验压缩引擎 |
+| **SNN** | `src/lib/snn/`、`src/lib/sequence/`、`docs/SNN_*.md`、`tests/snn.test.ts` | 脉冲神经网络实验 |
+
+两者都不参与 CM-CNN 的任何数字。`src/lib/codec.ts` 属于 UCZ，CM-CNN 实验从不修改它，
+`docs/CM_CNN_ACCELERATION.md` 以它的 SHA-256 作为溯源校验。将这两个项目拆分为独立仓库的工作尚未进行，
+在此之前以上文件清单即为边界。
+
+## 引用
+
+```
+CM-CNN-Accel: Microarchitecture-Aware Spatial and Temporal Computation Skipping for CNN
+Inference on AVX-512 CPUs. Technical Report 1, version 2.0, November 2026.
 ```
 
----
+同系列：*CM-Transform*（论文 2，共激活置换块稀疏与缓存行对齐执行），
+见 [no-nova/CM-Transformer](https://github.com/no-nova/CM-Transformer)。
 
-## 路线图
+## 许可
 
-* **v0.1.x —— TypeScript 参考实现。** 关注正确性、仪器与上面的基准记录。此阶段不以速度为目标，
-  规划器是刻意穷举的。
-* **v0.2.0 —— C++20 SIMD 后端。** 移植混合层与表原语，保持规划器与容器格式不变，使 v0.1 生成的
-  容器继续可解。目标：编码 5–10×，解码 10–20×。
-* 再往后：流式变体（模型本身已是因果的），以及用 32 位重整化替代当前 12 位概率路径的算术编码器。
-
----
-
-## 许可与致谢
-
-**MPL-2.0** —— 见 [LICENSE](LICENSE)。
-
-UCZ 站在一长串已发表工作之上，[BENCHMARKS.md](BENCHMARKS.md) 里之所以列出这些对照点，正是因为
-它们做得好：
-
-* **上下文混合** —— Matt Mahoney 的 `paq` 系列（以及由 paq8px 贡献者维护的 `paq8px`）与 Byron Knoll
-  的 `cmix`，它们确立了一点：对许多弱预测器做逻辑混合，胜过任何单一强预测器。
-* **领域专家** —— `AC2`（蛋白质）、`GeCo3`（DNA）、`JBIG`/`JBIG2`（二值图像）、`FLAC`（音频）、
-  `xz`/LZMA（通用）。它们的压缩率是本项目用来对照的标尺，而它们胜出的地方，本项目如实记录而不是
-  略去。
-* **通用性的思想** —— Solomonoff、Kolmogorov、Rissanen（MDL）以及 Wallace 与 Boulton 的 MML：
-  一个能在线上学习一切数据的压缩器，是一种归纳模型，而不只是一个文件工具。
-
-这是一个带严格测试套件的研究玩具。如果它有用，它的用处在于充当第一节那个问题的测量仪器。
+Mozilla Public License 2.0 — 见 [`LICENSE`](LICENSE)。
