@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the manuscript and this archive."
+title: "CM-CNN-Accel: Microarchitecture-Aware Spatial and Temporal Computation Skipping for CNN Inference on AVX-512 CPUs"
+type: software
+version: 1.0.0
+license: MPL-2.0
+doi: 10.5281/zenodo.24435069
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24435069
+    description: "Version 1.0.0 archive"
+  - type: doi
+    value: 10.5281/zenodo.24435068
+    description: "All versions (concept DOI)"
+date-released: 2026-11-22
+repository-code: "https://github.com/no-nova/CM-CNN"
+url: "https://github.com/no-nova/CM-CNN/releases/tag/paper1-v1.0.0"
+authors:
+  - family-names: "no-nova"
+    name-particle: ""
+    given-names: ""
+abstract: >-
+  Reference implementations, AVX-512 kernels, benchmark drivers and result files for the
+  technical report on microarchitecture-aware spatial and temporal computation skipping for
+  CNN inference. The report identifies three coupled constraints that decide whether MAC
+  reductions become wall-clock time: SIMD execution granularity, load-port throughput per FMA,
+  and the convolution topology that fixes how much arithmetic one skipping decision controls.
+keywords:
+  - CNN inference acceleration
+  - AVX-512
+  - structured sparsity
+  - channel permutation
+  - temporal reuse
+preferred-citation:
+  type: report
+  title: "CM-CNN-Accel: Microarchitecture-Aware Spatial and Temporal Computation Skipping for CNN Inference on AVX-512 CPUs"
+  authors:
+    - family-names: "no-nova"
+      given-names: ""
+  year: 2026
+  month: 11
+  version: "2.0"
+  doi: 10.5281/zenodo.24435069
+  url: "https://github.com/no-nova/CM-CNN/releases/download/paper1-v1.0.0/CM_CNN_Accel_Paper1_Final.pdf"

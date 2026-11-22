@@ -13,6 +13,8 @@ arithmetic one skipping decision controls).
 (31 pages, English) · Chinese edition `paper1_bundle/CM_CNN_Accel_Paper1_ZH.pdf` · Markdown
 source `CM_CNN_Accel_Paper1_v2.md` · TeX-free build via `file/cm_cnn_accel_paper/build_paper_pdf.sh`.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24435068.svg)](https://doi.org/10.5281/zenodo.24435068)
+
 **Release:** [paper1-v1.0.0](https://github.com/no-nova/CM-CNN/releases/tag/paper1-v1.0.0)
 carries the compiled PDF as a standalone asset.
 
@@ -84,6 +86,7 @@ derived ones.
 ```
 CM-CNN-Accel: Microarchitecture-Aware Spatial and Temporal Computation Skipping for CNN
 Inference on AVX-512 CPUs. Technical Report 1, version 2.0, November 2026.
+doi:10.5281/zenodo.24435068
 ```
 
 Related work in this series: *CM-Transform* (Paper 2), co-activation permuted block sparsity
