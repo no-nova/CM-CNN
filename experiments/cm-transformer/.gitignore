@@ -1,8 +1,0 @@
-# local build products and cached tensors (regenerate with the scripts)
-__pycache__/
-*.pyc
-*.so
-*.o
-*.pt
-results/build/
-paper2_bundle/*_section.typ
